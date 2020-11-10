@@ -3,20 +3,85 @@ The coronavirus emergency has put a strain on society on many levels, in  partic
 The application will allow customers to “line up” (i.e., retrieve a number) from their home, and then wait  until  their  number  is  called  (or  is  close  to  being  called)  to  approach  the  store.  In  addition,  the application could be used to generate QR codes that would be scanned upon entering the store, thus allowing store managers to monitor entrances.
 
 \begin{enumerate}
-	\item CLup should allow customers to queue up remotely
-	\item CLup should allow store owners to monitor entrances
+	\item CLup should allow customers to queue up remotely and in loco (fallback) so that they don't need to form a physical line
+	\item CLup should allow store owners to allows store managers to regulate the input and output streams of customers in the building
 	\item CLup should provide the customer with a reasonably precise estimate of waiting time
 	\item CLup should alert the customers when it is time to get to the shop taking into account travel time
 	\item CLup should allow customers to book future visits to stores
-	\item CLup should allow customers to specify estimated visit duration and desired objects
+	\item CLup should allow customers to specify estimated visit duration and desired objects in order to provide a better guess
+	\item CLup should be able to infer an approximate duration of the visit from an analysis of the previous one to plan visits and manage the queue in a finer way
 \end{enumerate}
 
+
+%Identify product and application domain
+%analysis of the world and of the shared phenomena
 \subsection{Scope}
-... Here you see a subsubsection
+The system to be allows to avoid creating queues in front of stores.
+This is accomplished by enabling the users to queue up remotely.
+Moreover, the shop owners can oversee customers entering and exiting stores. \\
+The system offers the following functionalities:
+\begin{itemize}
+	\item it allows customers to line up remotely
+	\item it identifies a customer
+	\item it allows identified customers whose position in queue allows it to enter and exit the store
+	\item it schedules customers in order to minimize overcrowding inside and outside of the store
+	\item it alerts customers when they should head to the store
+	\item it allows customers to queue up on the spot
+	\item it allows customers to book a visit and optionally specify duration and desired categories of products
+	\item it uses statistics build on entrance and exit data to better evaluate duration of visits
+\end{itemize}
+\subsubsection{World Phenomena}
+\begin{enumerate}
+	\item Customer reaches the store
+	\item Customer enters or exits shop
+	\item Store owner keeps in check influx of customers in building
+	\item Customer buys products
+\end{enumerate}
+\subsubsection{Shared Phenomena}
+\begin{enumerate}
+	\item Customer queues up
+	\item Customer is identified in order to allow entrance/exit from store
+	\item Customer is allocated a time slot and is alerted when his turn is close
+	\item Customer books a visit to a store
+\end{enumerate}
+
+
 \subsubsection{World Phenomena}
 %what you write here is a comment that is not shown in the final text
-\subsection{Scope}
 \subsection{Definitions, Acronyms, Abbreviations}
+\subsubsection{Definitions}
+\begin{tabular}{ c c }
+	Ticket & Virtual or physical artifact used to identify the position of a customer in a queue \\
+	Identification & Customer is identified when he receives a ticket (be it virtual or physical) and he is inserted in the queue 
+\end{tabular}
+\subsubsection{Acronyms}
+\begin{tabular}{ c c }
+	RASD & Requirement Analysis and Specification Document \\
+	GPS & Global Positioning System \\
+	S2B & Software to be \\
+	UI & User Interface
+\end{tabular}
+\subsubsection{Abbreviations}
+\begin{tabular}{ c c }
+	Gn & Goal number n \\
+	Rn & Requirement number n \\
+	Dn & Domain Assumption number n
+\end{tabular}
 \subsection{Revision history}
+Not yet defined.
 \subsection{Reference Documents}
+\begin{enumerate}
+	\item IEEE Std 830-1998 Recommended Practice for Software Requirements Specifications
+	\item Specification Document: R\&DD Assignment A.Y. 2020/2021
+\end{enumerate}
 \subsection{Document Structure}
+\begin{itemize}
+	\item Chapter 1: gives an introduction about the purpose of the document and the development of the application, with its corresponding specifications such as the definitions, acronyms, abbreviation,	revision history of the document and the references. Besides, are specified the main goals, world and shared phenomena of the software.
+	\item Chapter 2: contains the overall description of the project. In the product perspective are included the state charts of the major function of the application and the model description through a Class diagram. In user characteristic are explained the types of actors that can use the application.
+	Moreover, the product function clarified the functionalities of the application. Finally, are included the domain assumption that can be deducted from the assignment.
+	\item Chapter 3: presents the interface requirement including: user, hardware, software and communication interfaces. This section contains the core of the document, the specification of functional and non-functional requirements. Functional requirements are submitted with a list of use cases with their corresponding sequence diagrams and some scenarios useful to identify specific cases in which the application can be utilised. Non-functional requirements included: performance, design and the software systems attributes.
+	\item Chapter 4: includes the alloy code and the corresponding metamodels generated from it, with a brief introduction about the main purpose of the alloy model
+	\item Chapter 5: shows the effort spent for each member of the group.
+	\item Chapter 6: includes the reference documents.
+\end{itemize}
+\end{}

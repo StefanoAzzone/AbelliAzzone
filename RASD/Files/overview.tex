@@ -20,9 +20,60 @@ He/she can also monitor the number of customers inside at any time and visualize
 \includegraphics[width=\textwidth]{Images/ClassDiagram.png}
 \caption{\label{fig:metamodel2}Class Diagram.}
 \end{figure}
+\newpage
 \subsubsection{State charts}
+Here we show the main processes that the system will manage, and the states in which the system will find itself.
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{Images/StateDiagram.png}
-	\caption{\label{fig:metamodel2}State Diagram 1: Creation of a reservation.}
+	\caption{\label{fig:metamodel3}State Diagram 1: Creation of a reservation.}
+\end{figure}\\
+The figure above illustrates how the customer creates a reservation (virtual customer). The customer accesses the main menu. From there he/she can request an immediate reservation or a future reservation. If he/she requests an immediate reservation, it is created and the process terminates. If he/she requires a future reservation he can add the departments he/she intends to visit, and how much time he/she is going to spend at the store. Then the reservation is created and the process terminates.\\\\\\\\
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{Images/StateDiagram2.png}
+	\caption{State Diagram 2: Store owner sets occupation.}
 \end{figure}
+The figure above illustrates how the store owner sets the maximum occupation of one of his stores. The store owner logs in and is provided a main menu. He/she selects one of his stores, and is presented with the current maximum occupation of his selected store. He can change it to a value to his liking, or go back to the main menu.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{Images/StateDiagram3.png}
+	\caption{State Diagram 3: On premise creation of a reservation.}
+\end{figure}
+The figure above illustrates how a customer can queue up on premise (physical customer). The customer is presented with an on premise main menu. From there he/she can request to queue up (create a reservation) immediately. He will be prompted to identify himself (e.g. social security card). Once identified the customer will be provided a ticket with a number that represents his position in queue and an estimate of the waiting time.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{Images/StateDiagram4.png}
+	\caption{State Diagram 3: Customer enters a store.}
+\end{figure}
+The figure above illustrates how a customer who is authorized can access the store. At the entrance of his/her store of choice he is enabled to demonstrate his authorization. Once he/she does, he is allowed to enter the store.
+
+\subsection{Product functions}
+We describe here functions that the S2B will support.
+\begin{enumerate}
+	\item Customers can queue up virtually or physically at one of the stores registered to the service.
+	\item Customers can access the desired store when its population reaches acceptable levels.
+	\item Customers that queued up virtually can be notified when it is time for them to depart to reach the store.
+	\item Store owners can monitor the population in each of their stores.
+	\item Store owners can define the maximum population of each of their stores.
+	\item Store owners can register stores to the system.
+\end{enumerate}
+
+\subsection{User characteristics}
+\begin{enumerate}
+	\item {\bfseries Customers}: a physical person that needs to access any of the stores registered to the system. The customers belong to all demographics, thus the need for a user-friendly interface for both virtual and physical customers. The customer needs a reasonably precise estimate of waiting time and time to get to the store.
+	\item {\bfseries Store owners}: a physical or legal person that owns any number of stores and needs to enable customer access through a queue system.
+\end{enumerate}
+
+\subsection{Assumptions, dependencies and constraints}
+\subsubsection{Domain Assumptions}
+\begin{enumerate}
+	\item The stores have means to allow entrance or exit to customers that are authorized (e.g. QR/NFC).
+	\item Outside stores a device can identify customers and print tickets.
+	\item When provided, user location has maximum error of 5 meters.
+	\item There is no way for a customer to enter a store except from entrance and exit.
+	\item Each virtual and physical customer has means of identification unique to that user (e.g, telephone number, social security card).
+\end{enumerate}

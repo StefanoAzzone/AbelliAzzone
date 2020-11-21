@@ -1,1 +1,36 @@
-Organize this section according to the rules defined in the project description. 
+\subsection{External interface requirements}
+\subsubsection{User interfaces}
+There are two categories of users that have different interface requirements:
+\begin{itemize}
+	\item {\bfseries Customers}\\
+	Customers belong to all demographics so a user friendly interface is needed. The customer is presented with a main menu which allows him/her to:
+	\begin{itemize}
+		\item line up immediately
+		\item book a visit
+		\item view and delete existing reservations
+	\end{itemize}
+	The customer will receive a notification when it is time for him/her to depart to reach the shop.\\\\
+	\item {\bfseries Store owners}\\
+	The store owner is presented with a main menu from which he/she can:
+		\begin{itemize}
+		\item register a store to the system
+		\item delete a store from the system
+		\item view and edit occupation for currently registered stores
+	\end{itemize}
+\end{itemize}
+\subsubsection{Hardware interfaces}
+The S2B requires the following hardware interfaces:
+\begin{enumerate}
+	\item {\bfseries Computer or smartphone}\\
+	Users will need a computer or a smartphone to access the system's services which are provided via an application (only for smartphone owners) and a web application. Only users with an application will be able to receive notifications that alert them when it is time for them to depart and reach the store.
+	\item {\bfseries Turnstiles}\\
+	Turnstiles allow authorized customers to enter or exit the store by providing a means of identification. (i.e. QR, NFC)
+	\item {\bfseries Ticket printer}\\
+	The ticket printers located outside stores allow potential customers to queue up on premise provided that they identify themselves (e.g. social security card).
+\end{enumerate}
+
+\subsubsection{Software interfaces}
+The system uses a public API to locate the customer and provide him/her with notifications about the time he will need to depart to reach the store.
+
+\subsubsection{Communication interfaces}
+Customers can access the system through a working internet connection.

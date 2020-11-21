@@ -12,7 +12,11 @@
 \BOOKMARK [2][-]{subsection.1.5}{Reference Documents}{section.1}% 12
 \BOOKMARK [2][-]{subsection.1.6}{Document Structure}{section.1}% 13
 \BOOKMARK [1][-]{section.2}{Overall Description}{}% 14
-\BOOKMARK [1][-]{section.3}{Specific Requirements}{}% 15
-\BOOKMARK [1][-]{section.4}{Formal Analysis Using Alloy}{}% 16
-\BOOKMARK [1][-]{section.5}{Effort Spent}{}% 17
-\BOOKMARK [1][-]{Item.19}{References}{}% 18
+\BOOKMARK [2][-]{subsection.2.1}{Product perspective}{section.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Customer}{subsection.2.1}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Store owner}{subsection.2.1}% 17
+\BOOKMARK [3][-]{subsubsection.2.1.3}{State charts}{subsection.2.1}% 18
+\BOOKMARK [1][-]{section.3}{Specific Requirements}{}% 19
+\BOOKMARK [1][-]{section.4}{Formal Analysis Using Alloy}{}% 20
+\BOOKMARK [1][-]{section.5}{Effort Spent}{}% 21
+\BOOKMARK [1][-]{Item.26}{References}{}% 22

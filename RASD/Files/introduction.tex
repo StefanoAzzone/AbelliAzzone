@@ -1,15 +1,16 @@
 \subsection{Purpose}
 The coronavirus emergency has put a strain on society on many levels, in  particular,  grocery  shopping can  become  a  challenge  in  the presence  of  such  strict  rules: supermarkets  need to  restrict  access  to  their  stores  to  avoid having  crowds  inside and long  lines outside. The  goal  of  this  project  is  to  develop  an  easy-to-use  application  that,  on  the  one  side,  allows  store managers  to  regulate  the  influx  of  people  in  the  building  and,  on  the  other  side,  saves  people  from having to line up and stand outside of stores for hours on end. \\\\
-The application will allow customers to “line up” (i.e., retrieve a number) from their home, and then wait  until  their  number  is  called  (or  is  close  to  being  called)  to  approach  the  store.  In  addition,  the application could be used to generate QR codes that would be scanned upon entering the store, thus allowing store managers to monitor entrances.
+The application will allow customers to “line up” (i.e., retrieve a number) from their home, and then wait  until  their  number  is  called  (or  is  close  to  being  called)  to  approach  the  store.  In  addition,  the application could be used to generate QR codes that would be scanned upon entering the store, thus allowing store managers to monitor entrances.\\\\
+Follow the goals:
 
-\begin{enumerate}
-	\item CLup should allow customers to queue up remotely and in loco (fallback) so that they don't need to form a physical line
-	\item CLup should allow store owners to allows store managers to regulate the input and output streams of customers in the building
+\begin{enumerate}[label=G\arabic*]
+	\item CLup should allow customers to queue up remotely and on premise in such a way that they don't need to form a physical line
+	\item CLup should allow store owners to regulate how many customers can be simultaneously in their stores
 	\item CLup should provide the customer with a reasonably precise estimate of waiting time
 	\item CLup should alert the customers when it is time to get to the shop taking into account travel time
 	\item CLup should allow customers to book future visits to stores
-	\item CLup should allow customers to specify estimated visit duration and desired objects in order to provide a better guess
-	\item CLup should be able to infer an approximate duration of the visit from an analysis of the previous one to plan visits and manage the queue in a finer way
+	\item CLup should allow customers to specify estimated visit duration and desired objects in order to provide a better guess of waiting time for all the customers
+	\item CLup should be able to infer an approximate duration of the visit from an analysis of the previous ones to plan visits and manage the queue in a finer way
 \end{enumerate}
 
 
@@ -17,31 +18,34 @@ The application will allow customers to “line up” (i.e., retrieve a number) 
 %analysis of the world and of the shared phenomena
 \subsection{Scope}
 The system to be allows to avoid creating queues in front of stores.
-This is accomplished by enabling the users to queue up remotely.
+This is accomplished by enabling the customers to queue up remotely.
 Moreover, the shop owners can oversee customers entering and exiting stores. \\
 The system offers the following functionalities:
-\begin{itemize}
-	\item it allows customers to line up remotely
-	\item it identifies a customer
-	\item it allows identified customers whose position in queue allows it to enter and exit the store
+%TODO: they look a lot like goals/product functions, substitute with (slides):
+% Identifies the product and 
+% application domain
+\begin{enumerate}[label=F\arabic*]
+	\item it allows customers to line up remotely or on premise
+	\item it allows customers whose position in queue allows it to enter and exit the store
 	\item it schedules customers in order to minimize overcrowding inside and outside of the store
 	\item it alerts customers when they should head to the store
-	\item it allows customers to queue up on the spot
 	\item it allows customers to book a visit and optionally specify duration and desired categories of products
-	\item it uses statistics build on entrance and exit data to better evaluate duration of visits
-\end{itemize}
+	\item it allows store owners to set how many customers can be simultaneously in their stores
+	\item it allows store owners to register stores
+	\item it uses statistics build on entrance and exit data, and preferred categories to better evaluate duration of visits
+\end{enumerate}
 \subsubsection{World Phenomena}
-\begin{enumerate}
-	\item Customer reaches the store
-	\item Customer enters or exits shop
-	\item Store owner keeps in check influx of customers in building
+\begin{enumerate}[label=WP\arabic*]
+	\item Customer reaches a store
+	\item Customer enters or exits a store
+	\item Store owner controls current number of customers in one of his stores
 	\item Customer buys products
 \end{enumerate}
 \subsubsection{Shared Phenomena}
-\begin{enumerate}
+\begin{enumerate}[label=SP\arabic*]
 	\item Customer queues up
-	\item Customer is identified in order to allow entrance/exit from store
-	\item Customer is allocated a time slot and is alerted when his turn is close
+	\item Customer is identified in order to allow entrance or exit from a store
+	\item Customer is alerted when his turn is close
 	\item Customer books a visit to a store
 \end{enumerate}
 
@@ -50,26 +54,40 @@ The system offers the following functionalities:
 %what you write here is a comment that is not shown in the final text
 \subsection{Definitions, Acronyms, Abbreviations}
 \subsubsection{Definitions}
-\begin{tabular}{ c c }
+\begin{tabular}{ | m{5cm} | m{10cm} | }
+	\hline
 	Ticket & Virtual or physical artifact used to identify the position of a customer in a queue \\
-	Identification & Customer is identified when he receives a ticket (be it virtual or physical) and he is inserted in the queue\\
+	\hline
 	Reservation & A place in the queue\\
-	Enqueued & A customer is enqueued when he has provided the system with a mean of identification and requested a reservation\\
+	\hline
+	Enqueued & A customer is enqueued when he has provided the system with a means of identification and requested a reservation\\
+	\hline
 	Authorized & A customer is authorized when he has been enqueued and is allowed temporary access access the store.\\
-	Occupation & Number of customers present in the store
+	\hline
+	Occupation & Number of customers currently present in the store\\
+	\hline
 \end{tabular}
 \subsubsection{Acronyms}
-\begin{tabular}{ c c }
+\begin{tabular}{ | m{5cm} | m{10cm} | }
+	\hline
 	RASD & Requirement Analysis and Specification Document \\
+	\hline
 	GPS & Global Positioning System \\
+	\hline
 	S2B & Software to be \\
-	UI & User Interface
+	\hline
+	UI & User Interface\\
+	\hline
 \end{tabular}
 \subsubsection{Abbreviations}
-\begin{tabular}{ c c }
+\begin{tabular}{ | m{5cm} | m{10cm} | }
+	\hline
 	Gn & Goal number n \\
+	\hline
 	Rn & Requirement number n \\
-	Dn & Domain Assumption number n
+	\hline
+	Dn & Domain Assumption number n \\
+	\hline
 \end{tabular}
 \subsection{Revision history}
 Not yet defined.
@@ -83,7 +101,7 @@ Not yet defined.
 	\item Chapter 1: gives an introduction about the project, describing the purpose of the    system informally and defining its scope, its main goals, world and shared phenomena. Moreover this section contains specifications such as the definitions, acronyms, abbreviation,	revision history of the document and the references.
 	\item Chapter 2: contains the overall description of the project, with a more in-depth look at its functionalities. Here are identified the main actors involved in the application’s usage lifecycle, some scenarios that point out the major features of the S2B, and all the necessary domain assumptions, dependencies and constraints. This section also provides a class diagram, which aid to better understand the general structure of the project, and some state diagrams, to make the evolution of the crucial objects clear.
 	\item Chapter 3: This section contains the core of the document: first it presents the interface requirement including user, hardware, software and communication interfaces.
-	Then it offers the specification and the description of all the functional requirements necessary in order to reach the goals; is also provided a list of use cases, with their corresponding sequence diagrams and their mapping on the requirements, as long as some scenarios, useful to identify specific cases in which the application can be utilised.
+	Then it offers the specification and the description of all the functional requirements necessary in order to reach the goals; is also provided a list of use cases, with their corresponding sequence diagrams and their mapping on the requirements, as long as some scenarios, useful to identify specific cases in which the application can be utilized.
 	Finally non-functional requirements are defined, including performance, design and the software systems attributes.
 	\item Chapter 4: includes the alloy code and the corresponding metamodels generated from it, in order to show how the project has been modeled and represented through the language.   
 	\item Chapter 5: shows the effort which each member of the group spent working on the project.

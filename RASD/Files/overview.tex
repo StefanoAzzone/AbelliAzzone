@@ -1,20 +1,28 @@
 \subsection{Product perspective}
-The S2B will be used by two kinds of users: customers store owner.
-
+The S2B will be used by two kinds of users: customers and store owners, and offers to each of them different functionalities:
+%TODO: probably move it to product functions and write some general description here about what slides say:
+% Describes external interfaces: system, 
+% user, hardware, software; also 
+% operations and site adaptation, and 
+% hardware constraints
 \subsubsection{Customer}
 The customer can create reservations for a desired store: such reservation is then inserted into a queue.\\This queue is managed in order to avoid overcrowding. To achieve this, statistics about visits' durations are exploited, taking also into account information that customers may provide (e.g. which department of the store they want to visit).\\
 There are multiple types of reservations that can be requested:
 \begin{enumerate}
 	\item Immediate reservation: the costumer wants to queue up immediately to a store. He/she is also provided with an estimation of the time he has to wait before his/her turn.
 	\item Future reservation: the costumer wants to book a future visit at a desired time and store.\\ When creating the reservation the customer can specify how long he/she intends to stay and which departments of the market he/she plans to go to, in order to provide a better plan. If he/she does not specify the duration the system can infer it using some statistic built on his/her previous visits. Then the customer will be provided whit the actual time he will be able to access the store (considering the bookings from other customers).
-	\item On premise reservation: the customer is allowed to enqueue directly at the store. Each of them will provide a system to print tickets so that those who do not have access to the required technology for the previous options can still line up.\\These tickets contain a reservation number and an estimation of the waiting time before being able to enter.
+	\item On premise reservation: the customer is allowed to enqueue directly at the store. Each of them will provide a system to print tickets so that those who do not have access to the required technology for the previous options can still line up. These tickets contain a reservation number and an estimation of the waiting time before being able to enter.
 \end{enumerate}
 Customers who requested an immediate or a future reservation receive an alert when they need to depart to reach the store.
-This alert is based on the location of the customer, so that the time needed to reach the store is taken into account.\\
-Moreover immediate and future reservations can be deleted by who created them.\\
+This alert is based on the location of the customer, so that the time needed to reach the store is taken into account. Moreover immediate and future reservations can be deleted by who created them.\\
 \subsubsection{Store owner}
-The store owner can set the maximum occupation threshold for each of his stores, to avoid overcrowding.\\
-He/she can also monitor the number of customers inside at any time and visualize statistics about the flow of clients and department occupation.
+The store owner can
+\begin{enumerate}
+	\item register a store to the system so that it can be accessed by customers
+	\item set the maximum occupation threshold for each of his stores.
+	\item monitor the number of customers inside at any time
+	\item visualize statistics about the flow of clients and department occupation
+\end{enumerate}
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{Images/ClassDiagram.png}
@@ -70,9 +78,9 @@ We describe here functions that the S2B will support.
 
 \subsection{Assumptions, dependencies and constraints}
 \subsubsection{Domain Assumptions}
-\begin{enumerate}
-	\item The stores have means to allow entrance or exit to customers that are authorized (e.g. QR/NFC).
-	\item Outside stores a device can identify customers and print tickets.
+\begin{enumerate}[label=D\arabic*]
+	\item The stores have means to allow entrance or exit to customers that are authorized (e.g. with QR/NFC connected turnstiles).
+	\item Outside stores a device can identify customers (e.g. with social security card) and print tickets.
 	\item When provided, user location has maximum error of 5 meters.
 	\item There is no way for a customer to enter a store except from entrance and exit.
 	\item Each virtual and physical customer has means of identification unique to that user (e.g, telephone number, social security card).

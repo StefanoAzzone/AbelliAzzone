@@ -10,6 +10,12 @@ There are two categories of users that have different interface requirements:
 		\item view and delete existing reservations
 	\end{itemize}
 	The customer will receive a notification when it is time for him/her to depart to reach the shop.\\\\
+	\includegraphics[scale=0.1]{Images/MainMenuCustomer.png}
+	\qquad
+	\includegraphics[scale=0.1]{Images/BookAVisit.png}
+	%TODO add by car/on foot icons
+	\qquad
+	\includegraphics[scale=0.1]{Images/ShowReservations.png}
 	\item {\bfseries Store owners}\\
 	The store owner is presented with a main menu from which he/she can:
 		\begin{itemize}
@@ -17,6 +23,13 @@ There are two categories of users that have different interface requirements:
 		\item delete a store from the system
 		\item view and edit occupation for currently registered stores
 	\end{itemize}
+	\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=0.1]{Images/MainMenuOwner.png}
+		\qquad \qquad
+		\includegraphics[scale=0.1]{Images/ModifyOccupation.png}
+	\end{figure}
+	
 \end{itemize}
 \subsubsection{Hardware interfaces}
 The S2B requires the following hardware interfaces:
@@ -38,6 +51,20 @@ The system uses a public API to locate the customer and provide him/her with not
 Customers can access the system through a working internet connection.
 
 \subsection{Functional requirements}
+\subsubsection{List of requirements}
+\begin{enumerate}[label=R\arabic*]
+	\item Turnstiles only unlock when activated by authorized customers.
+	\item The number of customers in the store never exceeds the occupation set by the owner.
+	%\item The customer is alerted when his/her turn is near.
+	\item The monitor outside the store shows the number of the last authorized customer.
+	\item The system allows customers and store owners to register and log in.
+	\item The system must be able to validate the authenticity of the identifying information provided in registration requests.
+	\item The system allows customers to search for a store among those registered by their owners.
+	\item Registered customers can send a reservation request to the system.
+	\item Registered customers can specify information about their visit (e.g. estimated duration, desired category of products).
+	\item The system must use gathered data to build statistics. %TODO to ask.
+	\item The system provides customers with means to verify that they are authorized.
+\end{enumerate}
 \subsubsection{Use cases}
 %TODO: 'customer is notified' use case: is it useless?
 \paragraph{Customer registration}
@@ -66,7 +93,7 @@ Customers can access the system through a working internet connection.
 			\item validation of identifying information is not successful
 			\item the customer decides to cancel the registration
 		\end{enumerate}
-		If one of the events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu\\
+		If one of the first two events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu.\newline If event 3 occurs the customer is redirected to the main page.\\
 		\hline
 	\end{tabular}
 \end{flushleft}
@@ -97,7 +124,7 @@ Customers can access the system through a working internet connection.
 			\item validation of identifying information is not successful
 			\item the store owner decides to cancel the registration
 		\end{enumerate}
-		If one of the events described above occur, the application will alert the store owner and provide him with the possibility to retry or go back to the initial menu\\
+		If one of the first two events described above occur, the application will alert the store owner and provide him with the possibility to retry or go back to the initial menu.\newline If event 3 occurs the store owner is redirected to the main page.\\
 		\hline
 	\end{tabular}
 \end{flushleft}
@@ -120,6 +147,7 @@ Customers can access the system through a working internet connection.
 				\item with an immediate reservation
 				\item with a future reservation (and optionally inserts desired categories of item he/she intends to buy and how much time he/she intends to spend at the store)
 			\end{itemize}
+			\item customer specify  whether he is going to reach the store by car or on foot
 			\item customer submits reservation request
 		\end{enumerate}\\
 		\hline
@@ -128,6 +156,7 @@ Customers can access the system through a working internet connection.
 		Exceptions & \begin{enumerate}
 			\item customer decides to cancel the reservation
 		\end{enumerate}
+	%TODO store e chiuso
 		If one of the events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu\\
 		\hline
 	\end{tabular}
@@ -157,7 +186,7 @@ Customers can access the system through a working internet connection.
 		Exceptions & \begin{enumerate}
 			\item customer decides to cancel the reservation
 		\end{enumerate}
-		If one of the events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu\\
+		If one of the events described above occur, the application will alert the customer and go back to the initial menu\\
 		\hline
 	\end{tabular}
 \end{flushleft}
@@ -173,7 +202,7 @@ Customers can access the system through a working internet connection.
 		Entry condition & Customer has logged in on the smartphone application and is at the entrance of a store\\
 		\hline
 		Event flow & \begin{enumerate}
-			\item customer selects the option to show existing reservations from main menu
+			\item customer selects the option to show existing reservations from main menu of the phone app %TODO web app?????
 			\item customer selects an existing reservation and if authorized (i.e. it is his turn to enter the store) he/she is given the means to identify him/herself (e.g. display QR or activate NFC)
 			\item customer identifies him/herself at the turnstiles
 		\end{enumerate}\\
@@ -183,7 +212,7 @@ Customers can access the system through a working internet connection.
 		Exceptions & \begin{enumerate}
 			\item customer is not authorized to enter the store
 		\end{enumerate}
-		If one of the events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu\\
+		If the event described above occurs, the turnstiles will not let the customer in\\
 		\hline
 	\end{tabular}
 \end{flushleft}
@@ -223,18 +252,17 @@ Customers can access the system through a working internet connection.
 		\hline
 		Event flow & \begin{enumerate}
 			\item store owner selects the option register a store from main menu
-			\item store owner inserts necessary information and sets up equipment
+			\item store owner inserts necessary information and sets up equipment (i.e. connect printer, monitor and turnstiles to the system)
 			\item store owner submits store registration request
 		\end{enumerate}\\
 		\hline
 		Exit conditions & Store registration is confirmed\\
 		\hline
 		Exceptions & \begin{enumerate}
-			\item store owner decides to cancel the store registration
 			\item information is missing or incorrect
-			\item equipment is not working properly
+			\item equipment is not working properly			\item store owner decides to cancel the store registration
 		\end{enumerate}
-		If one of the events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu\\
+		If one of the events described above occur, the application will alert the store owner and provide him with the possibility to retry or go back to the initial menu\\
 		\hline
 	\end{tabular}
 \end{flushleft}
@@ -260,7 +288,7 @@ Customers can access the system through a working internet connection.
 		Exceptions & \begin{enumerate}
 			\item the threshold value is inadequate
 		\end{enumerate}
-		If one of the events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu\\
+		If the event described above occurs, the application will alert the store owner and provide him with the possibility to retry or go back to the initial menu\\
 		\hline
 	\end{tabular}
 \end{flushleft}

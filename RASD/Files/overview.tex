@@ -36,6 +36,7 @@ Here we show the main processes that the system will manage, and the states in w
 	\includegraphics[width=\textwidth]{Images/StateDiagram.png}
 	\caption{\label{fig:metamodel3}State Diagram 1: Creation of a reservation.}
 \end{figure}\\
+%TODO add by car/on foot request
 The figure above illustrates how the customer creates a reservation (virtual customer). The customer accesses the main menu. From there he/she can request an immediate reservation or a future reservation. If he/she requests an immediate reservation, it is created and the process terminates. If he/she requires a future reservation he can add the departments he/she intends to visit, and how much time he/she is going to spend at the store. Then the reservation is created and the process terminates.\\\\\\\\
 
 \begin{figure}[!htb]
@@ -80,7 +81,9 @@ We describe here functions that the S2B will support.
 \subsubsection{Domain Assumptions}
 \begin{enumerate}[label=D\arabic*]
 	\item The stores have means to allow entrance or exit to customers that are authorized (e.g. with QR/NFC connected turnstiles).
+	\item Turnstiles only let one person in each time they unlock.
 	\item Outside stores a device can identify customers (e.g. with social security card) and print tickets.
+	\item Outside stores there is a monitor.
 	\item When provided, user location has maximum error of 5 meters.
 	\item There is no way for a customer to enter a store except from entrance and exit.
 	\item Each virtual and physical customer has means of identification unique to that user (e.g, telephone number, social security card).

@@ -65,6 +65,8 @@ Customers can access the system through a working internet connection.
 	\item The system must use gathered data to build statistics. %TODO to ask.
 	\item The system provides customers with means to verify that they are authorized.
 \end{enumerate}
+\subsubsection{Mapping on requirements}
+\subsubsection{Use case diagram}
 \subsubsection{Use cases}
 %TODO: 'customer is notified' use case: is it useless?
 \paragraph{Customer registration}
@@ -155,9 +157,10 @@ Customers can access the system through a working internet connection.
 		\hline
 		Exceptions & \begin{enumerate}
 			\item customer decides to cancel the reservation
+			\item customer requests immediate reservaiton but store is closed at that time
 		\end{enumerate}
 	%TODO store e chiuso
-		If one of the events described above occur, the application will alert the customer and provide him with the possibility to retry or go back to the initial menu\\
+		If one of the events described above occur, the application will alert the customer and go back to the initial menu\\
 		\hline
 	\end{tabular}
 \end{flushleft}
@@ -199,13 +202,15 @@ Customers can access the system through a working internet connection.
 		\hline
 		Actors & Customer\\
 		\hline
-		Entry condition & Customer has logged in on the smartphone application and is at the entrance of a store\\
+		Entry condition & Customer has logged in on the smartphone application and is at the entrance of a store or has printed authorization from the web app\\
 		\hline
-		Event flow & \begin{enumerate}
-			\item customer selects the option to show existing reservations from main menu of the phone app %TODO web app?????
+		Event flow &
+		If customer has a smartphone:
+		\begin{enumerate}
+			\item customer selects the option to show existing reservations from main menu of the phone app 
 			\item customer selects an existing reservation and if authorized (i.e. it is his turn to enter the store) he/she is given the means to identify him/herself (e.g. display QR or activate NFC)
-			\item customer identifies him/herself at the turnstiles
-		\end{enumerate}\\
+		\end{enumerate}
+		Then the customer identifies him/herself at the turnstiles\\
 		\hline
 		Exit conditions & Customer enters the store\\
 		\hline
@@ -292,3 +297,46 @@ Customers can access the system through a working internet connection.
 		\hline
 	\end{tabular}
 \end{flushleft}
+\subsubsection{Sequence diagrams}
+\subsubsection{Scenarios} %TODO: should they go to section 2 as assignment says?
+\paragraph{Customer queues up remotely}
+Gordon comes home from work at 5:30 PM. He would like to go to the store. He is a registered user of CLup. His smartphone has internet connection and GPS on. He opens the CLup mobile application and requests an immediate reservation to a store of his choice, selecting the car as means of transport. After some time he is alerted that he needs to depart to avoid being late at the store and losing the reservation. Pietro departs and arrives to the store. He opens the application and selects the reservation he created which now contains the number that represents his position in the queue. After some time the monitor outside the store shows his number, which means it is his turn to enter. He activates the turnstiles with the QR now shown in the reservation page of the mobile application and enters the store. He buys all the products he needs. He opens the application and selects the reservation he created which now contains a QR code. He activates the turnstiles and exits the store.
+%TODO: be like Pietro
+\paragraph{Customer queues up on premise}
+Marco is an old man. He does not have a smartphone. He would like to go to the store next to his house on foot. He reaches the store, and retrieves a queue reservation ticket from the printer outside the store, by inserting his social security card. The ticket displays a QR code and a number that represents his position in queue. After some time the monitor outside the store shows his number, which means it is his turn to enter. He activates the turnstiles with the QR printed on his ticket and enters the store. He buys all the products he needs. He activates the turnstiles with his ticket and exits the store.
+\subsection{Performance Requirements}
+The system cannot guarantee that a customer can enter a store at a precise time unless it requires users to exit after a maximum time (which it doesn't).
+The system guarantees that if
+%TODO: should those be domain assumptions?
+\begin{itemize}
+	\item the customer never disconnects from the internet and GPS
+	\item the customer specified the correct means of transport when creating the reservation
+\end{itemize}
+ he/she will be alerted when he needs to depart to reach a store (in order not to be late) with a delay of at most 10 seconds.
+\subsection{Design Constraints}
+\subsubsection{Standards compliance}
+The code should follow the requirements contained in this document, and be thoroughly commented.
+\subsubsection{Hardware limitations}
+The software the customer uses requires either:
+\begin{itemize}
+	\item a smartphone to use the smart application
+	\item a computer to use the web application and a home printer to print reservation
+\end{itemize}
+The software the store owner uses requires both:
+\begin{itemize}
+	\item turnstiles activated by QR
+	\item reservation printer activated by social security card
+\end{itemize}
+\subsubsection{Any other constraint}
+Customers cannot have more than three active reservation requests for different stores and more than one for the same store.
+\subsection{Software System Attributes}
+\subsubsection{Reliability}
+The system must have an appropriate infrastructure with a full backup system located in an separate office distant at least 100km (nuclear fallout radius). Adequate personnel will guarantee recovery time to substitute faulty hardware.
+\subsubsection{Availability}
+The system should be up for 99\% of the time (3.65 MTTR) since its temporary downtime does not cause emergency situations. The system is fully automated. The users are alerted about system downtime with a delay of at most 10 minutes. The users are alerted that the system is up again with a delay of at most 10 minutes.
+\subsubsection{Security}
+The location of customers is sensitive information and therefore is never stored. Customers and store owners provide identifying information during registration: the databases containing such information must be protected against internal and external attacks. Communication between central system and users is encrypted.
+\subsubsection{Maintainability}
+The system is easy to maintain: its code is thoroughly commented and modular. Appropriate design patterns are exploited.
+\subsubsection{Portability}
+The smartphone application runs under Android and iOS. The web application runs under Android, iOS, Windows, MacOS.

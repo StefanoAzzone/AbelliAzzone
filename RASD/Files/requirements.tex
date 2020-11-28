@@ -58,12 +58,13 @@ Customers can access the system through a working internet connection.
 	%\item The customer is alerted when his/her turn is near.
 	\item The monitor outside the store shows the number of the last authorized customer.
 	\item The system allows customers and store owners to register and log in.
-	\item The system must be able to validate the authenticity of the identifying information provided in registration requests.
+	\item The system must be able to validate the authenticity of the identifying information provided.
 	\item The system allows customers to search for a store among those registered by their owners.
 	\item Registered customers can send a reservation request to the system.
 	\item Registered customers can specify information about their visit (e.g. estimated duration, desired category of products).
 	\item The system must use gathered data to build statistics. %TODO to ask.
 	\item The system provides customers with means to verify that they are authorized.
+	\item The system exchanges information with the printer.
 \end{enumerate}
 \subsubsection{Mapping on requirements}
 \subsubsection{Use case diagram}
@@ -131,6 +132,32 @@ Customers can access the system through a working internet connection.
 	\end{tabular}
 \end{flushleft}
 
+\paragraph{User logs in}
+\begin{flushleft}
+	\begin{tabular} { | m{3cm} | m{10cm} | }
+		\hline
+		Name & User logs in\\
+		\hline
+		Actors & Customer or store owner\\
+		\hline
+		Entry condition & The user has opened the application on his device, and has already registered to the system\\
+		\hline
+		Event flow & \begin{enumerate}
+            \item User chooses to log in from the welcome menu
+            \item User identifies him/herself with created credentials
+		\end{enumerate}\\
+		\hline
+		Exit conditions & User is logged in\\
+		\hline
+		Exceptions & \begin{enumerate}
+			\item User credentials are invalid
+		\end{enumerate}
+		%TODO store e chiuso
+		If the event described above occurs, the application will alert the user and allows him to retry\\
+		\hline
+	\end{tabular}
+\end{flushleft}
+
 \paragraph{Customer queuing up remotely}
 \begin{flushleft}
 	\begin{tabular} { | m{3cm} | m{10cm} | }
@@ -142,13 +169,12 @@ Customers can access the system through a working internet connection.
 		Entry condition & Customer has logged in on the smartphone application or the web app on his computer\\
 		\hline
 		Event flow & \begin{enumerate}
-			\item customer selects the option to queue up from main menu
-			\item customer selects a store from the list of stores registered to the system
-			\item customer selects to queue up
+			\item customer selects to queue up from main menu
 			\begin{itemize}
 				\item with an immediate reservation
 				\item with a future reservation (and optionally inserts desired categories of item he/she intends to buy and how much time he/she intends to spend at the store)
 			\end{itemize}
+			\item customer selects a store from the list of stores registered to the system
 			\item customer specify  whether he is going to reach the store by car or on foot
 			\item customer submits reservation request
 		\end{enumerate}\\
@@ -205,7 +231,7 @@ Customers can access the system through a working internet connection.
 		Entry condition & Customer has logged in on the smartphone application and is at the entrance of a store or has printed authorization from the web app\\
 		\hline
 		Event flow &
-		If customer has a smartphone:
+		If the customer has not printed the reservation ticket he must use his smartphone:
 		\begin{enumerate}
 			\item customer selects the option to show existing reservations from main menu of the phone app 
 			\item customer selects an existing reservation and if authorized (i.e. it is his turn to enter the store) he/she is given the means to identify him/herself (e.g. display QR or activate NFC)
@@ -232,11 +258,13 @@ Customers can access the system through a working internet connection.
 		\hline
 		Entry condition & Customer has logged in on the smartphone application and is in a store\\
 		\hline
-		Event flow & \begin{enumerate}
+		Event flow &
+		If the customer has not printed the reservation ticket he must use his smartphone:
+		\begin{enumerate}
 			\item customer selects the option to show existing reservations from main menu
 			\item customer selects an existing reservation and if authorized (i.e. it is his turn to enter the store) he/she is given the means to identify him/herself (e.g. display QR or activate NFC)
-			\item customer identifies him/herself at the turnstiles
-		\end{enumerate}\\
+		\end{enumerate}
+	    Customer identifies him/herself at the turnstiles\\
 		\hline
 		Exit conditions & Customer exits the store\\
 		\hline

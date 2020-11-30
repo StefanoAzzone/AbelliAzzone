@@ -53,20 +53,67 @@ Customers can access the system through a working internet connection.
 \subsection{Functional requirements}
 \subsubsection{List of requirements}
 \begin{enumerate}[label=R\arabic*]
-	\item Turnstiles only unlock when activated by authorized customers.
+	\item Turnstiles unlock if and only if activated by authorized customers.
 	\item The number of customers in the store never exceeds the occupation set by the owner.
-	%\item The customer is alerted when his/her turn is near.
-	\item The monitor outside the store shows the number of the last authorized customer.
+	\item The monitor outside the store displays the number of the last authorized customer.
 	\item The system allows customers and store owners to register and log in.
-	\item The system must be able to validate the authenticity of the identifying information provided.
+	\item The system validates the authenticity of the identifying information provided.
 	\item The system allows customers to search for a store among those registered by their owners.
 	\item Registered customers can send a reservation request to the system.
-	\item Registered customers can specify information about their visit (e.g. estimated duration, desired category of products).
-	\item The system must use gathered data to build statistics. %TODO to ask.
-	\item The system provides customers with means to verify that they are authorized.
+	\item On premise customers with an identifying document can send a reservation request to the system.
+	\item Registered customers that book a visit can specify estimated visit duration.
+	\item Registered customers that book a visit can specify desired product categories.
+	\item The system provides customers with a QR code to enter the store once authorized.
+	\item The system uses gathered data to build statistics. %TODO to ask.
+	\item Registered customers with a smartphone are alerted when their turn is near.
 	\item The system exchanges information with the printer.
+	\item Registered customers can delete a pending or authorized reservation.
+	\item After a reservation is authorized if it does not become current in a fixed time, it expires.
+	\item Registered customers must specify desired means of transport while requesting a reservation.
+
+	%TODO add that customers have a time window in which they can enter a store after which their reservation expires, otherwise the store could remain empty (limit case)
+	
+	%TODO pensare a come sistemare la faccenda dell'occupazione dei dipartimanti/massima
 \end{enumerate}
 \subsubsection{Mapping on requirements}
+\begin{tabular}{ | m{3cm} | m{5cm} | m{9cm} | }
+	\hline
+	G1 & D1, D2, D5, D6, D8, D9 & R1, R2, R4, R5, R6, R7, R11, R17\\
+	\hline
+	G2 & D1, D2, D3, D4, D5, D6 & R1, R2, R3, R5, R8, R11\\
+	\hline
+	G3 & D1, D2, D3, D4, D5, D6, D8, D9 & R1, R2, R3, R4, R5, R6, R7, R9, R10, R11, R17\\
+	\hline
+	G4 & D1, D2, D5, D8, D9 & R1, R2 \\
+	\hline
+	G5 & D8, D9 & R9, R12, R15, R16\\
+	\hline
+	G6 & D7, D8, D9 & R13\\
+	\hline
+
+\end{tabular}
+\begin{enumerate}[label=G\arabic*]
+	\item CLup should allow customers to queue up remotely
+	\item CLup should allow customers to queue up on premise
+	\item CLup should allow customers to book future visits to stores
+	\item CLup should allow store owners to regulate the maximum number of customers in their stores
+	\item CLup should provide the customer with a reasonably precise estimate of waiting time
+	\item CLup should alert the customers when it is time to get to the shop taking into account travel time
+	%\item CLup should allow customers to specify estimated visit duration and desired objects in order to provide a better guess of waiting time for all the customers
+	%TODO is this a goal or a reqirement???
+	% CLup should be able to infer an approximate duration of the visit from an analysis of the previous ones to plan visits and manage the queue in a finer way
+\end{enumerate}
+\begin{enumerate}[label=D\arabic*]
+	\item The stores have QR activated turnstiles.
+	\item Turnstiles let one and only one person in each time they unlock.
+	\item Outside stores is a social security card activated ticket printer.
+	\item Outside stores there is a monitor.
+	\item There is no way for a customer to enter a store except from entrance and exit.
+	\item Each customer has either a telephone number or an identification document.
+	\item When provided, user location has maximum error of 5 meters.
+	\item To register to the S2B users must have either a smartphone or a computer.
+	\item To register and use the S2B users must have an internet connection.
+\end{enumerate}
 \subsubsection{Use case diagram}
 \subsubsection{Use cases}
 %TODO: 'customer is notified' use case: is it useless?

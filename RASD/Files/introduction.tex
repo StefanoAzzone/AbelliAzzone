@@ -4,14 +4,15 @@ The application will allow customers to “line up” (i.e., retrieve a number) 
 The system must attain the following goals:
 
 \begin{enumerate}[label=G\arabic*]
-	\item CLup should allow customers to queue up remotely and on premise in such a way that they don't need to form a physical line
-	\item CLup should allow store owners to regulate how many customers can be simultaneously in their stores
+	\item CLup should allow customers to queue up remotely
+	\item CLup should allow customers to queue up on premise
+	\item CLup should allow customers to book future visits to stores
+	\item CLup should allow store owners to regulate the maximum number of customers in their stores
 	\item CLup should provide the customer with a reasonably precise estimate of waiting time
 	\item CLup should alert the customers when it is time to get to the shop taking into account travel time
-	\item CLup should allow customers to book future visits to stores
 	%\item CLup should allow customers to specify estimated visit duration and desired objects in order to provide a better guess of waiting time for all the customers
 	%TODO is this a goal or a reqirement???
-	\item CLup should be able to infer an approximate duration of the visit from an analysis of the previous ones to plan visits and manage the queue in a finer way
+	% CLup should be able to infer an approximate duration of the visit from an analysis of the previous ones to plan visits and manage the queue in a finer way
 \end{enumerate}
 
 
@@ -33,7 +34,7 @@ The system offers the following functionalities:
 	\item it allows customers to book a visit and optionally specify duration and desired categories of products
 	\item it allows store owners to monitor flux of people inside the store and set how many customers can be simultaneously inside
 	\item it allows store owners to register stores
-	\item it uses statistics build on entrance and exit data, and preferred categories to better evaluate duration of visits
+%	\item it uses statistics build on entrance and exit data, and preferred categories to better evaluate duration of visits
 \end{enumerate}
 User can access the system using a phone application provided that they own a smartphone with an internet connection. This application allows registered users to easily access the functionality of the system.\\Moreover, for those who do not have access to the required technology or don't want to use the phone application, there is also a web app. Therefore, users will be able to log in and perform the same operations of the phone application using an internet browser.\\ Finally the customers of the store will also have the possibility to create reservations on premise: every shop will be equipped with a device to print tickets in order to give every client a very easy way to line up. Of course customers that wants to queue up "on the spot" must have a means of identification (e.g. document), in order to prevent fake reservations that would slow down the queue. For the same reason users that use the phone application or the web app must log in to identify themselves.\\
 Only customer with a valid reservation (i.e it is their turn) will be allowed to enter the store; to achieve this, each store must have a device (e.g. a QR/NFC reader) to every entrance, and clients must validate their reservation before being admitted inside. They should also do the same to exit, in order to monitor the store's occupation.

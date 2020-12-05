@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.9)  30 NOV 2020 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.10)  5 DEC 2020 16:54
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**main.tex
-(./main.tex
+**./main.tex
+(main.tex
 LaTeX2e <2020-10-01> patch level 2
-L3 programming layer <2020-10-27> xparse <2020-03-03> (./commandsFile.tex
-(c:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2020-10-27> xparse <2020-03-03> (commandsFile.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(c:/texlive/2020/texmf-dist/tex/latex/base/size11.clo
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
 File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count175
@@ -23,15 +21,15 @@ File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(c:/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
-(c:/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 )
-(c:/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box47
 \beforetitleunit=\skip49
@@ -42,11 +40,10 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \titlewidth=\dimen141
 \titlewidthlast=\dimen142
 \titlewidthfirst=\dimen143
-)
-(c:/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+) (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.st
+y
 Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
-
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
 )
@@ -57,33 +54,35 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \FV@StepNumber=\count185
 \FV@OutFile=\write3
 )
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
+f
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen144
 \Gin@req@width=\dimen145
 )
-(c:/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(c:/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(c:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count186
@@ -98,6 +97,8 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen152
 \Gm@layoutvoffset=\dimen153
 \Gm@dimlist=\toks19
+
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
 )
 
 Package geometry Warning: Over-specification in `h'-direction.
@@ -107,7 +108,7 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (845.04684pt) is ignored.
 
-(c:/texlive/2020/texmf-dist/tex/latex/tocloft/tocloft.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
 \cftparskip=\skip51
@@ -144,7 +145,7 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cfttabindent=\skip80
 \cfttabnumwidth=\skip81
 )
-(c:/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip82
@@ -156,35 +157,34 @@ s
 \f@nch@O@erf=\skip88
 \f@nch@O@olf=\skip89
 \f@nch@O@orf=\skip90
-)
-(c:/texlive/2020/texmf-dist/tex/latex/wasysym/wasysym.sty
+) (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty
 Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 \symwasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
 )
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/pifont.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
 
 
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/upzd.fd
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
 
 
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/upsy.fd
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/times.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
-(c:/texlive/2020/texmf-dist/tex/latex/tabu/tabu.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/tabu\tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 
-(c:/texlive/2020/texmf-dist/tex/latex/tools/array.sty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen154
 \ar@mcellbox=\box49
 \extrarowheight=\dimen155
@@ -193,7 +193,7 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \backup@length=\skip92
 \ar@cellbox=\box50
 )
-(c:/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box51
 \sift@deathcycles=\count191
@@ -222,8 +222,7 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@hleads=\box54
 \tabu@vleads=\box55
 \tabu@cellskip=\skip93
-)
-(c:/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
+) (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen167
 \TX@old@table=\dimen168
@@ -233,10 +232,10 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@cols=\count198
 \TX@ftn=\toks23
 )
-(c:/texlive/2020/texmf-dist/tex/latex/ltablex/ltablex.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/ltablex\ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
 
-(c:/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTleft=\skip94
 \LTright=\skip95
@@ -254,7 +253,7 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \c@LT@chunks=\count269
 \LT@p@ftn=\toks24
 ))
-(c:/texlive/2020/texmf-dist/tex/latex/float/float.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count270
 \float@exts=\toks25
@@ -262,18 +261,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks26
 \@floatcapt=\box61
 )
-(c:/texlive/2020/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.st
+y
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
+ (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 
-(c:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count271
@@ -282,10 +281,10 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box62
 \rot@mess@toks=\toks27
 )
-(c:/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-(c:/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen173
 \captionmargin@=\dimen174
@@ -301,20 +300,19 @@ Package caption Info: Standard document class detected.
 Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
 
-(c:/texlive/2020/texmf-dist/tex/latex/caption/ltcaption.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
-)
-(c:/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(c:/texlive/2020/texmf-dist/tex/latex/colortbl/colortbl.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks28
 \minrowclearance=\skip100
@@ -329,14 +327,12 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-
-(c:/texlive/2020/texmf-dist/tex/latex/graphics/dvipsnam.def
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
-(c:/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
+)) (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(c:/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip101
 \enit@outerparindent=\dimen180
@@ -344,11 +340,10 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box63
 \enit@count@id=\count275
 \enitdp@description=\count276
-)
-(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks30
 \symAMSa=\mathgroup5
@@ -357,57 +352,64 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(c:/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-(c:/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
+s.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(c:/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
+sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(c:/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.
+sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
+ekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
+sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacr
+o.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
+y
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen181
 \Hy@linkcounter=\count277
 \Hy@pagecounter=\count278
-
-(c:/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(c:/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.st
+y
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count279
@@ -420,18 +422,18 @@ Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
 \c@Hy@tempcnt=\count280
-
-(c:/texlive/2020/texmf-dist/tex/latex/url/url.sty
+ (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen182
 
-(c:/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(c:/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
+c.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -448,7 +450,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
 
-(c:/texlive/2020/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
@@ -458,11 +460,10 @@ with kernel methods
 \c@Hfootnote=\count284
 )
 Package hyperref Info: Driver: hpdftex.
-
-(c:/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-(c:/texlive/2020/texmf-dist/tex/latex/base/atveryend-ltx.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
@@ -470,18 +471,20 @@ with kernel methods
 \Fld@listcount=\count285
 \c@bookmark@seq@number=\count286
 
-(c:/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
+lecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(c:/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
+counter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip102
-)
-(./util/highlight.tex (c:/texlive/2020/texmf-dist/tex/generic/soul/soul.sty
+) (util/highlight.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks31
 \SOUL@lasttoken=\toks32
@@ -493,34 +496,47 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen186
 \SOUL@ulht=\dimen187
 )
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz
+.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.s
+ty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-common.tex
 \pgfutil@everybye=\toks36
 \pgfutil@tempdima=\dimen188
 \pgfutil@tempdimb=\dimen189
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
-) (c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-common-lists.tex))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-latex.def
 \pgfutil@abb=\box64
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs
+.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex
+)
 Package: pgfrcs 2020/10/01 v3.1.6a (3.1.6a)
 ))
 Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
 
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore
+.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys
+.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys.code.tex
 Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex
 \pgfkeys@pathtoks=\toks37
 \pgfkeys@temptoks=\toks38
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+sfiltered.code.tex
 \pgfkeys@tmptoks=\toks39
 ))
 \pgf@x=\dimen190
@@ -543,31 +559,43 @@ Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 \t@pgf@tokb=\toks41
 \t@pgf@tokc=\toks42
 \pgf@sys@id@count=\count291
- (c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.
+cfg
 File: pgf.cfg 2020/10/01 v3.1.6a (3.1.6a)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-pdftex.def
 File: pgfsys-pdftex.def 2020/10/01 v3.1.6a (3.1.6a)
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-common-pdf.def
 File: pgfsys-common-pdf.def 2020/10/01 v3.1.6a (3.1.6a)
 )))
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+yssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgfsyssoftpath@smallbuffer@items=\count292
 \pgfsyssoftpath@bigbuffer@items=\count293
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-)) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+re.code.tex
 Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc
+.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil
+.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpars
+er.code.tex
 \pgfmath@dimen=\dimen256
 \pgfmath@count=\count294
 \pgfmath@box=\box65
@@ -575,28 +603,32 @@ Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
 \pgfmath@stack@operand=\toks44
 \pgfmath@stack@operation=\toks45
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
-x)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
-.code.tex)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
-ex)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
-de.tex)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
-)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
-x)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
-)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
-etics.code.tex)))
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.basic.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.trigonometric.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.random.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.comparison.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.base.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.round.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.misc.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.integerarithmetics.code.tex)))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloa
+t.code.tex
 \c@pgfmathroundto@lastzeros=\count295
 ))
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code
+.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repoints.code.tex
 File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@picminx=\dimen257
 \pgf@picmaxx=\dimen258
@@ -613,111 +645,132 @@ File: pgfcorepoints.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@zx=\dimen269
 \pgf@zy=\dimen270
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
-e.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@path@lastx=\dimen271
 \pgf@path@lasty=\dimen272
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
-x
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@shorten@end@additional=\dimen273
 \pgf@shorten@start@additional=\dimen274
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rescopes.code.tex
 File: pgfcorescopes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgfpic=\box66
 \pgf@hbox=\box67
 \pgf@layerbox@main=\box68
 \pgf@picture@serial@count=\count296
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
-.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+regraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgflinewidth=\dimen275
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
-ode.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@pt@x=\dimen276
 \pgf@pt@y=\dimen277
 \pgf@pt@temp=\dimen278
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+requick.code.tex
 File: pgfcorequick.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reobjects.code.tex
 File: pgfcoreobjects.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
-de.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rearrows.code.tex
 File: pgfcorearrows.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgfarrowsep=\dimen279
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reshade.code.tex
 File: pgfcoreshade.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@max=\dimen280
 \pgf@sys@shading@range@num=\count297
 \pgf@shadingcount=\count298
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reimage.code.tex
 File: pgfcoreimage.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reexternal.code.tex
 File: pgfcoreexternal.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgfexternal@startupbox=\box69
 ))
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+relayers.code.tex
 File: pgfcorelayers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
-.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransparency.code.tex
 File: pgfcoretransparency.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repatterns.code.tex
 File: pgfcorepatterns.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-) (c:/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rerdf.code.tex
 File: pgfcorerdf.code.tex 2020/10/01 v3.1.6a (3.1.6a)
-))) (c:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
-x
+)))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgfnodeparttextbox=\box70
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eplot.code.tex
 File: pgfmoduleplot.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
-y
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@nodesepstart=\dimen281
 \pgf@nodesepend=\dimen282
 )
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
-y
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-1-18.sty
 Package: pgfcomp-version-1-18 2020/10/01 v3.1.6a (3.1.6a)
-)) (c:/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(c:/texlive/2020/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.s
+ty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.
+sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor
+.code.tex
 Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex)
 \pgffor@iter=\dimen283
 \pgffor@skip=\dimen284
 \pgffor@stack=\toks46
 \pgffor@toks=\toks47
 ))
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz\tikz.code.tex
 Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
-de.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgf@plot@mark@count=\count299
 \pgfplotmarksize=\dimen285
@@ -739,7 +792,8 @@ File: pgflibraryplothandlers.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \tikznumberofcurrentchild=\count302
 \tikz@fig@count=\count303
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+ematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 \pgfmatrixcurrentrow=\count304
 \pgfmatrixcurrentcolumn=\count305
@@ -747,20 +801,20 @@ File: pgfmodulematrix.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
 \tikz@expandcount=\count307
 
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarytopaths.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )))
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarycalc.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2020/10/01 v3.1.6a (3.1.6a)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarydecorations.pathmorphing.code.tex
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarydecorations.code.tex
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
-ex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+edecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen294
 \pgfdecoratedremainingdistance=\dimen295
 \pgfdecoratedinputsegmentcompleteddistance=\dimen296
@@ -772,23 +826,23 @@ ex
 )
 \tikz@lib@dec@box=\box75
 )
-(c:/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
-orations.pathmorphing.code.tex))
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decora
+tions\pgflibrarydecorations.pathmorphing.code.tex))
 \highlight@previous=\dimen301
 \highlight@current=\dimen302
-) (./util/abbrev.tex))
+) (util/abbrev.tex))
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 3.
 
 
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/t1ptm.fd
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-(c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count309
 \l__pdf_internal_box=\box76
-)
-(./main.aux)
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -807,7 +861,9 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
- (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
+kii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count310
 \scratchdimen=\dimen303
@@ -820,15 +876,13 @@ LaTeX Font Info:    ... okay on input line 3.
 \MPnumerator=\count314
 \makeMPintoPDFobject=\count315
 \everyMPtoPDFconversion=\toks49
-) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
+base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-
-(c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -867,13 +921,14 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 3.
-(c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
-(c:/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
+tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count316
@@ -881,50 +936,49 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
-
-(./main.out) (./main.out)
+ (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-<Images/PolimiLogo.png, id=207, 405.515pt x 125.46875pt>
+<Images/PolimiLogo.png, id=205, 405.515pt x 125.46875pt>
 File: Images/PolimiLogo.png Graphic file (type png)
 <use Images/PolimiLogo.png>
 Package pdftex.def Info: Images/PolimiLogo.png  used on input line 13.
 (pdftex.def)             Requested size: 202.75699pt x 62.7342pt.
  [1
 
-{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Images/Polimi
-Logo.png>]
+{C:/Users/Simone/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Images/Polim
+iLogo.png>]
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 36
 .
 
-(c:/texlive/2020/texmf-dist/tex/latex/wasysym/uwasy.fd
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
 
 
-(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
 
 
-(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 13.59999pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[2] (./main.toc [3])
+[2] (main.toc [3])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [4] (./Files/introduction.tex
+ [4] (Files/introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
@@ -936,12 +990,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
 [5
 
-] [6]) [7] (./Files/overview.tex
+] [6]) [7] (Files/overview.tex
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
 
  []
 
-<Images/ClassDiagram.png, id=318, 1215.54124pt x 735.74875pt>
+<Images/ClassDiagram.png, id=315, 1215.54124pt x 735.74875pt>
 File: Images/ClassDiagram.png Graphic file (type png)
 <use Images/ClassDiagram.png>
 Package pdftex.def Info: Images/ClassDiagram.png  used on input line 35.
@@ -949,7 +1003,7 @@ Package pdftex.def Info: Images/ClassDiagram.png  used on input line 35.
 [8
 
 ]
-<Images/StateDiagram1.png, id=331, 874.26625pt x 452.69125pt>
+<Images/StateDiagram1.png, id=328, 874.26625pt x 452.69125pt>
 File: Images/StateDiagram1.png Graphic file (type png)
 <use Images/StateDiagram1.png>
 Package pdftex.def Info: Images/StateDiagram1.png  used on input line 43.
@@ -975,35 +1029,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--48
  []
 
 [9 <./Images/ClassDiagram.png> <./Images/StateDiagram1.png>]
-<Images/StateDiagram2.png, id=340, 1064.97874pt x 163.61125pt>
+<Images/StateDiagram2.png, id=337, 1064.97874pt x 163.61125pt>
 File: Images/StateDiagram2.png Graphic file (type png)
 <use Images/StateDiagram2.png>
 Package pdftex.def Info: Images/StateDiagram2.png  used on input line 51.
 (pdftex.def)             Requested size: 455.24411pt x 69.93704pt.
-<Images/StateDiagram3.png, id=341, 1064.97874pt x 188.705pt>
+<Images/StateDiagram3.png, id=338, 1064.97874pt x 188.705pt>
 File: Images/StateDiagram3.png Graphic file (type png)
 <use Images/StateDiagram3.png>
 Package pdftex.def Info: Images/StateDiagram3.png  used on input line 58.
 (pdftex.def)             Requested size: 455.24411pt x 80.66357pt.
-<Images/StateDiagram4.png, id=342, 1054.94125pt x 128.48pt>
+<Images/StateDiagram4.png, id=339, 1054.94125pt x 128.48pt>
 File: Images/StateDiagram4.png Graphic file (type png)
 <use Images/StateDiagram4.png>
 Package pdftex.def Info: Images/StateDiagram4.png  used on input line 65.
 (pdftex.def)             Requested size: 455.24411pt x 55.44331pt.
  [10 <./Images/StateDiagram2.png> <./Images/StateDiagram3.png> <./Images/StateD
 iagram4.png>])
-[11] (./Files/requirements.tex
-<Images/MainMenuCustomer.png, id=374, 1355.0625pt x 2409.0pt>
+[11] (Files/requirements.tex
+<Images/MainMenuCustomer.png, id=371, 1355.0625pt x 2409.0pt>
 File: Images/MainMenuCustomer.png Graphic file (type png)
 <use Images/MainMenuCustomer.png>
 Package pdftex.def Info: Images/MainMenuCustomer.png  used on input line 13.
 (pdftex.def)             Requested size: 135.51419pt x 240.91411pt.
-<Images/BookAVisit.png, id=375, 1355.0625pt x 2409.0pt>
+<Images/BookAVisit.png, id=372, 1355.0625pt x 2409.0pt>
 File: Images/BookAVisit.png Graphic file (type png)
 <use Images/BookAVisit.png>
 Package pdftex.def Info: Images/BookAVisit.png  used on input line 15.
 (pdftex.def)             Requested size: 135.51419pt x 240.91411pt.
-<Images/ShowReservations.png, id=376, 1355.0625pt x 2409.0pt>
+<Images/ShowReservations.png, id=373, 1355.0625pt x 2409.0pt>
 File: Images/ShowReservations.png Graphic file (type png)
 <use Images/ShowReservations.png>
 Package pdftex.def Info: Images/ShowReservations.png  used on input line 18.
@@ -1018,12 +1072,12 @@ Overfull \hbox (26.63452pt too wide) in paragraph at lines 12--19
 []  []  [] 
  []
 
-<Images/MainMenuOwner.png, id=377, 1355.0625pt x 2409.0pt>
+<Images/MainMenuOwner.png, id=374, 1355.0625pt x 2409.0pt>
 File: Images/MainMenuOwner.png Graphic file (type png)
 <use Images/MainMenuOwner.png>
 Package pdftex.def Info: Images/MainMenuOwner.png  used on input line 28.
 (pdftex.def)             Requested size: 135.51419pt x 240.91411pt.
-<Images/ModifyOccupation.png, id=378, 1355.0625pt x 2409.0pt>
+<Images/ModifyOccupation.png, id=375, 1355.0625pt x 2409.0pt>
 File: Images/ModifyOccupation.png Graphic file (type png)
 <use Images/ModifyOccupation.png>
 Package pdftex.def Info: Images/ModifyOccupation.png  used on input line 30.
@@ -1032,7 +1086,13 @@ Package pdftex.def Info: Images/ModifyOccupation.png  used on input line 30.
 
  <./Images/MainMenuCustomer.png> <./Images/BookAVisit.png> <./Images/ShowReserv
 ations.png>] [13 <./Images/MainMenuOwner.png> <./Images/ModifyOccupation.png>]
-Overfull \hbox (66.0527pt too wide) in paragraph at lines 79--95
+Overfull \hbox (2.6473pt too wide) in paragraph at lines 63--64
+[]\T1/ptm/m/n/10.95 Non reg-is-tered cus-tomers with an iden-ti-fy-ing doc-u-me
+nt can re-quest reser-va-tions through the printer. 
+ []
+
+
+Overfull \hbox (66.0527pt too wide) in paragraph at lines 80--96
 [] 
  []
 
@@ -1048,88 +1108,88 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-<Images/UseCase1Diagram.png, id=506, 603.25375pt x 553.06625pt>
+<Images/UseCase1Diagram.png, id=502, 603.25375pt x 553.06625pt>
 File: Images/UseCase1Diagram.png Graphic file (type png)
 <use Images/UseCase1Diagram.png>
-Package pdftex.def Info: Images/UseCase1Diagram.png  used on input line 376.
+Package pdftex.def Info: Images/UseCase1Diagram.png  used on input line 377.
 (pdftex.def)             Requested size: 301.62613pt x 276.53244pt.
-<Images/UseCase2Diagram.png, id=507, 603.25375pt x 553.06625pt>
+<Images/UseCase2Diagram.png, id=503, 603.25375pt x 553.06625pt>
 File: Images/UseCase2Diagram.png Graphic file (type png)
 <use Images/UseCase2Diagram.png>
-Package pdftex.def Info: Images/UseCase2Diagram.png  used on input line 377.
+Package pdftex.def Info: Images/UseCase2Diagram.png  used on input line 378.
 (pdftex.def)             Requested size: 301.62613pt x 276.53244pt.
-<Images/UseCase3Diagram.png, id=508, 548.0475pt x 442.65375pt>
+<Images/UseCase3Diagram.png, id=504, 548.0475pt x 442.65375pt>
 File: Images/UseCase3Diagram.png Graphic file (type png)
 <use Images/UseCase3Diagram.png>
-Package pdftex.def Info: Images/UseCase3Diagram.png  used on input line 378.
+Package pdftex.def Info: Images/UseCase3Diagram.png  used on input line 379.
 (pdftex.def)             Requested size: 274.02307pt x 221.32632pt.
-<Images/UseCase4Diagram.png, id=509, 569.12625pt x 733.74126pt>
+<Images/UseCase4Diagram.png, id=505, 569.12625pt x 733.74126pt>
 File: Images/UseCase4Diagram.png Graphic file (type png)
 <use Images/UseCase4Diagram.png>
-Package pdftex.def Info: Images/UseCase4Diagram.png  used on input line 379.
+Package pdftex.def Info: Images/UseCase4Diagram.png  used on input line 380.
 (pdftex.def)             Requested size: 284.56242pt x 366.86974pt.
-<Images/UseCase5Diagram.png, id=510, 581.17125pt x 442.65375pt>
+<Images/UseCase5Diagram.png, id=506, 581.17125pt x 442.65375pt>
 File: Images/UseCase5Diagram.png Graphic file (type png)
 <use Images/UseCase5Diagram.png>
-Package pdftex.def Info: Images/UseCase5Diagram.png  used on input line 380.
+Package pdftex.def Info: Images/UseCase5Diagram.png  used on input line 381.
 (pdftex.def)             Requested size: 290.58492pt x 221.32632pt.
-<Images/UseCase6-7Diagram.png, id=511, 743.77875pt x 522.95375pt>
+<Images/UseCase6-7Diagram.png, id=507, 743.77875pt x 522.95375pt>
 File: Images/UseCase6-7Diagram.png Graphic file (type png)
 <use Images/UseCase6-7Diagram.png>
-Package pdftex.def Info: Images/UseCase6-7Diagram.png  used on input line 381.
+Package pdftex.def Info: Images/UseCase6-7Diagram.png  used on input line 382.
 (pdftex.def)             Requested size: 371.88846pt x 261.47623pt.
-<Images/UseCase8Diagram.png, id=512, 603.25375pt x 543.02875pt>
+<Images/UseCase8Diagram.png, id=508, 603.25375pt x 543.02875pt>
 File: Images/UseCase8Diagram.png Graphic file (type png)
 <use Images/UseCase8Diagram.png>
-Package pdftex.def Info: Images/UseCase8Diagram.png  used on input line 382.
+Package pdftex.def Info: Images/UseCase8Diagram.png  used on input line 383.
 (pdftex.def)             Requested size: 301.62613pt x 271.5137pt.
-<Images/UseCase9Diagram.png, id=513, 638.385pt x 543.02875pt>
+<Images/UseCase9Diagram.png, id=509, 638.385pt x 543.02875pt>
 File: Images/UseCase9Diagram.png Graphic file (type png)
 <use Images/UseCase9Diagram.png>
-Package pdftex.def Info: Images/UseCase9Diagram.png  used on input line 383.
+Package pdftex.def Info: Images/UseCase9Diagram.png  used on input line 384.
 (pdftex.def)             Requested size: 319.19171pt x 271.5137pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--384
+Underfull \hbox (badness 10000) in paragraph at lines 377--385
 
  []
 
@@ -1146,44 +1206,46 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23 <./Images/UseCase6-7Diagram.png> <./Images/UseCase8Diagram.png>] [24 <./Im
-ages/UseCase9Diagram.png>]) [25] [26] (./Files/alloy.tex
+ages/UseCase9Diagram.png>]) [25] [26] (Files/alloy.tex
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 .
 
-(c:/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
+(C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [27
+))
+[27
 
-] (./Files/effort.tex
+] (Files/effort.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
 ) [28
 
-] (./main.bbl) [29
+] (main.bbl) [29
 
-] (./main.aux)
+] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 37A33D5F6DAF3ED8AB19AD217CE7C747;3530.
  ) 
 Here is how much of TeX's memory you used:
- 22068 strings out of 479485
- 409395 string characters out of 5875916
- 703098 words of memory out of 5000000
- 38348 multiletter control sequences out of 15000+600000
- 565904 words of font info for 73 fonts, out of 8000000 for 9000
+ 22071 strings out of 479799
+ 417108 string characters out of 2869247
+ 693527 words of memory out of 3000000
+ 38330 multiletter control sequences out of 15000+200000
+ 565904 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,15n,100p,1031b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2020/texm
-f-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2020/texmf-dist/fonts/type1/pub
-lic/lm/lmtt10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-<c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2020/t
-exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (29 pages, 1242649 bytes).
+ 93i,15n,100p,1034b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C
+:/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
+sers/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/
+Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:
+/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C
+:/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on main.pdf (29 pages, 1295651 bytes).
 PDF statistics:
- 641 PDF objects out of 1000 (max. 8388607)
- 562 compressed objects within 6 object streams
+ 634 PDF objects out of 1000 (max. 8388607)
  228 named destinations out of 1000 (max. 500000)
  508 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -14,7 +14,7 @@ There are multiple types of reservations that can be requested:
 	\item On premise reservation: the customer is allowed to enqueue directly at the store. Each of them will provide a system to print tickets so that those who do not have access to the required technology for the previous options can still line up. These tickets contain a reservation number and an estimation of the waiting time before being able to enter.
 \end{enumerate}
 Customers who requested an immediate or a future reservation receive an alert when they need to depart to reach the store.
-This alert is based on the location of the customer, so that the time needed to reach the store is taken into account. Moreover immediate and future reservations can be deleted by who created them.\\\\
+This alert is based on the location of the customer, so that the time needed to reach the store is taken into account. If, for any reason, a customer cannot to go to a store he/she has lined up to it is possible for him/her to delete the immediate or future reservation. For obvious reasons the on premise reservation cannot be deleted.\\\\
 Reservations can be in one of the following states:
 \begin{itemize}
 	\item Pending: customer cannot yet access the store
@@ -25,11 +25,12 @@ Reservations can be in one of the following states:
 \subsubsection{Store owner}
 The store owner can
 \begin{enumerate}
-	\item register a store to the system so that it can be accessed by customers
-	\item set the maximum occupation threshold for each of his stores.
-	\item monitor the number of customers inside at any time
-	\item visualize statistics about the flow of clients and department occupation
+	\item Register a store to the system so that it can be accessed by customers
+	\item Set the maximum occupation threshold for each of his stores.
+	\item Monitor the number of customers inside at any time
+	\item Visualize statistics about the flow of clients and department occupation
 \end{enumerate}
+When setting the maximum occupation of a store, the owner can specify a threshold for each department or for the whole store. In the latter case the occupation of each department is set to the same value. In case customers select which section of the store they intend to visit their presence will be considered only in those specific department, in order to allow more customers in, provided that they will not come in contact with each other. For safety, if customers don't specify anything they are supposed to visit each department.
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{Images/ClassDiagram.png}
@@ -71,10 +72,11 @@ The figure above illustrates how a customer who is authorized can access the sto
 We describe here functions that the system will support.
 \begin{enumerate}
 	\item Customers can queue up virtually or physically, immediately or in the future at one of the stores registered to the service.
+	\item Customers can delete a virtual reservation.
 	\item Customers can access the desired store when its occupation reaches acceptable levels.
 	\item Customers that queued up virtually can be notified when it is time for them to depart to reach the store.
 	\item Store owners can monitor the occupation in each of their stores.
-	\item Store owners can define the maximum occupation of each of their stores.
+	\item Store owners can define the maximum occupation of each department of their stores.
 	\item Store owners can register stores to the system.
 \end{enumerate}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.10)  5 DEC 2020 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.10)  8 DEC 2020 16:36
 entering extended mode
 **./main.tex
 (main.tex
@@ -998,66 +998,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--20
 <Images/ClassDiagram.png, id=315, 1215.54124pt x 735.74875pt>
 File: Images/ClassDiagram.png Graphic file (type png)
 <use Images/ClassDiagram.png>
-Package pdftex.def Info: Images/ClassDiagram.png  used on input line 35.
+Package pdftex.def Info: Images/ClassDiagram.png  used on input line 36.
 (pdftex.def)             Requested size: 455.24411pt x 275.54585pt.
 [8
 
-]
-<Images/StateDiagram1.png, id=328, 874.26625pt x 452.69125pt>
+] [9 <./Images/ClassDiagram.png>]
+<Images/StateDiagram1.png, id=334, 874.26625pt x 452.69125pt>
 File: Images/StateDiagram1.png Graphic file (type png)
 <use Images/StateDiagram1.png>
-Package pdftex.def Info: Images/StateDiagram1.png  used on input line 43.
+Package pdftex.def Info: Images/StateDiagram1.png  used on input line 44.
 (pdftex.def)             Requested size: 455.24411pt x 235.72545pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--48
+Underfull \hbox (badness 10000) in paragraph at lines 41--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--48
+Underfull \hbox (badness 10000) in paragraph at lines 41--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--48
+Underfull \hbox (badness 10000) in paragraph at lines 41--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--48
+Underfull \hbox (badness 10000) in paragraph at lines 41--49
 
  []
 
-[9 <./Images/ClassDiagram.png> <./Images/StateDiagram1.png>]
-<Images/StateDiagram2.png, id=337, 1064.97874pt x 163.61125pt>
+<Images/StateDiagram2.png, id=335, 1064.97874pt x 163.61125pt>
 File: Images/StateDiagram2.png Graphic file (type png)
 <use Images/StateDiagram2.png>
-Package pdftex.def Info: Images/StateDiagram2.png  used on input line 51.
+Package pdftex.def Info: Images/StateDiagram2.png  used on input line 52.
 (pdftex.def)             Requested size: 455.24411pt x 69.93704pt.
-<Images/StateDiagram3.png, id=338, 1064.97874pt x 188.705pt>
+<Images/StateDiagram3.png, id=336, 1064.97874pt x 188.705pt>
 File: Images/StateDiagram3.png Graphic file (type png)
 <use Images/StateDiagram3.png>
-Package pdftex.def Info: Images/StateDiagram3.png  used on input line 58.
+Package pdftex.def Info: Images/StateDiagram3.png  used on input line 59.
 (pdftex.def)             Requested size: 455.24411pt x 80.66357pt.
-<Images/StateDiagram4.png, id=339, 1054.94125pt x 128.48pt>
+<Images/StateDiagram4.png, id=337, 1054.94125pt x 128.48pt>
 File: Images/StateDiagram4.png Graphic file (type png)
 <use Images/StateDiagram4.png>
-Package pdftex.def Info: Images/StateDiagram4.png  used on input line 65.
+Package pdftex.def Info: Images/StateDiagram4.png  used on input line 66.
 (pdftex.def)             Requested size: 455.24411pt x 55.44331pt.
- [10 <./Images/StateDiagram2.png> <./Images/StateDiagram3.png> <./Images/StateD
-iagram4.png>])
-[11] (Files/requirements.tex
-<Images/MainMenuCustomer.png, id=371, 1355.0625pt x 2409.0pt>
+[10 <./Images/StateDiagram1.png> <./Images/StateDiagram2.png>] [11 <./Images/St
+ateDiagram3.png> <./Images/StateDiagram4.png>]) [12] (Files/requirements.tex
+<Images/MainMenuCustomer.png, id=376, 1355.0625pt x 2409.0pt>
 File: Images/MainMenuCustomer.png Graphic file (type png)
 <use Images/MainMenuCustomer.png>
 Package pdftex.def Info: Images/MainMenuCustomer.png  used on input line 13.
 (pdftex.def)             Requested size: 135.51419pt x 240.91411pt.
-<Images/BookAVisit.png, id=372, 1355.0625pt x 2409.0pt>
+<Images/BookAVisit.png, id=377, 1355.0625pt x 2409.0pt>
 File: Images/BookAVisit.png Graphic file (type png)
 <use Images/BookAVisit.png>
 Package pdftex.def Info: Images/BookAVisit.png  used on input line 15.
 (pdftex.def)             Requested size: 135.51419pt x 240.91411pt.
-<Images/ShowReservations.png, id=373, 1355.0625pt x 2409.0pt>
+<Images/ShowReservations.png, id=378, 1355.0625pt x 2409.0pt>
 File: Images/ShowReservations.png Graphic file (type png)
 <use Images/ShowReservations.png>
 Package pdftex.def Info: Images/ShowReservations.png  used on input line 18.
@@ -1072,20 +1070,20 @@ Overfull \hbox (26.63452pt too wide) in paragraph at lines 12--19
 []  []  [] 
  []
 
-<Images/MainMenuOwner.png, id=374, 1355.0625pt x 2409.0pt>
+<Images/MainMenuOwner.png, id=379, 1355.0625pt x 2409.0pt>
 File: Images/MainMenuOwner.png Graphic file (type png)
 <use Images/MainMenuOwner.png>
 Package pdftex.def Info: Images/MainMenuOwner.png  used on input line 28.
 (pdftex.def)             Requested size: 135.51419pt x 240.91411pt.
-<Images/ModifyOccupation.png, id=375, 1355.0625pt x 2409.0pt>
+<Images/ModifyOccupation.png, id=380, 1355.0625pt x 2409.0pt>
 File: Images/ModifyOccupation.png Graphic file (type png)
 <use Images/ModifyOccupation.png>
 Package pdftex.def Info: Images/ModifyOccupation.png  used on input line 30.
 (pdftex.def)             Requested size: 135.51419pt x 240.91411pt.
-[12
+[13
 
  <./Images/MainMenuCustomer.png> <./Images/BookAVisit.png> <./Images/ShowReserv
-ations.png>] [13 <./Images/MainMenuOwner.png> <./Images/ModifyOccupation.png>]
+ations.png>] [14 <./Images/MainMenuOwner.png> <./Images/ModifyOccupation.png>]
 Overfull \hbox (2.6473pt too wide) in paragraph at lines 63--64
 []\T1/ptm/m/n/10.95 Non reg-is-tered cus-tomers with an iden-ti-fy-ing doc-u-me
 nt can re-quest reser-va-tions through the printer. 
@@ -1096,11 +1094,21 @@ Overfull \hbox (66.0527pt too wide) in paragraph at lines 80--96
 [] 
  []
 
-[14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[15]
+<Images/Use Case Diagram.png, id=427, 1172.38pt x 641.39626pt>
+File: Images/Use Case Diagram.png Graphic file (type png)
+<use Images/Use Case Diagram.png>
+Package pdftex.def Info: Images/Use Case Diagram.png  used on input line 119.
+(pdftex.def)             Requested size: 468.9437pt x 256.55396pt.
 
- [15]
-[16]
+Overfull \hbox (13.69958pt too wide) in paragraph at lines 119--120
+[] 
+ []
+
+
+Underfull \vbox (badness 3148) has occurred while \output is active []
+
+ [16 <./Images/Use Case Diagram.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
@@ -1108,131 +1116,88 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-<Images/UseCase1Diagram.png, id=502, 603.25375pt x 553.06625pt>
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+<Images/UseCase1Diagram.png, id=513, 603.25375pt x 553.06625pt>
 File: Images/UseCase1Diagram.png Graphic file (type png)
 <use Images/UseCase1Diagram.png>
-Package pdftex.def Info: Images/UseCase1Diagram.png  used on input line 377.
+Package pdftex.def Info: Images/UseCase1Diagram.png  used on input line 380.
 (pdftex.def)             Requested size: 301.62613pt x 276.53244pt.
-<Images/UseCase2Diagram.png, id=503, 603.25375pt x 553.06625pt>
+<Images/UseCase2Diagram.png, id=514, 603.25375pt x 553.06625pt>
 File: Images/UseCase2Diagram.png Graphic file (type png)
 <use Images/UseCase2Diagram.png>
-Package pdftex.def Info: Images/UseCase2Diagram.png  used on input line 378.
+Package pdftex.def Info: Images/UseCase2Diagram.png  used on input line 385.
 (pdftex.def)             Requested size: 301.62613pt x 276.53244pt.
-<Images/UseCase3Diagram.png, id=504, 548.0475pt x 442.65375pt>
+
+[22 <./Images/UseCase1Diagram.png>]
+<Images/UseCase3Diagram.png, id=526, 548.0475pt x 442.65375pt>
 File: Images/UseCase3Diagram.png Graphic file (type png)
 <use Images/UseCase3Diagram.png>
-Package pdftex.def Info: Images/UseCase3Diagram.png  used on input line 379.
+Package pdftex.def Info: Images/UseCase3Diagram.png  used on input line 390.
 (pdftex.def)             Requested size: 274.02307pt x 221.32632pt.
-<Images/UseCase4Diagram.png, id=505, 569.12625pt x 733.74126pt>
+<Images/UseCase4Diagram.png, id=527, 569.12625pt x 733.74126pt>
 File: Images/UseCase4Diagram.png Graphic file (type png)
 <use Images/UseCase4Diagram.png>
-Package pdftex.def Info: Images/UseCase4Diagram.png  used on input line 380.
+Package pdftex.def Info: Images/UseCase4Diagram.png  used on input line 395.
 (pdftex.def)             Requested size: 284.56242pt x 366.86974pt.
-<Images/UseCase5Diagram.png, id=506, 581.17125pt x 442.65375pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23 <./Images/UseCase2Diagram.png> <./Images/UseCase3Diagram.png>]
+<Images/UseCase5Diagram.png, id=536, 581.17125pt x 442.65375pt>
 File: Images/UseCase5Diagram.png Graphic file (type png)
 <use Images/UseCase5Diagram.png>
-Package pdftex.def Info: Images/UseCase5Diagram.png  used on input line 381.
+Package pdftex.def Info: Images/UseCase5Diagram.png  used on input line 400.
 (pdftex.def)             Requested size: 290.58492pt x 221.32632pt.
-<Images/UseCase6-7Diagram.png, id=507, 743.77875pt x 522.95375pt>
+<Images/UseCase6-7Diagram.png, id=537, 743.77875pt x 522.95375pt>
 File: Images/UseCase6-7Diagram.png Graphic file (type png)
 <use Images/UseCase6-7Diagram.png>
-Package pdftex.def Info: Images/UseCase6-7Diagram.png  used on input line 382.
+Package pdftex.def Info: Images/UseCase6-7Diagram.png  used on input line 405.
 (pdftex.def)             Requested size: 371.88846pt x 261.47623pt.
-<Images/UseCase8Diagram.png, id=508, 603.25375pt x 543.02875pt>
+ [24 <./Images/UseCase4Diagram.png> <./Images/UseCase5Diagram.png>]
+<Images/UseCase8Diagram.png, id=546, 603.25375pt x 543.02875pt>
 File: Images/UseCase8Diagram.png Graphic file (type png)
 <use Images/UseCase8Diagram.png>
-Package pdftex.def Info: Images/UseCase8Diagram.png  used on input line 383.
+Package pdftex.def Info: Images/UseCase8Diagram.png  used on input line 410.
 (pdftex.def)             Requested size: 301.62613pt x 271.5137pt.
-<Images/UseCase9Diagram.png, id=509, 638.385pt x 543.02875pt>
+<Images/UseCase9Diagram.png, id=547, 638.385pt x 543.02875pt>
 File: Images/UseCase9Diagram.png Graphic file (type png)
 <use Images/UseCase9Diagram.png>
-Package pdftex.def Info: Images/UseCase9Diagram.png  used on input line 384.
+Package pdftex.def Info: Images/UseCase9Diagram.png  used on input line 415.
 (pdftex.def)             Requested size: 319.19171pt x 271.5137pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20 <./Images/UseCase1Diagram.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21 <./Images/UseCase2Diagram.png> <./Images/UseCase3Diagram.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22 <./Images/UseCase4Diagram.png> <./Images/UseCase5Diagram.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23 <./Images/UseCase6-7Diagram.png> <./Images/UseCase8Diagram.png>] [24 <./Im
-ages/UseCase9Diagram.png>]) [25] [26] (Files/alloy.tex
+ [25 <./Images/UseCase6-7Diagram.png> <./Images/UseCase8Diagram.png>] [26 <./Im
+ages/UseCase9Diagram.png>] [27]) [28] (Files/alloy.tex
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 .
 
 (C:\Users\Simone\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-[27
+[29
 
 ] (Files/effort.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-) [28
+) [30
 
-] (main.bbl) [29
+] (main.bbl) [31
 
 ] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 37A33D5F6DAF3ED8AB19AD217CE7C747;3530.
  ) 
 Here is how much of TeX's memory you used:
- 22071 strings out of 479799
- 417108 string characters out of 2869247
- 693527 words of memory out of 3000000
- 38330 multiletter control sequences out of 15000+200000
+ 22090 strings out of 479799
+ 417476 string characters out of 2869247
+ 693528 words of memory out of 3000000
+ 38335 multiletter control sequences out of 15000+200000
  565904 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,15n,100p,1034b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1243,9 +1208,9 @@ Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:
 /Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C
 :/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on main.pdf (29 pages, 1295651 bytes).
+Output written on main.pdf (31 pages, 1388011 bytes).
 PDF statistics:
- 634 PDF objects out of 1000 (max. 8388607)
- 228 named destinations out of 1000 (max. 500000)
- 508 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 241 named destinations out of 1000 (max. 500000)
+ 513 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="False"/>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="True"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+</node>
+
+<node color="Blue">
+   <type name="Reservation"/>
+</node>
+
+<node shape="Box">
+   <type name="FutureReservation"/>
+</node>
+
+<node shape="Dbl Octagon">
+   <type name="EXPIRED"/>
+</node>
+
+<node shape="Ellipse" color="Green">
+   <type name="Customer"/>
+</node>
+
+<node shape="Hexagon">
+   <type name="AUTHORIZED"/>
+</node>
+
+<node shape="House">
+   <type name="OnPremiseReservation"/>
+</node>
+
+<node shape="Inv Triangle" color="Gray">
+   <type name="StoreOwner"/>
+</node>
+
+<node shape="Lined Diamond" color="White">
+   <type name="TimeInterval"/>
+</node>
+
+<node shape="Octagon">
+   <type name="CURRENT"/>
+</node>
+
+<node shape="Parallelogram" color="Red">
+   <type name="Store"/>
+</node>
+
+<node shape="Tpl Octagon">
+   <type name="PENDING"/>
+</node>
+
+<node shape="Trapezoid">
+   <type name="ImmediateReservation"/>
+</node>
+
+<node visible="no">
+   <type name="Bool"/>
+</node>
+
+<node visible="no" color="Yellow">
+   <type name="ReservationState"/>
+</node>
+
+<edge color="Gray" visible="no" attribute="yes" constraint="no">
+   <relation name="alertedCustomer"> <type name="Reservation"/> <type name="Bool"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="creationTime"> <type name="Reservation"/> <type name="Int"/> </relation>
+   <relation name="currentOccupation"> <type name="Store"/> <type name="Int"/> </relation>
+   <relation name="maximumOccupation"> <type name="Store"/> <type name="Int"/> </relation>
+   <relation name="state"> <type name="Reservation"/> <type name="ReservationState"/> </relation>
+   <relation name="timeToReachStore"> <type name="Reservation"/> <type name="Int"/> </relation>
+   <relation name="timeToWait"> <type name="Reservation"/> <type name="Int"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

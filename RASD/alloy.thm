@@ -44,10 +44,6 @@
    <type name="StoreOwner"/>
 </node>
 
-<node shape="Lined Diamond" color="White">
-   <type name="TimeInterval"/>
-</node>
-
 <node shape="Octagon">
    <type name="CURRENT"/>
 </node>
@@ -79,6 +75,7 @@
 <edge visible="no" attribute="yes">
    <relation name="creationTime"> <type name="Reservation"/> <type name="Int"/> </relation>
    <relation name="currentOccupation"> <type name="Store"/> <type name="Int"/> </relation>
+   <relation name="entryTime"> <type name="FutureReservation"/> <type name="Int"/> </relation>
    <relation name="maximumOccupation"> <type name="Store"/> <type name="Int"/> </relation>
    <relation name="state"> <type name="Reservation"/> <type name="ReservationState"/> </relation>
    <relation name="timeToReachStore"> <type name="Reservation"/> <type name="Int"/> </relation>

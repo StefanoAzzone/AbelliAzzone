@@ -1,16 +1,15 @@
-
-	
 sig Customer{
+	-- list of the reservations he/she requested
 	opens: set Reservation
 }
-
 sig StoreOwner{
+	-- list of the stores he/she/it owns
 	owns: set Store
 }
-
--- how to model that each store has a capacity?
 sig Store{
+	-- current occupation is the number of people currently in the store
 	currentOccupation: one Int,
+	-- maximum occupation is the maximum number of people that can fit in a store at any given time
 	maximumOccupation: one Int
 }
 {
@@ -19,18 +18,22 @@ sig Store{
 	--store has at least one owner
 	all s: Store | some o: StoreOwner | s in o.owns
 
+	-- non negativity constraints
 	currentOccupation >= 0
 	maximumOccupation >= 0
 }
-
-sig TimeInterval{}
-
 abstract sig Reservation{
+	-- store to which the reservation refers
 	refersTo: one Store,
+	-- state can be: pending, authorized, current, expired
 	state: one ReservationState,
+	-- estimate of time needed to reach the store from the customer location using selected means of transport
 	timeToReachStore: one Int,
+	-- estimate of time before the customer will be authorized to enter
 	timeToWait: one Int,
+	-- True iff the customer has been alerted
 	alertedCustomer: one Bool,
+	-- time of creation of the reservation
 	creationTime: one Int
 }
 {
@@ -44,32 +47,36 @@ abstract sig Reservation{
 	timeToWait >= 0
 }
 
+-- customer wants to queue up immediately
 sig ImmediateReservation extends Reservation {}
+-- customer wants to queue up immediately on premise
 sig OnPremiseReservation extends Reservation {}
+-- customer wants to book a visit to the store for a future date
 sig FutureReservation extends Reservation {
--- when booking a future reservation a customer specifies a target time.
--- In most cases target time and entry time coincide; the latter may be 
--- greater than the former in case of delays.
+	-- when booking a future reservation a customer specifies a target time.
+	-- In most cases target time and entry time coincide; the latter may be 
+	-- greater than the former in case of delays.
 	entryTime: one Int
 }
 
--- Non ubiquity of customer
+-- non ubiquity of customer, customer cannot be inside two different stores at the same time
 fact nonUbiquityCurrentCustomer{
 	all c: Customer | no disj r1, r2: Reservation | r1 in c.opens and r2 in c.opens and r1.state = CURRENT and r2.state = CURRENT
 }
 
 abstract sig ReservationState{}
 {
+	-- a reservation state has meaning if a reservation is in that state
 	all rs: ReservationState | some r: Reservation | r.state = rs
 }
 
--- Reservation has been requested but customer cannot yet access the store
+-- reservation has been requested but customer cannot yet access the store
 sig PENDING extends ReservationState{}
--- Customer can access the store for a time window
+-- customer can access the store for a time window
 sig AUTHORIZED extends ReservationState{}
--- Customer has accessed the store but has not exited yet
+-- customer has accessed the store and has not exited yet
 sig CURRENT extends ReservationState{}
--- Customer has exited the store or the time window to enter the store ended or the reservation was deleted
+-- customer has exited the store or the time window to enter the store ended or the reservation was deleted
 sig EXPIRED extends ReservationState{}
 
 abstract sig Bool {}
@@ -78,61 +85,65 @@ one sig True, False extends Bool{}
 pred isTrue[b: Bool] { b in True }
 pred isFalse[b: Bool] { b in False }
 
-
+-- returns reservations referring to store s
 fun storeReservations [s: Store] : set Reservation {
 	refersTo.s
 }
+-- returns states of reservations referring to store s
 fun storeReservationStates [s: Store] : set ReservationState {
 	storeReservations[s].state
 }
 
+-- the number of current reservation referring to a store s equals to s.currentOccupation
 fact currentStoreOccupationEqualsCurrentReservations {
 	all s: Store | let rs = storeReservationStates[s] | s.currentOccupation = #(rs :> CURRENT)
 }
-
+-- each reservation has its own state
 fact oneStateForEachReservation {
 	no disj r1, r2: Reservation | r1.state = r2.state
 }
-
+-- for every store s, s.currentOccupation never exceeds s.maximumOccupation
 fact noExceedMaximumOccupation {
 	all s: Store | s.maximumOccupation >= s.currentOccupation
 }
-
+--  customer that created reservation r is alerted when r.timeToWait <= r.timeToReachStore
 fact customerAlertedWhenNecessary {
 	all r: Reservation | (r in FutureReservation or r in ImmediateReservation)
 	and r.timeToWait <= r.timeToReachStore implies isTrue[r.alertedCustomer]
 }
-
+-- on premise customers cannot be alerted (since they have no smartphone)
 fact onPremiseCustomersCantBeAlerted {
 	all r: OnPremiseReservation | isFalse[r.alertedCustomer]
 }
-
+-- for every Reservation r that is not in PENDING state, r.timeToWait is zero
 fact nonPendingReservationHaveNoWaitTime {
 	all r: Reservation | (r.state not in PENDING) implies r.timeToWait = 0
 }
-
+-- for every Reservation r that is in PENDING state, r.timeToWait is greater than zero
 fact pendingReservationHasPositiveTimeToWait {
 	all r: Reservation | r.state in PENDING implies r.timeToWait > 0
 }
-
+-- for every OnPremiseReservation r, r.timeToReachStore is assumed equal to zero
 fact onPremiseReservationsHaveNoTimeToReachStore {
 	all r: OnPremiseReservation | r.timeToReachStore = 0
 }
-
+-- for all virtual reservations r (ImmediateReservation or FutureReservation), 
+-- r.timeToReachStore is greater than zero, which is to say they form no physical queue
+-- outside the store
 fact  noPhysicalQueueOutsideStore {
 	all r: Reservation | ((r in ImmediateReservation or r in FutureReservation)
 	and r.state not in CURRENT) implies r.timeToReachStore > 0
 }
-
-fact  afterEnteringTimeToReachStoreIsNull {
+-- after entering a store time to reach the store is zero
+fact  afterEnteringTimeToReachStoreIsZero {
 	all r: Reservation | r.state in CURRENT implies r.timeToReachStore = 0
 	all r: Reservation | r.state in EXPIRED implies r.timeToReachStore = 0
 }
-
+-- no customer can make more than one ImmediateReservation
 fact noDoubleImmediateReservationForSameCustomer {
 	no disj r1, r2: ImmediateReservation | some c: Customer | r1 in c.opens and r2 in c.opens
 }
-
+-- no customer can make more than one OnPremiseReservation
 fact noDoubleOnPremiseReservationForSameCustomer {
 	no disj r1, r2: OnPremiseReservation | some c: Customer | r1 in c.opens and r2 in c.opens
 }
@@ -152,7 +163,7 @@ fact DelayBetweenCreationAndTargetTime {
 	all r: FutureReservation | r.entryTime - r.creationTime > 1
 }
 
-
+-- for every FutureReservation r, r.timeToWait is dominated by the difference between r.entryTime and r.creationTime
 fact timeToWaitLessThanDifference {
 	all r: FutureReservation | r.timeToWait <= r.entryTime - r.creationTime
 }

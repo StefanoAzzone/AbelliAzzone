@@ -12,7 +12,7 @@ Finally a future reservation keeps track of entry time.
 We apply some constraints to the model so that it can represent the application domain of our S2B.\\
 First, customers are queued up following a First In First Out policy. We ensure that the parameters in the reservations are meaningful with respect to the state of the reservation itself, e.g. a customer is alerted when the time remaining before it is his/her turn is less or equal than the time for him/her to reach the store. For every store we check that the current occupation is equal to the number of customer inside the store and that this value never exceeds the maximum occupation of that store.
 
-\VerbatimInput{alloy.als}
+\lstinputlisting[language=alloy]{alloy.als}
 \newpage
 \subsection{Scenarios}
 Those are some instances of the Alloy model based on the predicates above.

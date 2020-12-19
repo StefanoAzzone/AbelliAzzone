@@ -1,0 +1,118 @@
+\input{commandsFile}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{alloy-style}
+\begin{document}
+
+%TITLE PAGE
+
+\begin{titlepage}
+
+
+%LOGO
+
+\centering
+\includegraphics[scale=0.5]{Images/PolimiLogo}
+
+\vspace{4cm}
+%TITLE 
+
+{\textcolor{Blue}{\textbf{\Huge{CLup}}}} \\ [1cm]
+
+
+\vspace{4cm}
+
+%Replace the text string with your title
+{\textcolor{Blue}{\textbf{\Huge{Design Document}}}} \\ [1cm]
+
+\vspace{4cm}
+Simone Abelli \\
+Stefano Azzone
+
+\end{titlepage}
+
+%Define deliverable specific info
+%Replace cell contents where needed
+\begin{table}[h!]
+\begin{tabu} to \textwidth { X[0.3,r,p] X[0.7,l,p] }
+\hline
+
+\textbf{Deliverable:} & DD\\
+\textbf{Title:} & Design Document \\
+\textbf{Authors:} & Simone Abelli, Stefano Azzone \\
+\textbf{Version:} & 1.0 \\ 
+\textbf{Date:} & 19 December 2020 \\
+\textbf{Download page:} & https://github.com/StefanoAzzone/AbelliAzzone \\
+\textbf{Copyright:} & Copyright © 2020, Simone Abelli, Stefano Azzone – All rights reserved \\
+\hline
+\end{tabu}
+\end{table}
+
+
+
+
+\setcounter{page}{2}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\tableofcontents
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Introduction}}}
+\label{sect:introduction}
+\input{Files/introduction}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Architectural Design}}}
+\label{sect:overview}
+\input{Files/architecture}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{User Interface Design}}}
+\label{sect:requirements}
+\input{Files/interface}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Requirements Traceability}}}
+\label{sect:alloy}
+\input{Files/requirements}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+
+\clearpage
+{\color{Blue}{\section{Implementation, Integration and Test Plan}}}
+\label{sect:alloy}
+\input{Files/iitp}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+
+\clearpage
+{\color{Blue}{\section{Effort Spent}}}
+\label{sect:effort}
+\input{Files/effort}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{main}
+\begin{itemize}
+	\item \textbf{drawio.org} was used to draw diagrams
+	\item \textbf{alloy.mit.edu} was the reference for alloy model
+	\item \textbf{uml-diagrams.org} was the reference for uml diagrams
+\end{itemize}
+%------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+\end{document}

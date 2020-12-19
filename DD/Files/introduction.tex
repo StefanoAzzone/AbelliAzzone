@@ -1,0 +1,82 @@
+\subsection{Purpose}
+The purpose of this document is to provide more technical and detailed information about the software discussed in the RASD document. The Design Document is a guide for the programmer that will develop the application in all its functions. The document will explain and motivate all the architectural choices by providing a description of the components and their interaction. We will also enforce the quality of the product through a set of design characteristics. Finally we describe the implementation, integration and test planning.\\
+The topics touched by this document are:
+\begin{itemize}
+	\item high level architecture
+	\item main components, their interfaces and deployment
+	\item runtime behavior
+	\item design patterns
+	\item more details on user interface
+	\item mapping of the requirements on the components of the architecture
+	\item implementation, integration and test planning
+\end{itemize}
+
+\subsection{Scope}
+
+CLup is a system that allows customers to line up in a virtual first in first out queue, in order to avoid overcrowding outside of stores. Customers can queue up remotely or on premise (by using a device installed outside the store). When a customer queues up remotely he/she can choose to line up immediately or to book a future visit. The system alerts customers when it is time for them to depart to reach the store. The system builds statistics on customer entry and exit in order to provide a better estimation of waiting times. The system allows the store owners to control the occupation of each of their stores. This is just a summary of all the features of the system, for a more detailed description of the software functionalities read the RASD. 
+
+\subsection{Definitions, Acronyms, Abbreviations}
+\subsubsection{Definitions}
+\begin{tabular}{ | m{5cm} | m{10cm} | }
+	\hline
+	Reservation & Virtual or physical artifact used to identify the position of a customer in a queue \\
+	\hline
+	Queue up & Customers are lined up in a FIFO queue\\
+	\hline
+	Enqueued & A customer is enqueued when he has provided the system with a means of identification and requested a reservation\\
+	\hline
+	Authorized & A customer is authorized when he has been enqueued and is allowed temporary access to the store.\\
+	\hline
+	Occupation & Number of customers currently present in the store\\
+	\hline
+	Printer & Device that can read a social security card and print tickets that contains a progressive number and an estimate of the waiting time.\\
+	\hline
+\end{tabular}
+\subsubsection{Acronyms}
+\begin{tabular}{ | m{5cm} | m{10cm} | }
+	\hline
+	RASD & Requirement Analysis and Specification Document \\
+	\hline
+	GPS & Global Positioning System \\
+	\hline
+	S2B & Software to be \\
+	\hline
+	UI & User Interface\\
+	\hline
+	FIFO & First in first out\\
+	\hline
+\end{tabular}
+\subsubsection{Abbreviations}
+\begin{tabular}{ | m{5cm} | m{10cm} | }
+	\hline
+	Gn & Goal number n \\
+	\hline
+	Rn & Requirement number n \\
+	\hline
+	Dn & Domain Assumption number n \\
+	\hline
+	WPn & World Phenomenon number n \\
+	\hline
+	SPn & Shared Phenomenon number n \\
+	\hline
+\end{tabular}
+\subsection{Revision history}
+Not yet defined.
+\subsection{Reference Documents}
+\begin{enumerate}
+	\item IEEE Std 830-1998 Recommended Practice for Software Requirements Specifications
+	\item Specification Document: R\&DD Assignment A.Y. 2020/2021
+	\item uml-diagrams.org
+\end{enumerate}
+\subsection{Document Structure}
+\begin{itemize}
+	\item Chapter 1: gives an introduction about the project, describing the purpose of the    system informally and defining its scope, its main goals, world and shared phenomena. Moreover this section contains specifications such as the definitions, acronyms, abbreviation,	revision history of the document and the references.
+	\item Chapter 2: contains the overall description of the project, with a more in-depth look at its functionalities. Here are identified the main actors involved in the application’s usage lifecycle, some scenarios useful to identify specific cases in which the application can be utilized, and all the necessary domain assumptions, dependencies and constraints. This section also provides a class diagram, which aid to better understand the general structure of the project, and some state diagrams, to make the evolution of the crucial objects clear.
+	\item Chapter 3: This section contains the core of the document: first it presents the interface requirement including user, hardware, software and communication interfaces.
+	Then it offers the specification and the description of all the functional requirements necessary in order to reach the goals; is also provided a list of use cases, with their corresponding sequence diagrams and their mapping on the requirements.
+	Finally non-functional requirements are defined, including performance, design and the software systems attributes.
+	\item Chapter 4: includes the alloy code and the corresponding metamodels generated from it, in order to show how the project has been modeled and represented through the language.   
+	\item Chapter 5: shows the effort which each member of the group spent working on the project.
+	\item Chapter 6: includes the reference documents.
+\end{itemize}
+

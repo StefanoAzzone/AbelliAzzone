@@ -13,7 +13,6 @@ There are two categories of users that have different interface requirements:
 	\includegraphics[scale=0.1]{Images/MainMenuCustomer.png}
 	\qquad
 	\includegraphics[scale=0.1]{Images/BookAVisit.png}
-	%TODO add by car/on foot icons
 	\qquad
 	\includegraphics[scale=0.1]{Images/ShowReservations.png}
 	\item {\bfseries Store owners}\\
@@ -64,17 +63,13 @@ Customers can access the system through a working internet connection.
 	\item Registered customers that book a visit can specify estimated visit duration.
 	\item Registered customers that book a visit can specify desired product categories.
 	\item The system provides customers with a QR code to enter the store once authorized.
-	\item The system uses gathered data to build statistics. %TODO to ask.
+	\item The system uses gathered data to build statistics.
 	\item Registered customers with a smartphone are alerted when their turn is near.
 
 	\item Registered customers can delete a pending or authorized reservation.
-	\item After a reservation is authorized if it does not become current in a fixed time, it expires.
+	\item Authorized reservations expire if they do not become current in a certain time window (specified by store owner)
 	\item Registered customers must specify desired means of transport while requesting a reservation.
-	\item Reservations are authorized according to a FIFO policy 
-
-	%TODO add that customers have a time window in which they can enter a store after which their reservation expires, otherwise the store could remain empty (limit case)
-	
-	%TODO pensare a come sistemare la faccenda dell'occupazione dei dipartimanti/massima
+	\item Reservations are authorized according to a FIFO policy
 \end{enumerate}
 \subsubsection{Mapping on requirements}
 \begin{tabular}{ | m{3cm} | m{5cm} | m{9cm} | }
@@ -101,9 +96,6 @@ Here we remind the goals for ease of use:
 	\item CLup should allow store owners to regulate the maximum number of customers in their stores
 	\item CLup should provide the customer with a reasonably precise estimate of waiting time
 	\item CLup should alert the customers when it is time to get to the shop taking into account travel time
-	%\item CLup should allow customers to specify estimated visit duration and desired objects in order to provide a better guess of waiting time for all the customers
-	%TODO is this a goal or a reqirement???
-	% CLup should be able to infer an approximate duration of the visit from an analysis of the previous ones to plan visits and manage the queue in a finer way
 \end{enumerate}
 
 Here we remind the domain assumptions for ease of use:
@@ -122,7 +114,6 @@ Here we remind the domain assumptions for ease of use:
 \includegraphics[scale=0.4]{Images/Use Case Diagram.png}
 \newpage
 \subsubsection{Use cases}
-%TODO: 'customer is notified' use case: is it useless?
 \paragraph{Customer registration}
 \begin{flushleft}
 	\begin{tabular} { | m{3cm} | m{10cm} | }
@@ -205,7 +196,6 @@ Here we remind the domain assumptions for ease of use:
 		Exceptions & \begin{enumerate}
 			\item User credentials are invalid
 		\end{enumerate}
-		%TODO store e chiuso
 		If the event described above occurs, the application will alert the user and allows him to retry\\
 		\hline
 	\end{tabular}
@@ -238,7 +228,6 @@ Here we remind the domain assumptions for ease of use:
 			\item customer decides to cancel the reservation
 			\item customer requests immediate reservaiton but store is closed at that time
 		\end{enumerate}
-	%TODO store e chiuso
 		If one of the events described above occur, the application will alert the customer and go back to the initial menu\\
 		\hline
 	\end{tabular}
@@ -378,62 +367,77 @@ Here we remind the domain assumptions for ease of use:
 		\hline
 	\end{tabular}
 \end{flushleft}
+\paragraph{Customer is alerted}
+\begin{flushleft}
+	\begin{tabular} { | m{3cm} | m{10cm} | }
+		\hline
+		Name & Customer is alerted\\
+		\hline
+		Actors & Customer\\
+		\hline
+		Entry condition & Customer is logged into his smartphone application and the time he/she needs to wait becomes less or equal to the time he/she needs to reach the store\\
+		\hline
+		Event flow & \begin{enumerate}
+			\item The system sends a notification to the smartphone of the customer
+		\end{enumerate}\\
+		\hline
+		Exit conditions & Customer is notified\\
+		\hline
+		Exceptions & \begin{enumerate}
+			\item the threshold value is inadequate
+		\end{enumerate}
+		If the event described above occurs, the application will alert the store owner and provide him with the possibility to retry or go back to the initial menu\\
+		\hline
+	\end{tabular}
+\end{flushleft}
+\newpage
 \subsubsection{Sequence diagrams}
 \paragraph{Customer registration}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase1Diagram.png}
 \end{flushleft}
-\newpage
 \paragraph{Store owner registration}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase2Diagram.png}
 \end{flushleft}
-
+\newpage
 \paragraph{User logs in}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase3Diagram.png}
 \end{flushleft}
-\newpage
 \paragraph{Customer queuing up remotely}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase4Diagram.png}
 \end{flushleft}
-
+\newpage
 \paragraph{Customer queuing up on premise}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase5Diagram.png}
 \end{flushleft}
-\newpage
 \paragraph{Customer entering and exiting store}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase6-7Diagram.png}
 \end{flushleft}
-
+\newpage
 \paragraph{Store owner registering a store}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase8Diagram.png}
 \end{flushleft}
-\newpage
 \paragraph{Store owner setting maximum occupation of a store or a department}
 \begin{flushleft}
 	\includegraphics[scale=0.5]{Images/UseCase9Diagram.png}
 \end{flushleft}
+\newpage
+\paragraph{Customer is alerted}
+\begin{flushleft}
+	\includegraphics[scale=0.5]{Images/UseCase10Diagram.png}
+\end{flushleft}
 
-\subsubsection{Scenarios} %TODO: should they go to section 2 as assignment says?
-\paragraph{Customer queues up remotely}
-Gordon comes home from work at 5:30 PM. He would like to go to the store. He is a registered user of CLup. His smartphone has internet connection and GPS on. He opens the CLup mobile application and requests an immediate reservation to a store of his choice, selecting the car as means of transport. After some time he is alerted that he needs to depart to avoid being late at the store and losing the reservation. Gordon departs and arrives to the store. He opens the application and selects the reservation he created which now contains the number that represents his position in the queue. After some time the monitor outside the store shows his number, which means it is his turn to enter. He activates the turnstiles with the QR now shown in the reservation page of the mobile application and enters the store. He buys all the products he needs. He opens the application and selects the reservation he created which now contains a QR code. He activates the turnstiles and exits the store.
-%TODO: be like Pietro
-\paragraph{Customer queues up on premise}
-Marco is an old man. He does not have a smartphone. He would like to go to the store next to his house on foot. He reaches the store, and retrieves a queue reservation ticket from the printer outside the store, by inserting his social security card. The ticket displays a QR code, a number that represents his position in queue and an estimated waiting time. He can now come back home and wait the specified amount of time, then come back to the store. At that point the monitor outside the store shows his number, which means it is his turn to enter. He activates the turnstiles with the QR printed on his ticket and enters the store. He buys all the products he needs. He activates the turnstiles with his ticket and exits the store.
-\paragraph{Store owner registering a store and setting occupation}
-Paolo is the proud owner of the famous supermarket chain "Junes" and today there is the first opening of a new store of the chain. Due to Covid restrictions, he already use CLup to avoid overcrowding inside his stores. He decide to use the service also for the new building, so he access the system through his PC. Once logged in he register his new supermarket by inserting all necessary data. Then he select the newly registered store and set an appropriate occupation for each of its department, based on how many people it can contain, ensuring social distances.
-\paragraph{Customer books a visit}
-Lara is very organized woman; she likes to manage situations in advance, and for this reason, in the recent period, she uses CLup to book her visit to the store. Every Sunday she open the CLup web page from her phone, logs in and create a new reservation for the next Saturday. Because she request this reservations in advance af almost a week, she usually has no problems to book exactly for the time she prefer, so she is able to get an appointment for the 9.30 and print the ticket. In this way when the time arrives she can enter the store with no delays and rows.
 \subsection{Performance Requirements}
 The system cannot guarantee that a customer can enter a store at a precise time unless it requires users to exit after a maximum time (which it doesn't).
 The system guarantees that if
-%TODO: should those be domain assumptions?
 \begin{itemize}
+	\item the customer uses a smartphone
 	\item the customer never disconnects from the internet and GPS
 	\item the customer specified the correct means of transport when creating the reservation
 \end{itemize}
@@ -447,10 +451,11 @@ The software the customer uses requires either:
 	\item a smartphone to use the smart application
 	\item a computer to use the web application and a home printer to print reservation
 \end{itemize}
-The software the store owner uses requires both:
+The software the store owner uses requires:
 \begin{itemize}
 	\item turnstiles activated by QR
 	\item reservation printer activated by social security card
+	\item monitor to alert on premise customers when it is their turn
 \end{itemize}
 \subsubsection{Any other constraint}
 Customers cannot have more than five active reservation requests for different stores and more than two for the same store on the same day to avoid fake reservations.
@@ -458,7 +463,7 @@ Customers cannot have more than five active reservation requests for different s
 \subsubsection{Reliability}
 The system must have an appropriate infrastructure with a full backup system located in an separate office distant at least 100km (nuclear fallout radius). Adequate personnel will guarantee recovery time to substitute faulty hardware.
 \subsubsection{Availability}
-The system should be up for 99\% of the time (3.65 MTTR) since its temporary downtime does not cause emergency situations. The system is fully automated. The users are alerted about system downtime with a delay of at most 10 minutes. The users are alerted that the system is up again with a delay of at most 10 minutes.
+The system should be up for 99.9\% of the time (0.365 MTTR). Its temporary downtime does not cause emergency situations, but the system is an essential service: it should be possible to buy food every day. The system is fully automated. The users are alerted about system downtime with a delay of at most 10 minutes. The users are alerted that the system is up again with a delay of at most 10 minutes.
 \subsubsection{Security}
 The location of customers is sensitive information and therefore is never stored. Customers and store owners provide identifying information during registration: the databases containing such information must be protected against internal and external attacks. Communication between central system and users is encrypted.
 \subsubsection{Maintainability}

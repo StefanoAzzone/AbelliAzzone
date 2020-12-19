@@ -10,9 +10,6 @@ The system must attain the following goals:
 	\item CLup should allow store owners to regulate the maximum number of customers in their stores
 	\item CLup should provide the customer with an estimate of waiting time
 	\item CLup should alert the customers when it is time to get to the shop taking into account travel time
-	%\item CLup should allow customers to specify estimated visit duration and desired objects in order to provide a better guess of waiting time for all the customers
-	%TODO is this a goal or a reqirement???
-	% CLup should be able to infer an approximate duration of the visit from an analysis of the previous ones to plan visits and manage the queue in a finer way
 \end{enumerate}
 
 
@@ -23,24 +20,24 @@ The system to be allows to avoid creating queues in front of stores.
 This is accomplished by enabling the customers to queue up remotely.
 Moreover, the shop owners can oversee customers entering and exiting stores. \\
 The system offers the following functionalities:
-%TODO: they look a lot like goals/product functions, substitute with (slides):
-% Identifies the product and 
-% application domain
 \begin{enumerate}[label=F\arabic*]
 	\item it allows customers to line up remotely or on premise
+	\item it allows customers that requested to queue up, to cancel their request
 	\item it allows customers whose position in queue allows it to enter and exit the store
 	\item it schedules customers in order to minimize overcrowding inside and outside of the store
 	\item it alerts customers when they should head to the store
 	\item it allows customers to book a visit and optionally specify duration and desired categories of products
 	\item it allows store owners to monitor flux of people inside the store and set how many customers can be simultaneously inside
 	\item it allows store owners to register stores
-%	\item it uses statistics build on entrance and exit data, and preferred categories to better evaluate duration of visits
+	\item it builds statistics on entrance and exit data, and preferred categories
 \end{enumerate}
 User can access the system using a phone application provided that they own a smartphone with an internet connection. This application allows registered users to easily access the functionality of the system.\\Moreover, for those who do not have access to the required technology or don't want to use the phone application, there is also a web app. Therefore, users will be able to log in and perform the same operations of the phone application using an internet browser.\\ Finally the customers of the store will also have the possibility to create reservations on premise: every shop will be equipped with a device to print tickets in order to give every client a very easy way to line up. Of course customers that wants to queue up "on the spot" must have a means of identification (e.g. document), in order to prevent fake reservations that would slow down the queue. For the same reason users that use the phone application or the web app must log in to identify themselves.\\
 Only customer with a valid reservation (i.e it is their turn) will be allowed to enter the store; to achieve this, each store must have a device (e.g. a QR reader) to every entrance, and clients must validate their reservation before being admitted inside. They should also do the same to exit, in order to monitor the store's occupation.
 \subsubsection{World Phenomena}
 \begin{enumerate}[label=WP\arabic*]
-	\item Customer reaches a store
+	\item Customer reaches a store by foot
+	\item Customer reaches the store by car
+	\item Customer reaches the store by bike
 	\item Customer enters or exits a store
 	\item Store owner controls current number of customers in one of his stores
 	\item Customer buys products
@@ -50,7 +47,7 @@ Only customer with a valid reservation (i.e it is their turn) will be allowed to
 	\item Customer queues up
 	\item Customer is identified %in order to allow entrance or exit from a store
 	\item Turnstiles lock and unlock
-	\item Customer is alerted% when his turn is close
+	\item Customer is alerted %when his turn is close
 	\item Customer books a visit to a store
 	\item Printer prints a ticket
 \end{enumerate}
@@ -105,13 +102,14 @@ Not yet defined.
 \begin{enumerate}
 	\item IEEE Std 830-1998 Recommended Practice for Software Requirements Specifications
 	\item Specification Document: R\&DD Assignment A.Y. 2020/2021
+	\item uml-diagrams.org
 \end{enumerate}
 \subsection{Document Structure}
 \begin{itemize}
 	\item Chapter 1: gives an introduction about the project, describing the purpose of the    system informally and defining its scope, its main goals, world and shared phenomena. Moreover this section contains specifications such as the definitions, acronyms, abbreviation,	revision history of the document and the references.
-	\item Chapter 2: contains the overall description of the project, with a more in-depth look at its functionalities. Here are identified the main actors involved in the application’s usage lifecycle, some scenarios that point out the major features of the S2B, and all the necessary domain assumptions, dependencies and constraints. This section also provides a class diagram, which aid to better understand the general structure of the project, and some state diagrams, to make the evolution of the crucial objects clear.
+	\item Chapter 2: contains the overall description of the project, with a more in-depth look at its functionalities. Here are identified the main actors involved in the application’s usage lifecycle, some scenarios useful to identify specific cases in which the application can be utilized, and all the necessary domain assumptions, dependencies and constraints. This section also provides a class diagram, which aid to better understand the general structure of the project, and some state diagrams, to make the evolution of the crucial objects clear.
 	\item Chapter 3: This section contains the core of the document: first it presents the interface requirement including user, hardware, software and communication interfaces.
-	Then it offers the specification and the description of all the functional requirements necessary in order to reach the goals; is also provided a list of use cases, with their corresponding sequence diagrams and their mapping on the requirements, as long as some scenarios, useful to identify specific cases in which the application can be utilized.
+	Then it offers the specification and the description of all the functional requirements necessary in order to reach the goals; is also provided a list of use cases, with their corresponding sequence diagrams and their mapping on the requirements.
 	Finally non-functional requirements are defined, including performance, design and the software systems attributes.
 	\item Chapter 4: includes the alloy code and the corresponding metamodels generated from it, in order to show how the project has been modeled and represented through the language.   
 	\item Chapter 5: shows the effort which each member of the group spent working on the project.

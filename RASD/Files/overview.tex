@@ -1,12 +1,8 @@
 \subsection{Product perspective}
-The S2B will be used by two kinds of users: customers and store owners, and offers to each of them different functionalities:
-%TODO: probably move it to product functions and write some general description here about what slides say:
-% Describes external interfaces: system, 
-% user, hardware, software; also 
-% operations and site adaptation, and 
-% hardware constraints
+The S2B will be used by two kinds of users: customers and store owners. The system will provide customers with a simple UI, in order to be accessible for all demographics. To use the software the customers need either a smartphone or a computer (a printer may be required in this case to print a QR code on paper) with a working internet connection. The software will use a location API (e.g. Google Maps) to pinpoint the location of the customers. To allow on premise reservations the store must install a monitor and a ticket printer outside of the store, and connect them to the system.\\
+The system offers to each of the users different functionalities:
 \subsubsection{Customer}
-The customer can create reservations for a desired store: such reservation is then inserted into a queue.This queue is managed in order to avoid overcrowding, and to serve customers with a first come first served policy (FIFO queue). To achieve this, statistics about visits' durations are exploited, taking also into account information that customers may provide (e.g. which department of the store they want to visit).\\
+The customer can create reservations for a desired store: such reservation is then inserted into a queue. This queue is managed in order to avoid overcrowding, and to serve customers with a first come first served policy (FIFO queue). To achieve this, statistics about visits' durations are exploited, taking also into account information that customers may provide (e.g. which department of the store they want to visit).\\
 There are multiple types of reservations that can be requested:
 \begin{enumerate}
 	\item Immediate reservation: the costumer wants to queue up immediately to a store. He/she is also provided with an estimation of the time he has to wait before his/her turn.
@@ -69,6 +65,16 @@ The figure above illustrates how a customer can queue up on premise (physical cu
 	\caption{State Diagram 3: Customer enters a store.}
 \end{figure}
 The figure above illustrates how a customer who is authorized can access the store. At the entrance of his/her store of choice he is enabled to demonstrate his authorization. Once he/she does, he is allowed to enter the store.
+
+\subsubsection{Scenarios}
+\paragraph{Customer queues up remotely}
+Gordon comes home from work at 5:30 PM. He would like to go to the store. He is a registered user of CLup. His smartphone has internet connection and GPS on. He opens the CLup mobile application and requests an immediate reservation to a store of his choice, selecting the car as means of transport. After some time he is alerted that he needs to depart to avoid being late at the store and losing the reservation. Gordon departs and arrives to the store. He opens the application and selects the reservation he created which now contains the number that represents his position in the queue. After some time the monitor outside the store shows his number, which means it is his turn to enter. He activates the turnstiles with the QR now shown in the reservation page of the mobile application and enters the store. He buys all the products he needs. He opens the application and selects the reservation he created which now contains a QR code. He activates the turnstiles and exits the store.
+\paragraph{Customer queues up on premise}
+Marco is an old man. He does not have a smartphone. He would like to go to the store next to his house on foot. He reaches the store, and retrieves a queue reservation ticket from the printer outside the store, by inserting his social security card. The ticket displays a QR code, a number that represents his position in queue and an estimated waiting time. He can now come back home and wait the specified amount of time, then come back to the store. At that point the monitor outside the store shows his number, which means it is his turn to enter. He activates the turnstiles with the QR printed on his ticket and enters the store. He buys all the products he needs. He activates the turnstiles with his ticket and exits the store.
+\paragraph{Store owner registering a store and setting occupation}
+Paolo is the proud owner of the famous supermarket chain "Junes" and today there is the first opening of a new store of the chain. Due to Covid restrictions, he already use CLup to avoid overcrowding inside his stores. He decide to use the service also for the new building, so he access the system through his PC. Once logged in he register his new supermarket by inserting all necessary data. Then he select the newly registered store and set an appropriate occupation for each of its department, based on how many people it can contain, ensuring social distances.
+\paragraph{Customer books a visit}
+Lara is very organized woman; she likes to manage situations in advance, and for this reason, in the recent period, she uses CLup to book her visit to the store. Every Sunday she open the CLup web page from her phone, logs in and create a new reservation for the next Saturday. Because she request this reservations in advance af almost a week, she usually has no problems to book exactly for the time she prefer, so she is able to get an appointment for the 9.30 and print the ticket. In this way when the time arrives she can enter the store with no delays and rows.
 
 \subsection{Product functions}
 We describe here functions that the system will support.

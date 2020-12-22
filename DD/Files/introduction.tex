@@ -14,7 +14,7 @@ The topics touched by this document are:
 \subsection{Scope}
 
 CLup is a system that allows customers to line up in a virtual first in first out queue, in order to avoid overcrowding outside of stores. Customers can queue up remotely or on premise (by using a device installed outside the store). When a customer queues up remotely he/she can choose to line up immediately or to book a future visit. The system alerts customers when it is time for them to depart to reach the store. The system builds statistics on customer entry and exit in order to provide a better estimation of waiting times. The system allows the store owners to control the occupation of each of their stores. This is just a summary of all the features of the system, for a more detailed description of the software functionalities read the RASD. 
-
+\newpage
 \subsection{Definitions, Acronyms, Abbreviations}
 \subsubsection{Definitions}
 \begin{tabular}{ | m{5cm} | m{10cm} | }
@@ -30,6 +30,8 @@ CLup is a system that allows customers to line up in a virtual first in first ou
 	Occupation & Number of customers currently present in the store\\
 	\hline
 	Printer & Device that can read a social security card and print tickets that contains a progressive number and an estimate of the waiting time.\\
+	\hline
+	User & Either a customer or a store owner.\\
 	\hline
 \end{tabular}
 \subsubsection{Acronyms}
@@ -49,19 +51,14 @@ CLup is a system that allows customers to line up in a virtual first in first ou
 \subsubsection{Abbreviations}
 \begin{tabular}{ | m{5cm} | m{10cm} | }
 	\hline
-	Gn & Goal number n \\
+	Gn & Goal number n \\%TODO: check what is needed
 	\hline
 	Rn & Requirement number n \\
-	\hline
-	Dn & Domain Assumption number n \\
-	\hline
-	WPn & World Phenomenon number n \\
-	\hline
-	SPn & Shared Phenomenon number n \\
 	\hline
 \end{tabular}
 \subsection{Revision history}
 Not yet defined.
+%TODO Change also in RASD
 \subsection{Reference Documents}
 \begin{enumerate}
 	\item IEEE Std 830-1998 Recommended Practice for Software Requirements Specifications
@@ -70,13 +67,12 @@ Not yet defined.
 \end{enumerate}
 \subsection{Document Structure}
 \begin{itemize}
-	\item Chapter 1: gives an introduction about the project, describing the purpose of the    system informally and defining its scope, its main goals, world and shared phenomena. Moreover this section contains specifications such as the definitions, acronyms, abbreviation,	revision history of the document and the references.
-	\item Chapter 2: contains the overall description of the project, with a more in-depth look at its functionalities. Here are identified the main actors involved in the application’s usage lifecycle, some scenarios useful to identify specific cases in which the application can be utilized, and all the necessary domain assumptions, dependencies and constraints. This section also provides a class diagram, which aid to better understand the general structure of the project, and some state diagrams, to make the evolution of the crucial objects clear.
-	\item Chapter 3: This section contains the core of the document: first it presents the interface requirement including user, hardware, software and communication interfaces.
-	Then it offers the specification and the description of all the functional requirements necessary in order to reach the goals; is also provided a list of use cases, with their corresponding sequence diagrams and their mapping on the requirements.
-	Finally non-functional requirements are defined, including performance, design and the software systems attributes.
-	\item Chapter 4: includes the alloy code and the corresponding metamodels generated from it, in order to show how the project has been modeled and represented through the language.   
-	\item Chapter 5: shows the effort which each member of the group spent working on the project.
-	\item Chapter 6: includes the reference documents.
+	\item Chapter 1: gives an introduction about the Design Document, enumerating all the topics that will be covered. Moreover this section contains specifications such as the definitions, acronyms, abbreviation,	revision history of the document and the references.
+	\item Chapter 2: contains the architectural design choices, with an in-depth look at the high level components and their interactions. It include several views: the component view, the deployment view and the runtime view. Here are described the interfaces (both hardware and software) used for the development of the application, their functions and the processes in which they are utilized. Finally, there is the explanation of the architectural patterns chosen with the other design decisions.
+	\item Chapter 3: this section provide an overview of how the user interfaces of the system will look like.
+	\item Chapter 4: This chapter maps the requirements defined in the RASD to the design elements defined in this document. 
+	\item Chapter 5: here we define the plan for the implementation of the subcomponents of the system and the order in which the integration operations and their testing will be performed.
+	\item Chapter 6: shows the effort which each member of the group spent working on the project.
+	\item Chapter 7: includes the reference documents.
 \end{itemize}
 

@@ -1,7 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 5 items.
 I found no \citation commands---while reading file main.aux
 Database file #1: main.bib
 You've used 0 entries,

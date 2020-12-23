@@ -10,10 +10,30 @@
 \contentsline {subsection}{\numberline {1.6}Document Structure}{5}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Architectural Design}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Overview}{7}{subsection.2.1}%
-\contentsline {section}{\numberline {3}User Interface Design}{9}{section.3}%
-\contentsline {section}{\numberline {4}Requirements Traceability}{10}{section.4}%
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{11}{section.5}%
-\contentsline {section}{\numberline {6}Effort Spent}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Simone Abelli}{12}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{12}{subsection.6.2}%
-\contentsline {section}{References}{13}{subsection.6.2}%
+\contentsline {subsection}{\numberline {2.2}Component View}{8}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}WebApp}{9}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}WebServer}{9}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}SmartApp}{9}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}QRReader}{9}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}TicketPrinter}{9}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}StoreMonitor}{10}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}Redirector}{10}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}SignupManager}{10}{subsubsection.2.2.8}%
+\contentsline {subsubsection}{\numberline {2.2.9}LoginManager}{10}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}StoreOwnerManager}{10}{subsubsection.2.2.10}%
+\contentsline {subsubsection}{\numberline {2.2.11}CustomerManager}{10}{subsubsection.2.2.11}%
+\contentsline {subsubsection}{\numberline {2.2.12}ReservationManager}{10}{subsubsection.2.2.12}%
+\contentsline {subsubsection}{\numberline {2.2.13}StoreManager}{10}{subsubsection.2.2.13}%
+\contentsline {subsubsection}{\numberline {2.2.14}QueueManager}{11}{subsubsection.2.2.14}%
+\contentsline {subsubsection}{\numberline {2.2.15}QRManager}{11}{subsubsection.2.2.15}%
+\contentsline {subsubsection}{\numberline {2.2.16}StatisticsManager}{11}{subsubsection.2.2.16}%
+\contentsline {subsubsection}{\numberline {2.2.17}PrinterManager}{11}{subsubsection.2.2.17}%
+\contentsline {subsubsection}{\numberline {2.2.18}MonitorManager}{11}{subsubsection.2.2.18}%
+\contentsline {subsubsection}{\numberline {2.2.19}NotificationManager}{11}{subsubsection.2.2.19}%
+\contentsline {section}{\numberline {3}User Interface Design}{12}{section.3}%
+\contentsline {section}{\numberline {4}Requirements Traceability}{13}{section.4}%
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{14}{section.5}%
+\contentsline {section}{\numberline {6}Effort Spent}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Simone Abelli}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{15}{subsection.6.2}%
+\contentsline {section}{References}{16}{subsection.6.2}%

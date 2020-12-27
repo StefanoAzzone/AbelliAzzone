@@ -11,22 +11,34 @@ The presentation layer is composed by the smartphone or the computer of the user
 The application layer is composed by the application server.
 The data layer is composed by the database server.\\\\\\
 \includegraphics[scale=0.4]{Images/Archimate.png}\\
-Customers line up at a store trough the web app or the smartphone application and their requests are sent to the 
+This image shows the high level representation of the three-layer architecture, where we have all the devices used to interact with the user and their respective software, that have to connect to the application server, which is able to communicate with the database server.\\
+Although very simple, this high level view shows how a three tier architecture can provide more flexibility to the system, splitting the server side in two logical layers. It is also very useful from a security viewpoint: in fact the data are kept separated from the user by the application layer, so that all sensitive information are protected from undesired access.
 \newpage
+Let us now have a more in-depth look at the system architecture.\\
 \includegraphics[scale=0.5]{Images/System Architecture.png}\\
+Here we can better see how each tier of the previously defined architecture is mapped in the system. The customer is capable to interact with the system in several ways: through the phone app on his smartphone, by the web app on his computer, using the printer outside the store (in order to create an on premise reservation) or via QR scanner, which unlocks the turnstiles and validate enter and exit from the store. In order to provide an estimation of the travel time from the location of the customer to the store, the system uses the GPS technology through the Google Maps API.\\
+The store owner, from his/her side, can only access the system from the web app or the phone application; this is because in the role of owner he/she does not need to access the market, and use the system only to control occupation and statistics of the stores.\\
+The web app does not communicate directly with the application server, but must traverse the web server, which provide the web pages to the browser.\\
+The application server is protected from the outside by a first firewall, which creates a demilitarized zone for it. Then, it communicates with the database server, which contains the database management system, through a second and more restrictive firewall, that isolate the database from possible attacks. This double firewall ensures the security properties for the system.\\
+In order to create reservations, the clients must communicate synchronously with the server, as they have no information on the queue. The application server, then communicates synchronously with the database server to retrieve information or asynchronously to store information when needed.\\
+In the image above the server element must not be considered as a single machine: if so the architecture would be poorly scalable, and heavy traffic would make the system crash. To guarantee scalability we use a node replication approach, which involves the use of a node balancer which redirect the traffic between multiple servers.\\
 \includegraphics[scale=0.5]{Images/LoadBalancer.png}\\
-
+This image show an example of how this method works for the application tier: in this case the load balancer splits the work between three application servers, but of course there might be more. Moreover this approach is used also for the web server and the database server, according to the needs of the system.\\
+Until now we have used an informal view of the architecture; in the next sections we will keep deepening the architecture and its characteristics.\\
 \subsection{Component View}
-Here we display the main component architecture of our S2B. Since the ApplicationServer contains all the business logic, we will describe in detail the structure of its subcomponents.
+Here we display the main component architecture of our S2B. Since the ApplicationServer contains all the business logic, we will describe in detail the structure of its subcomponents.\\\\
 \begin{flushleft}
-\includegraphics[scale=0.4]{Images/Component.png}
+\includegraphics[scale=0.3]{Images/Component.png}
 \end{flushleft}
 \subsubsection{WebApp}
 This component allows customer and store owners to access their respective services on a computer. It requires a WebServer.
 \subsubsection{WebServer}
 This component communicates directly with the ApplicationServer and serves web pages to implement the WebApp component.
 \subsubsection{SmartApp}
-This component allows customers and store owners to access their respective services on a smartphone, by interfacing with the ApplicationServer.
+This component allows customers and store owners to access their respective services on a smartphone, by interfacing with the ApplicationServer. It is composed of the following subcomponents:
+\paragraph{StoreOwnerService}Allows the store owner to access the functionalities that the system reserved to him/her.
+\paragraph{CustomerService}Allows the customer to access the functionalities that the system reserved to him/her.
+\paragraph{NotificationService}Periodically retrieve the waiting time from the NotificationManager and calls MapsAPI to get the time to reach the store from the current position and if it is greater or equal to the waiting time it notifies the customer.
 \subsubsection{QRReader}
 This component reads user provided QRCodes and sends them to the ApplicationServer, thus enabling authentication for turnstiles.
 \subsubsection{TicketPrinter}
@@ -35,27 +47,55 @@ This component accepts a user document and after having validated it through the
 This component updates periodically calling the ApplicationServer, which provides it with the number of the last authorized reservation, thus notifying customers in front of the store when they can enter.
 \subsubsection{Redirector}
 This component provides an external interface for the previously described components, and allows them to communicate with the components that are located within the ApplicationServer, that we describe below.
-\subsubsection{SignupManager}
+\subsubsection{AccessManager}
+This component allows users to connect to the services, via sign up and login.
+\paragraph{SignupManager}
 This component allows customers and store owners that provide a valid identification document to register to the service, thus gaining access to its functionalities, provided that they log in. It is called through WebApp or SmartApp, and needs to access the DBMS to search for existing users with same identification document (to avoid duplication), and to create a new user.
-\subsubsection{LoginManager}
+\paragraph{LoginManager}
 This component allows customers and store owners to log in the service, thus gaining access to its functionalities. It is called by WebApp and SmartApp components, and needs to access the DBMS to verify user credentials against the stored ones.
-\subsubsection{StoreOwnerManager}
+\subsubsection{UserManager}
+This component allows users to change their profile.
+\paragraph{StoreOwnerManager}
 This component is accessed through WebApp or SmartApp and allows store owners to edit their credentials (obtained during sign up process), thus it needs access to DBMS.
-\subsubsection{CustomerManager}
+\paragraph{CustomerManager}
 This component is accessed through WebApp or SmartApp and allows customers to edit their credentials (obtained during sign up process), thus it needs access to DBMS.
 \subsubsection{ReservationManager}
-This component is accessed through WebApp or SmartApp and allows customers to send a reservation for a specific store, to delete an existing reservation, or to view status of non expired reservations (QR code, position in queue, status) by accessing QueueManager. It needs to access DBMS to retireve the list of the departments of the store that the reservation targets and, in case of an immediate reservation, to verify that the store is open at the current time. It needs access to DBMS also to fetch the list of non expired user reservation along with their information, and to delete them if required.
+This component is accessed through WebApp or SmartApp by customers and allows them to send a reservation for a specific store, to delete an existing reservation, or to view status of non expired reservations (QR code, position in queue, status) by accessing QueueManager. It needs to access DBMS to retireve the list of the departments of the store that the reservation targets and, in case of an immediate reservation, to verify that the store is open at the current time. It needs access to DBMS also to fetch the list of user reservation along with their information, and to delete them if required. Whenever a customer creates a reservation it is saved into the database.
 \subsubsection{StoreManager}
 This component is accessed through WebApp or SmartApp, and allows store owners to view owned stores, add new stores, delete existing stores or update information of existing stores, such as the list of departments and their respective maximum occupation. It needs to access the DBMS to execute the previous functions.
 \subsubsection{QueueManager}
-This component is accessed by the ReservationManager to add or remove a reservation from a queue of a specific store; whenever a reservation is added, this component accesses QRManager to generate an appropriate QR code for the reservation. It needs access to DBMS to get access to the current status of the queue of each store. It checks periodically the number of customers currently present, their location and the maximum occupation for every store and computes an estimated time that customers have to wait before gaining authorization to enter a specific store if such store has already reached maximum occupation. It checks periodically through MapsAPI an estimate of the time the customer needs to reach the store with his selected means of transport. If such time becomes lesser or equal to the time he/she needs to wait before entering the store, a notification is sent to the customer through NotificationManager if he/she uses a mobile application. This component accesses StatisticsManager to improve the computation of the time a customer needs to wait before being authorized to enter the store.
+This component contains the information about the people that are currently waiting to enter the store and those that are already inside it.\\
+It is accessed by the ReservationManager to add or remove a reservation from a queue of a specific store.
+It is also accessed by the QRManager whenever an authorized customer wants to view the QR and when he/she enters or exits the store.
+Finally it is accessed by NotificationManager and MonitorManager respectively in order to get the list of the customers currently waiting and the number of the last authorized customer.\\
+It needs access to DBMS to update the status of each reservation and entry and exit times. It checks periodically the number of customers currently present and the maximum occupation for every store and computes an estimated time that customers have to wait before gaining authorization to enter a specific store if such store has already reached maximum occupation.\\
+This component accesses StatisticsManager to improve the computation of the time a customer needs to wait before being authorized to enter the store.
 \subsubsection{QRManager}
-This component is accessed by the QueueManager during the insertion of a reservation in the queue to produce the QR that will be used to identify the customer that created such reservation. It needs access to the DBMS: when QRReader reads a QR code, it accesses this component to retrieve from the data base the reservation (if any) to which this QR corresponds, and opens turnstiles depending on the state of the reservation.
+This component accesses QueueManager whenever a customer needs to view a QR for a reservation: if a QR has already been generated for that reservation it is returned to QRManager, otherwise it is generated by QRManager and sent to QueueManager. When QRReader reads a QR code from a customer it calls QRManager, that accesses QueueManager to check that the reservation is existing and authorized, and if so it send the entry/exit time to the QueueManager and returns the QRReader the permission to unlock turnstile.
 \subsubsection{StatisticsManager}
 This component is accessed by QueueManager to improve the estimate of the time that a customer needs to wait before being authorized to enter a specific store. This component is accessed by a store owner through WebApp or SmartApp to visualize statistics. This component accesses the DBMS periodically to obtain the data with which to generate the statistics, and to save such statistics.
 \subsubsection{PrinterManager}
 This component allows the store owner with WebApp or SmartApp to register a TicketPrinter. This component also allows customer identification through TicketPrinter by validating a provided identification document. This component needs to access the DBMS to register or unregister instances of TicketPrinter.
 \subsubsection{MonitorManager}
-This component allows to update periodically a StoreMonitor. It retrieves from the DBMS the number of the last authorized reservation.
+This component allows to update periodically a StoreMonitor. It retrieves from the QueueManager the number of the last authorized reservation.
 \subsubsection{NotificationManager}
-This component is accessed by the SmartApp to retrieve notifications. This component is sent notifications by the queue manager, whenever the time to reach the store becomes greater or equal to the estimate of the time to wait before being authoruzed to enter the store. This component saves unsent notifications in DBMS until it is able to dispatch them.
+This component is accessed by the NotificationService to retrieve the wait time. This component periodically accesses the QueueManager to get this information.
+\subsubsection{MapsAPI}
+This component accesses an external mapping service (i.e. GoogleMaps) to compute the estimated time to reach the store from the current position of the device with the selected means of transport.
+\subsubsection{DBMS}
+This component is the DataBase Management System accessed by the ApplicationServer to perform create/read/update/delete operations on the DB.
+\subsubsection{Additional specification}
+For what concerns the smartphone application, it is a thick client: in fact beside the presentation logic, it contains a small part of the application logic. Indeed, the phone app can check the validity of the information inserted by the user when creating a reservation and, more importantly, it checks when it is time to notify the customer about its turn to reach the store, based on the position of the device and the position of the store (received by the server). It is important that the phone app does this computations, because the position of the customer, necessary to know how long will it take to go to the market, can only be detected by the end device.\\
+The web app, of course, is instead a thin client, because, being it a browser application, will only work on the presentation logic, to show the interface to the user.\\
+In order to guarantee the reliability of the system, both the web servers and the application servers must be replicated, so that in case of one of them goes down the application can still work.\\
+The load balancer, that in one of the previous diagram has been represented as a single component, may become overloaded by the requests. To prevent this it must be replicated too.
+\subsection{Deployment View}
+The following image shows the deployment diagram of the system by presenting the distribution (deployment) of software artifacts to the nodes, i.e. the deployment targets.
+
+
+
+
+
+
+
+

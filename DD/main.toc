@@ -1,48 +1,55 @@
-\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Purpose}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Scope}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Definitions, Acronyms, Abbreviations}{5}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Definitions}{5}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}Acronyms}{5}{subsubsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.3}Abbreviations}{5}{subsubsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.4}Revision history}{5}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Reference Documents}{5}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Document Structure}{5}{subsection.1.6}%
-\contentsline {section}{\numberline {2}Architectural Design}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Overview}{7}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Component View}{9}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}WebApp}{10}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}WebServer}{10}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}SmartApp}{10}{subsubsection.2.2.3}%
-\contentsline {paragraph}{\numberline {2.2.3.1}StoreOwnerService}{10}{paragraph.2.2.3.1}%
-\contentsline {paragraph}{\numberline {2.2.3.2}CustomerService}{10}{paragraph.2.2.3.2}%
-\contentsline {paragraph}{\numberline {2.2.3.3}NotificationService}{10}{paragraph.2.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}QRReader}{10}{subsubsection.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}TicketPrinter}{10}{subsubsection.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.6}StoreMonitor}{10}{subsubsection.2.2.6}%
-\contentsline {subsubsection}{\numberline {2.2.7}Redirector}{10}{subsubsection.2.2.7}%
-\contentsline {subsubsection}{\numberline {2.2.8}AccessManager}{10}{subsubsection.2.2.8}%
-\contentsline {paragraph}{\numberline {2.2.8.1}SignupManager}{11}{paragraph.2.2.8.1}%
-\contentsline {paragraph}{\numberline {2.2.8.2}LoginManager}{11}{paragraph.2.2.8.2}%
-\contentsline {subsubsection}{\numberline {2.2.9}UserManager}{11}{subsubsection.2.2.9}%
-\contentsline {paragraph}{\numberline {2.2.9.1}StoreOwnerManager}{11}{paragraph.2.2.9.1}%
-\contentsline {paragraph}{\numberline {2.2.9.2}CustomerManager}{11}{paragraph.2.2.9.2}%
-\contentsline {subsubsection}{\numberline {2.2.10}ReservationManager}{11}{subsubsection.2.2.10}%
-\contentsline {subsubsection}{\numberline {2.2.11}StoreManager}{11}{subsubsection.2.2.11}%
-\contentsline {subsubsection}{\numberline {2.2.12}QueueManager}{11}{subsubsection.2.2.12}%
-\contentsline {subsubsection}{\numberline {2.2.13}QRManager}{12}{subsubsection.2.2.13}%
-\contentsline {subsubsection}{\numberline {2.2.14}StatisticsManager}{12}{subsubsection.2.2.14}%
-\contentsline {subsubsection}{\numberline {2.2.15}PrinterManager}{12}{subsubsection.2.2.15}%
-\contentsline {subsubsection}{\numberline {2.2.16}MonitorManager}{12}{subsubsection.2.2.16}%
-\contentsline {subsubsection}{\numberline {2.2.17}NotificationManager}{12}{subsubsection.2.2.17}%
-\contentsline {subsubsection}{\numberline {2.2.18}MapsAPI}{12}{subsubsection.2.2.18}%
-\contentsline {subsubsection}{\numberline {2.2.19}DBMS}{12}{subsubsection.2.2.19}%
-\contentsline {subsubsection}{\numberline {2.2.20}Additional specification}{12}{subsubsection.2.2.20}%
-\contentsline {subsection}{\numberline {2.3}Deployment View}{13}{subsection.2.3}%
-\contentsline {section}{\numberline {3}User Interface Design}{14}{section.3}%
-\contentsline {section}{\numberline {4}Requirements Traceability}{15}{section.4}%
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{16}{section.5}%
-\contentsline {section}{\numberline {6}Effort Spent}{17}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Simone Abelli}{17}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{17}{subsection.6.2}%
-\contentsline {section}{References}{18}{subsection.6.2}%
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Purpose}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Scope}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Definitions, Acronyms, Abbreviations}{6}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Definitions}{6}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Acronyms}{6}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Abbreviations}{6}{subsubsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.4}Revision history}{6}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Reference Documents}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Document Structure}{6}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Architectural Design}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Overview}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Component View}{10}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}WebApp}{11}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}WebServer}{11}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}SmartApp}{11}{subsubsection.2.2.3}%
+\contentsline {paragraph}{\numberline {2.2.3.1}StoreOwnerService}{11}{paragraph.2.2.3.1}%
+\contentsline {paragraph}{\numberline {2.2.3.2}CustomerService}{11}{paragraph.2.2.3.2}%
+\contentsline {paragraph}{\numberline {2.2.3.3}NotificationService}{11}{paragraph.2.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}QRReader}{11}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}TicketPrinter}{11}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}StoreMonitor}{11}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}Redirector}{11}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}AccessManager}{11}{subsubsection.2.2.8}%
+\contentsline {paragraph}{\numberline {2.2.8.1}SignupManager}{12}{paragraph.2.2.8.1}%
+\contentsline {paragraph}{\numberline {2.2.8.2}LoginManager}{12}{paragraph.2.2.8.2}%
+\contentsline {subsubsection}{\numberline {2.2.9}UserManager}{12}{subsubsection.2.2.9}%
+\contentsline {paragraph}{\numberline {2.2.9.1}StoreOwnerManager}{12}{paragraph.2.2.9.1}%
+\contentsline {paragraph}{\numberline {2.2.9.2}CustomerManager}{12}{paragraph.2.2.9.2}%
+\contentsline {subsubsection}{\numberline {2.2.10}ReservationManager}{12}{subsubsection.2.2.10}%
+\contentsline {subsubsection}{\numberline {2.2.11}StoreManager}{12}{subsubsection.2.2.11}%
+\contentsline {subsubsection}{\numberline {2.2.12}QueueManager}{12}{subsubsection.2.2.12}%
+\contentsline {subsubsection}{\numberline {2.2.13}QRManager}{13}{subsubsection.2.2.13}%
+\contentsline {subsubsection}{\numberline {2.2.14}StatisticsManager}{13}{subsubsection.2.2.14}%
+\contentsline {subsubsection}{\numberline {2.2.15}PrinterManager}{13}{subsubsection.2.2.15}%
+\contentsline {subsubsection}{\numberline {2.2.16}MonitorManager}{13}{subsubsection.2.2.16}%
+\contentsline {subsubsection}{\numberline {2.2.17}NotificationManager}{13}{subsubsection.2.2.17}%
+\contentsline {subsubsection}{\numberline {2.2.18}MapsAPI}{13}{subsubsection.2.2.18}%
+\contentsline {subsubsection}{\numberline {2.2.19}DBMS}{13}{subsubsection.2.2.19}%
+\contentsline {subsubsection}{\numberline {2.2.20}Additional specification}{13}{subsubsection.2.2.20}%
+\contentsline {subsection}{\numberline {2.3}Deployment View}{14}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Smartphone}{14}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Computer}{14}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Firewall}{14}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}LoadBalancer}{15}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}ApplicationServerDevice}{15}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}WebServerDevice}{15}{subsubsection.2.3.6}%
+\contentsline {subsubsection}{\numberline {2.3.7}DatabaseDevice}{15}{subsubsection.2.3.7}%
+\contentsline {section}{\numberline {3}User Interface Design}{16}{section.3}%
+\contentsline {section}{\numberline {4}Requirements Traceability}{17}{section.4}%
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{18}{section.5}%
+\contentsline {section}{\numberline {6}Effort Spent}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Simone Abelli}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{19}{subsection.6.2}%
+\contentsline {section}{References}{20}{subsection.6.2}%

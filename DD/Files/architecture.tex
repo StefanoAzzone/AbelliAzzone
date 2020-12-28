@@ -91,11 +91,26 @@ In order to guarantee the reliability of the system, both the web servers and th
 The load balancer, that in one of the previous diagram has been represented as a single component, may become overloaded by the requests. To prevent this it must be replicated too.
 \subsection{Deployment View}
 The following image shows the deployment diagram of the system by presenting the distribution (deployment) of software artifacts to the nodes, i.e. the deployment targets.
-
-
-
-
-
-
-
-
+\begin{flushleft}
+	\includegraphics[scale=0.45]{Images/Deployment.png}
+\end{flushleft}
+Here we describe the components of the deployment view:
+\subsubsection{Smartphone}
+The customers and the store owners can access the functionalities of the system through a smartphone, that communicates through a firewall and a load balancer with the ApplicationServerDevice.\\
+The SmartAppArtifact allows communication between the Smartphone and the ApplicationServerDevice, and its operation is supported by the operative system of the smartphone, either Android or iOS.
+\subsubsection{Computer}
+The customers and the store owners can access the functionalities of the system through a computer that communicates through a firewall and a load balancer with the WebServerDevice which in turn is connected through a firewall and a load balancer with an ApplicationServerDevice.\\
+The WebAppArtifact will be downloaded from the WebServerDevice and it will be shown by the browser installed on the device which we assume for simplicity to be Chrome, whose operation is supported by the operating system of the Computer, either Windows or MacOs. 
+\subsubsection{Firewall}
+The firewalls allow to separate the different parts of the system: the DatabaseDevice is isolated from the ApplicationServerDevice, which in turn is isolated from the Smartphone and the WebServerdevice, which in turn is isolated from the Computer.
+\subsubsection{LoadBalancer}
+The LoadBalancer allow to balance the load of the system on the replicated ApplicationServerDevices and WebServerDevices.
+\subsubsection{ApplicationServerDevice}
+This device implements the main business logic of our system. It is accessed by Smartphone and Computer devices to make use of the functionalities offered by the system. It is supported by a DatabaseDevice that allows the ApplicationDevice to create, read, update and delete all the information necessary for the correct functioning of the system.\\
+The AppServerArtifact is run by the JRE which in turn is supported by the Solaris operating system.
+\subsubsection{WebServerDevice}
+This device allows customers and store owners to access their respective services by using Java RMI to communicate with the ApplicationServerDevice.\\
+The web server TomEE will server the browser the artifact it needs to show to the users. This web server's operation will be supported by Red Hat Linux Enterprise operating system.
+\subsubsection{DatabaseDevice}
+This device allows the ApplicationServerDevice to create, read, update, delete information that supports the system operation.\\
+The DataBase is managed by the Oracle DBMS which in turn is supported by Oracle Solaris.

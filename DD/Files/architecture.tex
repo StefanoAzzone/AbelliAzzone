@@ -14,22 +14,30 @@ The data layer is composed by the database server.\\\\\\
 This image shows the high level representation of the three-layer architecture, where we have all the devices used to interact with the user and their respective software, that have to connect to the application server, which is able to communicate with the database server.\\
 Although very simple, this high level view shows how a three tier architecture can provide more flexibility to the system, splitting the server side in two logical layers. It is also very useful from a security viewpoint: in fact the data are kept separated from the user by the application layer, so that all sensitive information are protected from undesired access.
 \newpage
-Let us now have a more in-depth look at the system architecture.\\
-\includegraphics[scale=0.5]{Images/System Architecture.png}\\
+Let us now have a more in-depth look at the system architecture.\\\\
+\includegraphics[scale=0.5]{Images/System Architecture.png}\\\\
 Here we can better see how each tier of the previously defined architecture is mapped in the system. The customer is capable to interact with the system in several ways: through the phone app on his smartphone, by the web app on his computer, using the printer outside the store (in order to create an on premise reservation) or via QR scanner, which unlocks the turnstiles and validate enter and exit from the store. In order to provide an estimation of the travel time from the location of the customer to the store, the system uses the GPS technology through the Google Maps API.\\
 The store owner, from his/her side, can only access the system from the web app or the phone application; this is because in the role of owner he/she does not need to access the market, and use the system only to control occupation and statistics of the stores.\\
 The web app does not communicate directly with the application server, but must traverse the web server, which provide the web pages to the browser.\\
-The application server is protected from the outside by a first firewall, which creates a demilitarized zone for it. Then, it communicates with the database server, which contains the database management system, through a second and more restrictive firewall, that isolate the database from possible attacks. This double firewall ensures the security properties for the system.\\
+The application and web servers ere protected from the outside by a first firewall, which creates a demilitarized zone for them. Then, the application server communicates with the database server, which contains the database management system, through a second and more restrictive firewall, that isolate the database from possible attacks. This double firewall ensures the security properties for the system.\\
 In order to create reservations, the clients must communicate synchronously with the server, as they have no information on the queue. The application server, then communicates synchronously with the database server to retrieve information or asynchronously to store information when needed.\\
-In the image above the server element must not be considered as a single machine: if so the architecture would be poorly scalable, and heavy traffic would make the system crash. To guarantee scalability we use a node replication approach, which involves the use of a node balancer which redirect the traffic between multiple servers.\\
-\includegraphics[scale=0.5]{Images/LoadBalancer.png}\\
+In the image above the server element must not be considered as a single machine: if so the architecture would be poorly scalable, and heavy traffic would make the system crash. To guarantee scalability we use a node replication approach, which involves the use of a node balancer which redirect the traffic between multiple servers.\newpage
+\begin{figure}[h]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.5]{Images/LoadBalancer.png}}
+\end{figure}
 This image show an example of how this method works for the application tier: in this case the load balancer splits the work between three application servers, but of course there might be more. Moreover this approach is used also for the web server and the database server, according to the needs of the system.\\
-Until now we have used an informal view of the architecture; in the next sections we will keep deepening the architecture and its characteristics.\\
+Until now we have used an informal view of the architecture; in the next sections we will keep deepening the architecture and its characteristics.\newpage
 \subsection{Component View}
 Here we display the main component architecture of our S2B. Since the ApplicationServer contains all the business logic, we will describe in detail the structure of its subcomponents.\\\\
-\begin{flushleft}
-\includegraphics[scale=0.3]{Images/Component.png}
-\end{flushleft}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.35]{Images/Component.png}}
+\end{figure}
+
+
 \subsubsection{WebApp}
 This component allows customer and store owners to access their respective services on a computer. It requires a WebServer.
 \subsubsection{WebServer}
@@ -88,7 +96,32 @@ This component is the DataBase Management System accessed by the ApplicationServ
 For what concerns the smartphone application, it is a thick client: in fact beside the presentation logic, it contains a small part of the application logic. Indeed, the phone app can check the validity of the information inserted by the user when creating a reservation and, more importantly, it checks when it is time to notify the customer about its turn to reach the store, based on the position of the device and the position of the store (received by the server). It is important that the phone app does this computations, because the position of the customer, necessary to know how long will it take to go to the market, can only be detected by the end device.\\
 The web app, of course, is instead a thin client, because, being it a browser application, will only work on the presentation logic, to show the interface to the user.\\
 In order to guarantee the reliability of the system, both the web servers and the application servers must be replicated, so that in case of one of them goes down the application can still work.\\
-The load balancer, that in one of the previous diagram has been represented as a single component, may become overloaded by the requests. To prevent this it must be replicated too.
+The load balancer, that in one of the previous diagram has been represented as a single component, may become overloaded by the requests. To prevent this it must be replicated too.\\
+To optimize the routing process we can divide the redirector in several subcomponents, one for each of the possible devices that will use it.\\
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.40]{Images/RedirectorExpanded.png}}
+\end{figure}
+This image shows how each interface connects with the redirector's subcomponents. Of course, each of them will provide a different routing on the possible interfaces of the system, as shown in the following diagrams.\\
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.35]{Images/MobileAppRouting.png}
+	\includegraphics[scale=0.35]{Images/MonitorRouting.png}}
+\end{figure}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.35]{Images/QRReaderRouting.png}
+	\includegraphics[scale=0.35]{Images/TicketPrinterRouting.png}}
+\end{figure}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.35]{Images/WebAppRouting.png}}
+\end{figure}
+\newpage
 \subsection{Deployment View}
 The following image shows the deployment diagram of the system by presenting the distribution (deployment) of software artifacts to the nodes, i.e. the deployment targets.
 \begin{flushleft}
@@ -102,15 +135,38 @@ The SmartAppArtifact allows communication between the Smartphone and the Applica
 The customers and the store owners can access the functionalities of the system through a computer that communicates through a firewall and a load balancer with the WebServerDevice which in turn is connected through a firewall and a load balancer with an ApplicationServerDevice.\\
 The WebAppArtifact will be downloaded from the WebServerDevice and it will be shown by the browser installed on the device which we assume for simplicity to be Chrome, whose operation is supported by the operating system of the Computer, either Windows or MacOs. 
 \subsubsection{Firewall}
-The firewalls allow to separate the different parts of the system: the DatabaseDevice is isolated from the ApplicationServerDevice, which in turn is isolated from the Smartphone and the WebServerdevice, which in turn is isolated from the Computer.
+The firewalls allow to separate the different parts of the system: the DatabaseDevice is isolated from the ApplicationServerDevice, which in turn is isolated from the Smartphone, and the WebServerdevice, which in turn is isolated from the Computer.
 \subsubsection{LoadBalancer}
-The LoadBalancer allow to balance the load of the system on the replicated ApplicationServerDevices and WebServerDevices.
+The LoadBalancer allows to balance the load of the system on the replicated ApplicationServerDevices and WebServerDevices.
 \subsubsection{ApplicationServerDevice}
 This device implements the main business logic of our system. It is accessed by Smartphone and Computer devices to make use of the functionalities offered by the system. It is supported by a DatabaseDevice that allows the ApplicationDevice to create, read, update and delete all the information necessary for the correct functioning of the system.\\
-The AppServerArtifact is run by the JRE which in turn is supported by the Solaris operating system.
+The AppServerArtifact is run by the JRE which in turn is supported by the RHEL operating system.
 \subsubsection{WebServerDevice}
 This device allows customers and store owners to access their respective services by using Java RMI to communicate with the ApplicationServerDevice.\\
 The web server TomEE will server the browser the artifact it needs to show to the users. This web server's operation will be supported by Red Hat Linux Enterprise operating system.
 \subsubsection{DatabaseDevice}
 This device allows the ApplicationServerDevice to create, read, update, delete information that supports the system operation.\\
-The DataBase is managed by the Oracle DBMS which in turn is supported by Oracle Solaris.
+The DataBase is managed by the Oracle DBMS which in turn is supported by Oracle Solaris.\newpage
+\subsection{Runtime View}
+%TODO : something here
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.5]{Images/RuntimeViewLogin.png}}
+\end{figure}
+%TODO : dashed arrows on responses
+By opening the application, user calls the SmartApp component. SmartApp calls Redirector, that calls LoginManager, that retrieves from the DBMS the password hash of the specified user (if he/she exists), and compares it with the provided password. The result of this operation is then sent back to the user.\\
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.35]{Images/RuntimeViewImmRes.png}}
+\end{figure}
+The customer selects the option to create an immediate reservation. The SmartApp requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer. The customer then selects a store form the list provided and a means of transport. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the selected store is open at the time, loading it from the DBMS, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the DBMS. It is rejected otherwise.
+
+%TODO: 	customer enter store (and exit) Az
+%		notification Ab
+%		Customer open OnPremiseRes Az
+%		Customer open FutureRes with web app Ab
+%		StatisticManager generates statistics Az
+%		StOwner register new store Ab
+

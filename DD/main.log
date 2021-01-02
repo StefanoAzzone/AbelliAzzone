@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.15)  2 JAN 2021 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2020.12.15)  2 JAN 2021 17:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -1160,31 +1160,31 @@ File: Images/RuntimeViewPreRes.png Graphic file (type png)
 Package pdftex.def Info: Images/RuntimeViewPreRes.png  used on input line 180.
 (pdftex.def)             Requested size: 517.13976pt x 499.22255pt.
  [22 <./Images/RuntimeViewPreRes.png>]
-<Images/RuntimeViewStatistics.png, id=437, 363.3575pt x 362.35374pt>
+<Images/RuntimeViewStatistics.png, id=437, 362.35374pt x 382.42876pt>
 File: Images/RuntimeViewStatistics.png Graphic file (type png)
 <use Images/RuntimeViewStatistics.png>
 Package pdftex.def Info: Images/RuntimeViewStatistics.png  used on input line 1
 87.
-(pdftex.def)             Requested size: 181.6783pt x 181.17642pt.
-<Images/RuntimeViewStoreEntry.png, id=438, 981.6675pt x 482.80376pt>
+(pdftex.def)             Requested size: 181.17642pt x 191.2139pt.
+<Images/RuntimeViewStoreEntry.png, id=438, 886.31125pt x 482.80376pt>
 File: Images/RuntimeViewStoreEntry.png Graphic file (type png)
 <use Images/RuntimeViewStoreEntry.png>
 Package pdftex.def Info: Images/RuntimeViewStoreEntry.png  used on input line 1
 94.
-(pdftex.def)             Requested size: 441.74629pt x 217.25967pt.
-<Images/RuntimeViewStoreReg.png, id=439, 1095.09125pt x 783.92876pt>
+(pdftex.def)             Requested size: 398.83638pt x 217.25967pt.
+<Images/RuntimeViewStoreReg.png, id=439, 1095.09125pt x 792.9625pt>
 File: Images/RuntimeViewStoreReg.png Graphic file (type png)
 <use Images/RuntimeViewStoreReg.png>
 Package pdftex.def Info: Images/RuntimeViewStoreReg.png  used on input line 201
 .
-(pdftex.def)             Requested size: 383.28767pt x 274.37918pt.
+(pdftex.def)             Requested size: 383.28767pt x 277.54103pt.
  [23 <./Images/RuntimeViewStatistics.png> <./Images/RuntimeViewStoreEntry.png>]
-<Images/RuntimeViewNotification.png, id=448, 1255.69125pt x 554.07pt>
+<Images/RuntimeViewNotification.png, id=448, 1075.01625pt x 532.99126pt>
 File: Images/RuntimeViewNotification.png Graphic file (type png)
 <use Images/RuntimeViewNotification.png>
 Package pdftex.def Info: Images/RuntimeViewNotification.png  used on input line
  209.
-(pdftex.def)             Requested size: 439.49852pt x 193.9274pt.
+(pdftex.def)             Requested size: 376.26132pt x 186.54973pt.
 ) [24 <./Images/RuntimeViewStoreReg.png> <./Images/RuntimeViewNotification.png>
 ] [25] (Files/interface.tex) [26
 
@@ -1225,7 +1225,7 @@ Here is how much of TeX's memory you used:
 {C:/Users/ste/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/U
 sers/ste/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Use
 rs/ste/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (30 pages, 652571 bytes).
+Output written on main.pdf (30 pages, 654209 bytes).
 PDF statistics:
  517 PDF objects out of 1000 (max. 8388607)
  112 named destinations out of 1000 (max. 500000)

@@ -47,10 +47,18 @@
 \contentsline {subsubsection}{\numberline {2.3.6}WebServerDevice}{18}{subsubsection.2.3.6}%
 \contentsline {subsubsection}{\numberline {2.3.7}DatabaseDevice}{18}{subsubsection.2.3.7}%
 \contentsline {subsection}{\numberline {2.4}Runtime View}{19}{subsection.2.4}%
-\contentsline {section}{\numberline {3}User Interface Design}{21}{section.3}%
-\contentsline {section}{\numberline {4}Requirements Traceability}{22}{section.4}%
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{23}{section.5}%
-\contentsline {section}{\numberline {6}Effort Spent}{24}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Simone Abelli}{24}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{24}{subsection.6.2}%
-\contentsline {section}{References}{25}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {2.4.1}Login via smartphone app}{19}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Immediate reservation via smartphone app}{20}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Future reservation via web app}{21}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}On premise reservation}{22}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}Statistics generation}{23}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.6}Customer enters store}{23}{subsubsection.2.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.7}Store owner registers store via web app}{24}{subsubsection.2.4.7}%
+\contentsline {subsubsection}{\numberline {2.4.8}Customer is notified by smartphone app}{24}{subsubsection.2.4.8}%
+\contentsline {section}{\numberline {3}User Interface Design}{26}{section.3}%
+\contentsline {section}{\numberline {4}Requirements Traceability}{27}{section.4}%
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{28}{section.5}%
+\contentsline {section}{\numberline {6}Effort Spent}{29}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Simone Abelli}{29}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{29}{subsection.6.2}%
+\contentsline {section}{References}{30}{subsection.6.2}%

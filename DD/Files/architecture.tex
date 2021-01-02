@@ -68,7 +68,7 @@ This component is accessed through WebApp or SmartApp and allows store owners to
 \paragraph{CustomerManager}
 This component is accessed through WebApp or SmartApp and allows customers to edit their credentials (obtained during sign up process), thus it needs access to DBMS.
 \subsubsection{ReservationManager}
-This component is accessed through WebApp or SmartApp by customers and allows them to send a reservation for a specific store, to delete an existing reservation, or to view status of non expired reservations (QR code, position in queue, status) by accessing QueueManager. It needs to access DBMS to retireve the list of the departments of the store that the reservation targets and, in case of an immediate reservation, to verify that the store is open at the current time. It needs access to DBMS also to fetch the list of user reservation along with their information, and to delete them if required. Whenever a customer creates a reservation it is saved into the database.
+This component is accessed through WebApp or SmartApp by customers and allows them to send a reservation for a specific store, to delete an existing reservation, or to view status of non expired reservations (QR code, position in queue, status) by accessing QueueManager. It needs to access DBMS to retireve the list of the departments of the store that the reservation targets and, in case of an immediate reservation, to verify that the store is open at the current time. It needs access to DBMS also to fetch the list of user reservation along with their information, and to delete them if required. Whenever a customer creates a reservation it is saved into the database. This component is also accessed by the TicketPrinter whenever a customer creates an on premise reservation.
 \subsubsection{StoreManager}
 This component is accessed through WebApp or SmartApp, and allows store owners to view owned stores, add new stores, delete existing stores or update information of existing stores, such as the list of departments and their respective maximum occupation. It needs to access the DBMS to execute the previous functions.
 \subsubsection{QueueManager}
@@ -149,6 +149,7 @@ This device allows the ApplicationServerDevice to create, read, update, delete i
 The DataBase is managed by the Oracle DBMS which in turn is supported by Oracle Solaris.\newpage
 \subsection{Runtime View}
 %TODO : something here
+\subsubsection{Login via smartphone app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
@@ -156,17 +157,57 @@ The DataBase is managed by the Oracle DBMS which in turn is supported by Oracle 
 \end{figure}
 %TODO : dashed arrows on responses
 By opening the application, user calls the SmartApp component. SmartApp calls Redirector, that calls LoginManager, that retrieves from the DBMS the password hash of the specified user (if he/she exists), and compares it with the provided password. The result of this operation is then sent back to the user.\\
+\subsubsection{Immediate reservation via smartphone app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.35]{Images/RuntimeViewImmRes.png}}
 \end{figure}
 The customer selects the option to create an immediate reservation. The SmartApp requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer. The customer then selects a store form the list provided and a means of transport. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the selected store is open at the time, loading it from the DBMS, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the DBMS. It is rejected otherwise.
-
-%TODO: 	customer enter store (and exit) Az
-%		notification Ab
-%		Customer open OnPremiseRes Az
-%		Customer open FutureRes with web app Ab
-%		StatisticManager generates statistics Az
-%		StOwner register new store Ab
-
+\subsubsection{Future reservation via web app}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+		\includegraphics[scale=0.3]{Images/RuntimeViewFutRes.png}}
+\end{figure}
+When the customer selects the option to book a visit, the WebApp, through the WebServer, requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer.\\
+The customer can then select a store form the list provided, the date he would like to book and, optionally, a list of departments he is interested in and how long he thinks the visit will be. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the resrvation is valid (the selected store is open at the time, the maximum number of reservations has not yet been reached), and if it is, the reservation can be generated: first, if the expected duration has not been specified, it is inferred by the StatisticsManager, based on the past reservations created by the customer, and returned to the ReservationManager; then it ask the queue manager to create the reservation and insert it into the queue in an appropriate time slot, considering the other reservations already present. The reservation is then saved into the DBMS.\\
+If the reservation was not valid, then it is rejected.
+\subsubsection{On premise reservation}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+		\includegraphics[scale=0.35]{Images/RuntimeViewPreRes.png}}
+\end{figure}
+The customer selects the option to create an on premise reservation, and provides the TicketPrinter with an identification document. This request is then forwarded by the Redirector to the PrinterManager that checks that the document is valid. If it is, an on premise reservation request is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that that the reservation is valid for the selected store at the time of creation (e.g. the store is open), loading the store info from the DBMS, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the DBMS. It is rejected otherwise.
+\subsubsection{Statistics generation}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.5]{Images/RuntimeViewStatistics.png}}
+\end{figure}
+Every week the StatisticsManager retrieves a list of the reservations of the past week, and for each customer and each store computes the average daily and weekly duration of the visit, and stores them in the DBMS.
+\subsubsection{Customer enters store}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.45]{Images/RuntimeViewStoreEntry.png}}
+\end{figure}
+The customer provides the QR reader with a QR code (be it on the screen of his/her smartphone or printed on paper). That code is then forwarded by the redirector to the QRManager that decodes it and calls the QueueManager to check that the QR code belongs to a customer that is now authorized to enter the store. If this is the case, the turnstiles unlock. Whenever the customer enters or exits a store, QueueManager saves the time of arrival/departure in the reservation, and then saves them in the DBMS.
+\subsubsection{Store owner registers store via web app}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.35]{Images/RuntimeViewStoreReg.png}}
+\end{figure}
+The store owner opens the app and look at all his/her stores; he/she decides to add a new store, so he/she insert all required data, that are sent, through the redirector, to the StoreManager. This component validates the data and, if everything is correct, asks the DBMS to save the data of the new store.\\
+Of course, in this process, only the store has been added, so the store owner will then also need to register the TicketPrinter, the QRReader and the StoreMonitor to the system.
+\subsubsection{Customer is notified by smartphone app}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.35]{Images/RuntimeViewNotification.png}}
+\end{figure}
+Periodically the system must check if it is time to notify the customer about his/her reservations.
+Once every minute, the NotificationManager will ask the QueueManager to send, for each of the relatively closest reservations (those that have as target time less than an hour with respect to the current time) the time remaining before they become authorized.\\
+Also the phone app, asynchronously, will use every minute the MapAPI to get an estimation of the time necessary to reach the store from the location of the device. Then it will ask the NotificationManager the time to wait, so that, by comparing this two numbers, it can decide whether notify the customer or not. Of course there can actuality be an additional value n such that the customer is notified if time to wait <= time to reach + n. In this way the customer has a little notice before departing.

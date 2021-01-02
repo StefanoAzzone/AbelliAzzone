@@ -40,10 +40,18 @@
 \BOOKMARK [3][-]{subsubsection.2.3.6}{WebServerDevice}{subsection.2.3}% 40
 \BOOKMARK [3][-]{subsubsection.2.3.7}{DatabaseDevice}{subsection.2.3}% 41
 \BOOKMARK [2][-]{subsection.2.4}{Runtime View}{section.2}% 42
-\BOOKMARK [1][-]{section.3}{User Interface Design}{}% 43
-\BOOKMARK [1][-]{section.4}{Requirements Traceability}{}% 44
-\BOOKMARK [1][-]{section.5}{Implementation, Integration and Test Plan}{}% 45
-\BOOKMARK [1][-]{section.6}{Effort Spent}{}% 46
-\BOOKMARK [2][-]{subsection.6.1}{Simone Abelli}{section.6}% 47
-\BOOKMARK [2][-]{subsection.6.2}{Stefano Azzone}{section.6}% 48
-\BOOKMARK [1][-]{subsection.6.2}{References}{}% 49
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Login via smartphone app}{subsection.2.4}% 43
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Immediate reservation via smartphone app}{subsection.2.4}% 44
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Future reservation via web app}{subsection.2.4}% 45
+\BOOKMARK [3][-]{subsubsection.2.4.4}{On premise reservation}{subsection.2.4}% 46
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Statistics generation}{subsection.2.4}% 47
+\BOOKMARK [3][-]{subsubsection.2.4.6}{Customer enters store}{subsection.2.4}% 48
+\BOOKMARK [3][-]{subsubsection.2.4.7}{Store owner registers store via web app}{subsection.2.4}% 49
+\BOOKMARK [3][-]{subsubsection.2.4.8}{Customer is notified by smartphone app}{subsection.2.4}% 50
+\BOOKMARK [1][-]{section.3}{User Interface Design}{}% 51
+\BOOKMARK [1][-]{section.4}{Requirements Traceability}{}% 52
+\BOOKMARK [1][-]{section.5}{Implementation, Integration and Test Plan}{}% 53
+\BOOKMARK [1][-]{section.6}{Effort Spent}{}% 54
+\BOOKMARK [2][-]{subsection.6.1}{Simone Abelli}{section.6}% 55
+\BOOKMARK [2][-]{subsection.6.2}{Stefano Azzone}{section.6}% 56
+\BOOKMARK [1][-]{subsection.6.2}{References}{}% 57

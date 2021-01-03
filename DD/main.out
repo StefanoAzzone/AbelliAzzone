@@ -48,10 +48,14 @@
 \BOOKMARK [3][-]{subsubsection.2.4.6}{Customer enters store}{subsection.2.4}% 48
 \BOOKMARK [3][-]{subsubsection.2.4.7}{Store owner registers store via web app}{subsection.2.4}% 49
 \BOOKMARK [3][-]{subsubsection.2.4.8}{Customer is notified by smartphone app}{subsection.2.4}% 50
-\BOOKMARK [1][-]{section.3}{User Interface Design}{}% 51
-\BOOKMARK [1][-]{section.4}{Requirements Traceability}{}% 52
-\BOOKMARK [1][-]{section.5}{Implementation, Integration and Test Plan}{}% 53
-\BOOKMARK [1][-]{section.6}{Effort Spent}{}% 54
-\BOOKMARK [2][-]{subsection.6.1}{Simone Abelli}{section.6}% 55
-\BOOKMARK [2][-]{subsection.6.2}{Stefano Azzone}{section.6}% 56
-\BOOKMARK [1][-]{subsection.6.2}{References}{}% 57
+\BOOKMARK [2][-]{subsection.2.5}{Component Interfaces}{section.2}% 51
+\BOOKMARK [2][-]{subsection.2.6}{Selected Architectural Style and Patterns}{section.2}% 52
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Three layer Client-Server}{subsection.2.6}% 53
+\BOOKMARK [3][-]{subsubsection.2.6.2}{RESTful architecture}{subsection.2.6}% 54
+\BOOKMARK [1][-]{section.3}{User Interface Design}{}% 55
+\BOOKMARK [1][-]{section.4}{Requirements Traceability}{}% 56
+\BOOKMARK [1][-]{section.5}{Implementation, Integration and Test Plan}{}% 57
+\BOOKMARK [1][-]{section.6}{Effort Spent}{}% 58
+\BOOKMARK [2][-]{subsection.6.1}{Simone Abelli}{section.6}% 59
+\BOOKMARK [2][-]{subsection.6.2}{Stefano Azzone}{section.6}% 60
+\BOOKMARK [1][-]{subsection.6.2}{References}{}% 61

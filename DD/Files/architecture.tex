@@ -46,7 +46,7 @@ This component communicates directly with the ApplicationServer and serves web p
 This component allows customers and store owners to access their respective services on a smartphone, by interfacing with the ApplicationServer. It is composed of the following subcomponents:
 \paragraph{StoreOwnerService}Allows the store owner to access the functionalities that the system reserved to him/her.
 \paragraph{CustomerService}Allows the customer to access the functionalities that the system reserved to him/her.
-\paragraph{NotificationService}Periodically retrieve the waiting time from the NotificationManager and calls MapsAPI to get the time to reach the store from the current position and if it is greater or equal to the waiting time it notifies the customer.
+\paragraph{NotificationService}Periodically receives the waiting time from the NotificationManager and calls MapsAPI to get the time to reach the store from the current position and if it is greater or equal to the waiting time (plus a constant, to give a little notice to the customer) it notifies the customer.
 \subsubsection{QRReader}
 This component reads user provided QRCodes and sends them to the ApplicationServer, thus enabling authentication for turnstiles.
 \subsubsection{TicketPrinter}
@@ -75,7 +75,8 @@ This component is accessed through WebApp or SmartApp, and allows store owners t
 This component contains the information about the people that are currently waiting to enter the store and those that are already inside it.\\
 It is accessed by the ReservationManager to add or remove a reservation from a queue of a specific store.
 It is also accessed by the QRManager whenever an authorized customer wants to view the QR and when he/she enters or exits the store.
-Finally it is accessed by NotificationManager and MonitorManager respectively in order to get the list of the customers currently waiting and the number of the last authorized customer.\\
+Moreover it accesses MonitorManager every time the number of the last authorized reservation of a store changes.
+Finally it is accessed by NotificationManager in order to get the list of the customers currently waiting.\\
 It needs access to DBMS to update the status of each reservation and entry and exit times. It checks periodically the number of customers currently present and the maximum occupation for every store and computes an estimated time that customers have to wait before gaining authorization to enter a specific store if such store has already reached maximum occupation.\\
 This component accesses StatisticsManager to improve the computation of the time a customer needs to wait before being authorized to enter the store.
 \subsubsection{QRManager}
@@ -85,9 +86,9 @@ This component is accessed by QueueManager to improve the estimate of the time t
 \subsubsection{PrinterManager}
 This component allows the store owner with WebApp or SmartApp to register a TicketPrinter. This component also allows customer identification through TicketPrinter by validating a provided identification document. This component needs to access the DBMS to register or unregister instances of TicketPrinter.
 \subsubsection{MonitorManager}
-This component allows to update periodically a StoreMonitor. It retrieves from the QueueManager the number of the last authorized reservation.
+This component allows to update periodically a StoreMonitor. It is updated by the QueueManager every time the number of the last authorized reservation of a store changes, and then updates all the StoreMonitor registered for that store.
 \subsubsection{NotificationManager}
-This component is accessed by the NotificationService to retrieve the wait time. This component periodically accesses the QueueManager to get this information.
+This component accesses the NotificationService to provide the wait time. This component periodically accesses the QueueManager to get this information.
 \subsubsection{MapsAPI}
 This component accesses an external mapping service (i.e. GoogleMaps) to compute the estimated time to reach the store from the current position of the device with the selected means of transport.
 \subsubsection{DBMS}
@@ -108,7 +109,7 @@ This image shows how each interface connects with the redirector's subcomponents
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.35]{Images/MobileAppRouting.png}
-	\includegraphics[scale=0.35]{Images/MonitorRouting.png}}
+	\includegraphics[scale=0.35]{Images/WebAppRouting.png}}
 \end{figure}
 \begin{figure}[H]
 	\noindent
@@ -119,7 +120,7 @@ This image shows how each interface connects with the redirector's subcomponents
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.35]{Images/WebAppRouting.png}}
+	\includegraphics[scale=0.35]{Images/MonitorRouting.png}}
 \end{figure}
 \newpage
 \subsection{Deployment View}
@@ -211,3 +212,31 @@ Of course, in this process, only the store has been added, so the store owner wi
 Periodically the system must check if it is time to notify the customer about his/her reservations.\\
 Once every minute, the NotificationManager will ask the QueueManager to send, for each of the relatively closest reservations(those that hava as target time less than an hour with respact to the current time) the time remaining before they become authorized. Each of this times is then sent to its respective customer, if the reservation has been generated by a phone app.\\
 Then the phone app will use the MapAPI to get an estimation of the time necessary to reach the store from the location of the device, by the means of transport specified at the creation of the reservation. Now, by comparing this two numbers, it can decide whether notify the customer or not. Of course there can actually be an additional value n such that the customer is notified if time to wait <= time to reach + n. In this way the customer has a little notice before departing.
+\newpage
+\subsection{Component Interfaces}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.45]{Images/ComponentInterfaces.png}}
+	\caption{Component Interfaces} %TODO: decide wether to keep captions
+\end{figure}
+In this diagram we represented the interfaces of the system components with their methods, and such interfaces interact with each other.\\
+For ease of representation we split WebApp and SmartApp component functionalities into three interfaces: CustomerService, StoreOwnerService and NotificationService. The WebApp component, that allows customers and store owners to interact with the system with a computer, implements the CustomerService and the StoreOwnerService interfaces. The SmartApp component, that allows customers and store owners to interact with the system with a smartphone, implements the CustomerService, StoreOwnerService and NotificationService interfaces.\\\\
+All communication from the outside world (except DBMS) to the ApplicationServer is mediated by the Redirector, while the ApplicationServer sends messages directly to the interested components: NotificationService communicates directly with the NotificationService, and MonitorManager communicates directly with the StoreMonitor component.\\
+Methods written here provide a logical representation of what component interfaces have to offer. They will be a soft guideline for the developers, that will be able to adapt them to create working components, facing the various problems that emerge during the implementation.\\
+At time of creation a user is assigned a string called id that uniquely represents that user. At time of creation a reservation is assigned a string called resId that uniquely represents it.\\
+\subsection{Selected Architectural Style and Patterns}
+The proposed architecture of the system make use of several architectural patterns, some of which has already been breafly described in the previous sections. We now present a more expanded specification of those architectural choices.\\\\
+\subsubsection{Three layer Client-Server}
+The overall architecture is a Three layer (presentation, application, data) client-server structure. This pattern has already been previously detailed, so check Section 2.1: Overview for more information about this style and why it has been chosen.
+\subsubsection{RESTful architecture}
+To manage the distributed system we choose a Representational state transfer (REST) architectural style. This style provides a data transmission system based on HTTP, with no other layers, which creates a stateless communication, i.e. it doesn't support the existence of sessions. In the RESTful Web Service requests are made to the URL of the resource or of the set of resources, which must be well defined and unambiguous. All operations will be mapped to the HTTP methods, e.g. GET, POST, PUT, DELETE.\\\\ This architectural style is used for fast performance, due to the absence of coupling between client and server components and upper layers to the HTTP protocol, and to ensure the ability to grow, by reusing components that can be managed and updated without affecting the system as a whole. In fact, due to the pandemic, the S2B has a strict time to market that we need to hit, in order to provide our functionalities when they are more needed; for this reason every extra function or modification we may want to add will need to be implemented after the release of the application, so an easy to update architecture is highly advised.\\\\
+As a REST architecture the system will support cacheability, eliminating some client–server interactions, further improving scalability and performance.\\
+Moreover it must have a single uniform interface, that simplifies and decouples the architecture, which enables each part to evolve independently. This constraint is checked by its subconstraints:
+\begin{itemize}
+	\item in our system resources identified in requests are conceptually separate from the representations that are returned to the client
+	\item resources given to the client can be manipulated through the client representation
+	\item each message includes enough information to describe how to process the message
+	\item the client is able from the initial URL to use server-provided links dynamically to discover all the available resources it needs
+\end{itemize}
+The other constraint of the REST style, i.e. the layered system with client-server architecture, has already been discussed in the previous sections of this document. 

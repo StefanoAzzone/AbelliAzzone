@@ -52,10 +52,16 @@
 \BOOKMARK [2][-]{subsection.2.6}{Selected Architectural Style and Patterns}{section.2}% 52
 \BOOKMARK [3][-]{subsubsection.2.6.1}{Three layer Client-Server}{subsection.2.6}% 53
 \BOOKMARK [3][-]{subsubsection.2.6.2}{RESTful architecture}{subsection.2.6}% 54
-\BOOKMARK [1][-]{section.3}{User Interface Design}{}% 55
-\BOOKMARK [1][-]{section.4}{Requirements Traceability}{}% 56
-\BOOKMARK [1][-]{section.5}{Implementation, Integration and Test Plan}{}% 57
-\BOOKMARK [1][-]{section.6}{Effort Spent}{}% 58
-\BOOKMARK [2][-]{subsection.6.1}{Simone Abelli}{section.6}% 59
-\BOOKMARK [2][-]{subsection.6.2}{Stefano Azzone}{section.6}% 60
-\BOOKMARK [1][-]{subsection.6.2}{References}{}% 61
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Model View Controller \(MVC\)}{subsection.2.6}% 55
+\BOOKMARK [3][-]{subsubsection.2.6.4}{Facade pattern}{subsection.2.6}% 56
+\BOOKMARK [3][-]{subsubsection.2.6.5}{Observer pattern}{subsection.2.6}% 57
+\BOOKMARK [2][-]{subsection.2.7}{Other Design Decisions}{section.2}% 58
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Thick/thin client}{subsection.2.7}% 59
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Realational DataBase}{subsection.2.7}% 60
+\BOOKMARK [1][-]{section.3}{User Interface Design}{}% 61
+\BOOKMARK [1][-]{section.4}{Requirements Traceability}{}% 62
+\BOOKMARK [1][-]{section.5}{Implementation, Integration and Test Plan}{}% 63
+\BOOKMARK [1][-]{section.6}{Effort Spent}{}% 64
+\BOOKMARK [2][-]{subsection.6.1}{Simone Abelli}{section.6}% 65
+\BOOKMARK [2][-]{subsection.6.2}{Stefano Azzone}{section.6}% 66
+\BOOKMARK [1][-]{subsection.6.2}{References}{}% 67

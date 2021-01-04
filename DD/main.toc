@@ -59,10 +59,16 @@
 \contentsline {subsection}{\numberline {2.6}Selected Architectural Style and Patterns}{27}{subsection.2.6}%
 \contentsline {subsubsection}{\numberline {2.6.1}Three layer Client-Server}{27}{subsubsection.2.6.1}%
 \contentsline {subsubsection}{\numberline {2.6.2}RESTful architecture}{27}{subsubsection.2.6.2}%
-\contentsline {section}{\numberline {3}User Interface Design}{28}{section.3}%
-\contentsline {section}{\numberline {4}Requirements Traceability}{29}{section.4}%
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{30}{section.5}%
-\contentsline {section}{\numberline {6}Effort Spent}{31}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Simone Abelli}{31}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{31}{subsection.6.2}%
-\contentsline {section}{References}{32}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Model View Controller (MVC)}{27}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}Facade pattern}{28}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}Observer pattern}{28}{subsubsection.2.6.5}%
+\contentsline {subsection}{\numberline {2.7}Other Design Decisions}{28}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Thick/thin client}{28}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Realational DataBase}{29}{subsubsection.2.7.2}%
+\contentsline {section}{\numberline {3}User Interface Design}{30}{section.3}%
+\contentsline {section}{\numberline {4}Requirements Traceability}{31}{section.4}%
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{32}{section.5}%
+\contentsline {section}{\numberline {6}Effort Spent}{33}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Simone Abelli}{33}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Stefano Azzone}{33}{subsection.6.2}%
+\contentsline {section}{References}{34}{subsection.6.2}%

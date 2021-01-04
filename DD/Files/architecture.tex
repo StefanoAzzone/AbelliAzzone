@@ -239,4 +239,30 @@ Moreover it must have a single uniform interface, that simplifies and decouples 
 	\item each message includes enough information to describe how to process the message
 	\item the client is able from the initial URL to use server-provided links dynamically to discover all the available resources it needs
 \end{itemize}
-The other constraint of the REST style, i.e. the layered system with client-server architecture, has already been discussed in the previous sections of this document. 
+The other constraint of the REST style, i.e. the layered system with client-server architecture, has already been discussed in the previous sections of this document.
+\subsubsection{Model View Controller (MVC)}
+In order to separate the internal representation of the information from how it is presented to the user, we decide to apply the well-known Model View Controller pattern.\\
+This style is based on the division of the whole sysetm in three parts:
+\begin{itemize}
+	\item the model: the component responsible for managing the data of the application and for receiving user input from the controller; in our architecture it is represented by the DBMS, which manages all the data of the system.
+	\item the view: the component responsible for the presentation of the information to the users and their interaction with the system; in the proposed architecture it is represented by the components of the presentation layer, namely the SmartApp, the WebApp, the StoreMonitor, the TicketPrinter and the QRReader.
+	\item the controller: the component responsible for receiving input from the user and, based on them, performs interactions with the model. In our system the controller is represented by the various components of the application server, which manage the input and perform changes to the DBMS.
+\end{itemize}
+This pattern has been chosen to guarantee the maintainability and the reusability of the code, as well as to promote a parallel development.
+\subsubsection{Facade pattern}
+In the system architecture we can notice that the client accesses the application server through the redirector component; this element constitutes the main part of the facade pattern. The redirector is a "facade", an exterior face of the application server, that hides the internal complexity of the system, providing a simple and unique interface that the client can access to use the various other components of the system.\\
+Using this pattern the client does not need to know which component of the architecture he need to contact in order to request a service, because all the routing is internal to the redirector.\\
+Another major benefit of this pattern is that any change in the server-side of the architecture will stay undetectable from the client side, provided that the facade stays the same.
+\subsubsection{Observer pattern}
+To implement the notification and store monitor functionalities, we have chosen to use the observer pattern.\\
+The notification service is, in fact, provided as follows:
+when a reservation is created from the phone app, the application itself subscribes to the NotificationManager, and becomes an observer of it. When the manager update the waiting time for the next reservation (which is done periodically by asking the QueueManager), it will also call a "notifyObservers" method, that will fetch all the observer who has a reservation relative to one of the new waiting times, and updates them.\\
+A analogous approach is used for the StoreMonitor: each monitor "observes" the MonitorManager, which receives an update by the QueueManager each time a reservation becomes current; each time this happens, the manager calls "notifyObservers" and looks for the monitors of the store for which the reservation has changed state, and updates them. In this way all the screens are updated only when they should change the displayed number, with no need of polling the server, improving efficiency.
+\subsection{Other Design Decisions}
+\subsubsection{Thick/thin client}
+As already discussed in Section 2.2.20: Additional specification the smartphone app is an example of thick client, being it able to partially store the reservations and use the MapsAPI to compute an estimation of the time needed to reach a specific store.\\ The web app is, instead, a thin client, which mainly displays the pages provided by the WebServer.
+\subsubsection{Realational DataBase}
+A relational DB is very fitting for this system, because the data are bounded to each other, e.g. users with reservations with stores, and those relations are well captured by join operations.\\
+Of course a non-relational DB may have some advantages, like the capability to handle large volumes of data at high speed with a scale-out architecture, but for our case the relational one has been preferred, due to the expressiveness of the SQL language and to the necessity to create data dependent structures.\\
+Other advantages of our DB choice are the accuracy (data are stored once, no data duplication), the possibility for multiple users to access the same database and the security (data access can be limited to only particular users).\\
+However an hybrid (relational + non relational) DB may be taken into account in future releases or updates.

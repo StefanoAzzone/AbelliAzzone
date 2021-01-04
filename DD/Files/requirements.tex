@@ -1,0 +1,81 @@
+\subsubsection{Requirements Traceability}
+\begin{enumerate}[label=R\arabic*]
+	\item Turnstiles unlock if and only if activated by authorized customers.
+	\begin{itemize}
+		\item \textbf{QueueManager}: this component manages the states of the reservations. A customer is considered authorized to enter a particular store if one of his/her reservations for that store is authorized.
+		\item \textbf{QRManager}: this component calls QueueManager when a customer attempts to enter by providing QRReader with a QR code. The turnstile will be unlocked only if the customer is authorized.
+	\end{itemize}
+	\item The number of customers in each department of the store never exceeds the occupation set by the owner.
+	\begin{itemize}
+		\item \textbf{QueueManager}: when the occupation of a department of a store has reached its maximum, this component stops authorizing reservations for that department until the occupation has decreased.
+		\item \textbf{StoreManager}: this component allows store owners to set and change the occupation of one of the departments of their stores.
+	\end{itemize}
+	\item The monitor outside the store displays the number of the last authorized customer.
+	\begin{itemize}
+		\item \textbf{QueueManager}: whenever a reservation of a store is authorized, this component notifies the MonitorManager of the number of that reservation.
+		\item \textbf{MonitorManager}: when this component is notified that a new reservation is authorized for a store, it updates the value on every StoreMonitor of that store.
+	\end{itemize}
+	\item The system allows customers and store owners to register and log in.
+	\begin{itemize}
+		\item \textbf{AccessManager}: this component allows customers and store owners to register and log in
+		\item \textbf{UserManager}: this component allows customers to edit their personal information if desired.
+	\end{itemize}
+	\item The system validates the authenticity of the identifying information provided.
+	\begin{itemize}
+		\item \textbf{AccessManager}: this component verifies the authenticity of the identifying documents provided by customers that register to the service.
+		\item \textbf{PrinterManager}: this component verifies the authenticity of the identifying documents provided by customers that try to create an on premise reservation.
+		\item \textbf{StoreManager}: this component verifies that documents regarding a store are valid.
+	\end{itemize}
+	\item The system allows customers to search for a store among those registered by their owners.
+	\begin{itemize}
+		\item \textbf{ReservationManager}: this component allows customers to retrieve and view a list of all existing stores.
+		\item \textbf{StoreManager}: this component allows store owners to create, view, update and delete their stores.
+	\end{itemize}
+	\item Registered customers can send a reservation request to the system.
+	\begin{itemize}
+		\item \textbf{ReservationManager}: this component allows customers to send a reservation request, be it immediate or future via web app or smartphone app
+	\end{itemize}
+	\item Non registered customers with an identifying document can request reservations through the printer.
+	\begin{itemize}
+		\item \textbf{ReservationManager}: this component recieves from the ticket printer on premise reservation requests.
+		\item \textbf{PrinterManager}: this component identifies on premise customers.
+	\end{itemize}
+	\item Registered customers that book a visit can specify estimated visit duration.
+	\begin{itemize}
+		\item \textbf{ReservationManager}: this component allows customers that book a visit to specify estimated visit duration.
+	\end{itemize}
+	\item Registered customers that book a visit can specify desired product categories.
+	\begin{itemize}
+		\item \textbf{ReservationManager}: this component allows customers that book a visit to specify desired product categories.
+	\end{itemize}
+	\item The system provides customers with a QR code to enter the store once authorized.
+	\begin{itemize}
+		\item \textbf{QueueManager}: this component manages the states of the reservations. A customer is considered authorized to enter a particular store if one of his/her reservations for that store is authorized.
+		\item \textbf{QRManager}: this component provides a QR code if the customer requires it.
+	\end{itemize}
+	\item The system uses gathered data to build statistics.
+	\begin{itemize}
+		\item \textbf{StatisticsManager}: this component uses the data of entry time and exit time of customers to create statistics about the estimated duration of customer visits.
+	\end{itemize}
+	\item Registered customers with a smartphone are alerted when their turn is near.
+	\begin{itemize}
+		\item \textbf{QueueManager}: this component manages the states of the reservations.
+		\item \textbf{NotificationsManager}: this component retrieves the time to wait for non expired reservations of customers from the QueueManager and sends this information to the respective customers. The SmartApp will notify the customer if time to wait is lesser or equal to the time to reach the store plus a slack.
+	\end{itemize}
+	\item Registered customers can delete a pending or authorized reservation.
+	\begin{itemize}
+		\item \textbf{ReservationManager}: this component allows customers to delete pending or authorized reservations.
+	\end{itemize}
+	\item Authorized reservations expire if they do not become current in a certain time window (specified by store owner)
+	\begin{itemize}
+		\item \textbf{QueueManager}: if an authorized reservation does not become current in a time windowm, this component changes its state to expired.
+	\end{itemize}
+	\item Registered customers must specify desired means of transport while requesting a reservation in order to receive notifications. %TODO edit RASD
+	\begin{itemize}
+		\item \textbf{ReservationManager}: this component allows customers to specify the means of transport while creating a reservation.
+	\end{itemize}
+	\item Reservations are authorized according to a FIFO policy
+	\begin{itemize}
+		\item \textbf{QueueManager}: this component manages the queue of each store in a first come first served manner.
+	\end{itemize}
+\end{enumerate}

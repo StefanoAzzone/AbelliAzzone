@@ -58,40 +58,40 @@ This component provides an external interface for the previously described compo
 \subsubsection{AccessManager}
 This component allows users to connect to the services, via sign up and login.
 \paragraph{SignupManager}
-This component allows customers and store owners that provide a valid identification document to register to the service, thus gaining access to its functionalities, provided that they log in. It is called through WebApp or SmartApp, and needs to access the DBMS to search for existing users with same identification document (to avoid duplication), and to create a new user.
+This component allows customers and store owners that provide a valid identification document to register to the service, thus gaining access to its functionalities, provided that they log in. It is called through WebApp or SmartApp, and needs to access the DBMSServices to search for existing users with same identification document (to avoid duplication), and to create a new user.
 \paragraph{LoginManager}
-This component allows customers and store owners to log in the service, thus gaining access to its functionalities. It is called by WebApp and SmartApp components, and needs to access the DBMS to verify user credentials against the stored ones.
+This component allows customers and store owners to log in the service, thus gaining access to its functionalities. It is called by WebApp and SmartApp components, and needs to access the DBMSServices to verify user credentials against the stored ones.
 \subsubsection{UserManager}
 This component allows users to change their profile.
 \paragraph{StoreOwnerManager}
-This component is accessed through WebApp or SmartApp and allows store owners to edit their credentials (obtained during sign up process), thus it needs access to DBMS.
+This component is accessed through WebApp or SmartApp and allows store owners to edit their credentials (obtained during sign up process), thus it needs access to DBMSServices.
 \paragraph{CustomerManager}
-This component is accessed through WebApp or SmartApp and allows customers to edit their credentials (obtained during sign up process), thus it needs access to DBMS.
+This component is accessed through WebApp or SmartApp and allows customers to edit their credentials (obtained during sign up process), thus it needs access to DBMSServices.
 \subsubsection{ReservationManager}
-This component is accessed through WebApp or SmartApp by customers and allows them to send a reservation for a specific store, to delete an existing reservation, or to view status of non expired reservations (QR code, position in queue, status) by accessing QueueManager. It needs to access DBMS to retireve the list of the departments of the store that the reservation targets and, in case of an immediate reservation, to verify that the store is open at the current time. It needs access to DBMS also to fetch the list of user reservation along with their information, and to delete them if required. Whenever a customer creates a reservation it is saved into the database. This component is also accessed by the TicketPrinter whenever a customer creates an on premise reservation.
+This component is accessed through WebApp or SmartApp by customers and allows them to send a reservation for a specific store, to delete an existing reservation, or to view status of non expired reservations (QR code, position in queue, status) by accessing QueueManager. It needs to access DBMSServices to retireve the list of the departments of the store that the reservation targets and, in case of an immediate reservation, to verify that the store is open at the current time. It needs access to DBMSServices also to fetch the list of user reservation along with their information, and to delete them if required. Whenever a customer creates a reservation it is saved into the database. This component is also accessed by the TicketPrinter whenever a customer creates an on premise reservation.
 \subsubsection{StoreManager}
-This component is accessed through WebApp or SmartApp, and allows store owners to view owned stores, add new stores, delete existing stores or update information of existing stores, such as the list of departments and their respective maximum occupation. It needs to access the DBMS to execute the previous functions.
+This component is accessed through WebApp or SmartApp, and allows store owners to view owned stores, add new stores, delete existing stores or update information of existing stores, such as the list of departments and their respective maximum occupation. It needs to access the DBMSServices to execute the previous functions.
 \subsubsection{QueueManager}
 This component contains the information about the people that are currently waiting to enter the store and those that are already inside it.\\
 It is accessed by the ReservationManager to add or remove a reservation from a queue of a specific store.
 It is also accessed by the QRManager whenever an authorized customer wants to view the QR and when he/she enters or exits the store.
 Moreover it accesses MonitorManager every time the number of the last authorized reservation of a store changes.
 Finally it is accessed by NotificationManager in order to get the list of the customers currently waiting.\\
-It needs access to DBMS to update the status of each reservation and entry and exit times. It checks periodically the number of customers currently present and the maximum occupation for every store and computes an estimated time that customers have to wait before gaining authorization to enter a specific store if such store has already reached maximum occupation.\\
+It needs access to DBMSServices to update the status of each reservation and entry and exit times. It checks periodically the number of customers currently present and the maximum occupation for every store and computes an estimated time that customers have to wait before gaining authorization to enter a specific store if such store has already reached maximum occupation.\\
 This component accesses StatisticsManager to improve the computation of the time a customer needs to wait before being authorized to enter the store.
 \subsubsection{QRManager}
 This component accesses QueueManager whenever a customer needs to view a QR for a reservation: if a QR has already been generated for that reservation it is returned to QRManager, otherwise it is generated by QRManager and sent to QueueManager. When QRReader reads a QR code from a customer it calls QRManager, that accesses QueueManager to check that the reservation is existing and authorized, and if so it send the entry/exit time to the QueueManager and returns the QRReader the permission to unlock turnstile.
 \subsubsection{StatisticsManager}
-This component is accessed by QueueManager to improve the estimate of the time that a customer needs to wait before being authorized to enter a specific store. This component is accessed by a store owner through WebApp or SmartApp to visualize statistics. This component accesses the DBMS periodically to obtain the data with which to generate the statistics, and to save such statistics.
+This component is accessed by QueueManager to improve the estimate of the time that a customer needs to wait before being authorized to enter a specific store. This component is accessed by a store owner through WebApp or SmartApp to visualize statistics. This component accesses the DBMSServices periodically to obtain the data with which to generate the statistics, and to save such statistics.
 \subsubsection{PrinterManager}
-This component allows the store owner with WebApp or SmartApp to register a TicketPrinter. This component also allows customer identification through TicketPrinter by validating a provided identification document. This component needs to access the DBMS to register or unregister instances of TicketPrinter.
+This component allows the store owner with WebApp or SmartApp to register a TicketPrinter. This component also allows customer identification through TicketPrinter by validating a provided identification document. This component needs to access the DBMSServices to register or unregister instances of TicketPrinter.
 \subsubsection{MonitorManager}
 This component allows to update periodically a StoreMonitor. It is updated by the QueueManager every time the number of the last authorized reservation of a store changes, and then updates all the StoreMonitor registered for that store.
 \subsubsection{NotificationManager}
 This component accesses the NotificationService to provide the wait time. This component periodically accesses the QueueManager to get this information.
 \subsubsection{MapsAPI}
 This component accesses an external mapping service (i.e. GoogleMaps) to compute the estimated time to reach the store from the current position of the device with the selected means of transport.
-\subsubsection{DBMS}
+\subsubsection{DBMSServices}
 This component is the DataBase Management System accessed by the ApplicationServer to perform create/read/update/delete operations on the DB.
 \subsubsection{Additional specification}
 For what concerns the smartphone application, it is a thick client: in fact beside the presentation logic, it contains a small part of the application logic. Indeed, the phone app can check the validity of the information inserted by the user when creating a reservation and, more importantly, it checks when it is time to notify the customer about its turn to reach the store, based on the position of the device and the position of the store (received by the server). It is important that the phone app does this computations, because the position of the customer, necessary to know how long will it take to go to the market, can only be detected by the end device.\\
@@ -147,7 +147,7 @@ This device allows customers and store owners to access their respective service
 The web server TomEE will server the browser the artifact it needs to show to the users. This web server's operation will be supported by Red Hat Linux Enterprise operating system.
 \subsubsection{DatabaseDevice}
 This device allows the ApplicationServerDevice to create, read, update, delete information that supports the system operation.\\
-The DataBase is managed by the Oracle DBMS which in turn is supported by Oracle Solaris.\newpage
+The DataBase is managed by the Oracle DBMSServices which in turn is supported by Oracle Solaris.\newpage
 \subsection{Runtime View}
 %TODO : something here
 \subsubsection{Login via smartphone app}
@@ -157,14 +157,14 @@ The DataBase is managed by the Oracle DBMS which in turn is supported by Oracle 
 	\includegraphics[scale=0.5]{Images/RuntimeViewLogin.png}}
 \end{figure}
 %TODO : dashed arrows on responses
-By opening the application, user calls the SmartApp component. SmartApp calls Redirector, that calls LoginManager, that retrieves from the DBMS the password hash of the specified user (if he/she exists), and compares it with the provided password. The result of this operation is then sent back to the user.\\
+By opening the application, user calls the SmartApp component. SmartApp calls Redirector, that calls LoginManager, that retrieves from the DBMSServices the password hash of the specified user (if he/she exists), and compares it with the provided password. The result of this operation is then sent back to the user.\\
 \subsubsection{Immediate reservation via smartphone app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.35]{Images/RuntimeViewImmRes.png}}
 \end{figure}
-The customer selects the option to create an immediate reservation. The SmartApp requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer. The customer then selects a store form the list provided and a means of transport. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the selected store is open at the time, loading it from the DBMS, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the DBMS. It is rejected otherwise.
+The customer selects the option to create an immediate reservation. The SmartApp requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer. The customer then selects a store form the list provided and a means of transport. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the selected store is open at the time, loading it from the DBMSServices, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the database. It is rejected otherwise.
 \subsubsection{Future reservation via web app}
 \begin{figure}[H]
 	\noindent
@@ -172,7 +172,7 @@ The customer selects the option to create an immediate reservation. The SmartApp
 		\includegraphics[scale=0.3]{Images/RuntimeViewFutRes.png}}
 \end{figure}
 When the customer selects the option to book a visit, the WebApp, through the WebServer, requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer.\\
-The customer can then select a store form the list provided, the date he would like to book and, optionally, a list of departments he is interested in and how long he thinks the visit will be. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the resrvation is valid (the selected store is open at the time, the maximum number of reservations has not yet been reached), and if it is, the reservation can be generated: first, if the expected duration has not been specified, it is inferred by the StatisticsManager, based on the past reservations created by the customer, and returned to the ReservationManager; then it ask the queue manager to create the reservation and insert it into the queue in an appropriate time slot, considering the other reservations already present. The reservation is then saved into the DBMS.\\
+The customer can then select a store form the list provided, the date he would like to book and, optionally, a list of departments he is interested in and how long he thinks the visit will be. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the resrvation is valid (the selected store is open at the time, the maximum number of reservations has not yet been reached), and if it is, the reservation can be generated: first, if the expected duration has not been specified, it is inferred by the StatisticsManager, based on the past reservations created by the customer, and returned to the ReservationManager; then it ask the queue manager to create the reservation and insert it into the queue in an appropriate time slot, considering the other reservations already present. The reservation is then saved into the database.\\
 If the reservation was not valid, then it is rejected.
 \subsubsection{On premise reservation}
 \begin{figure}[H]
@@ -180,28 +180,28 @@ If the reservation was not valid, then it is rejected.
 	\makebox[\textwidth]{
 		\includegraphics[scale=0.35]{Images/RuntimeViewPreRes.png}}
 \end{figure}
-The customer selects the option to create an on premise reservation, and provides the TicketPrinter with an identification document. This request is then forwarded by the Redirector to the PrinterManager that checks that the document is valid. If it is, an on premise reservation request is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that that the reservation is valid for the selected store at the time of creation (e.g. the store is open), loading the store info from the DBMS, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the DBMS. It is rejected otherwise.
+The customer selects the option to create an on premise reservation, and provides the TicketPrinter with an identification document. This request is then forwarded by the Redirector to the PrinterManager that checks that the document is valid. If it is, an on premise reservation request is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that that the reservation is valid for the selected store at the time of creation (e.g. the store is open), loading the store info from the DBMSServices, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the database. It is rejected otherwise.
 \subsubsection{Statistics generation}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.5]{Images/RuntimeViewStatistics.png}}
 \end{figure}
-Every week the StatisticsManager retrieves a list of the reservations of the past week, and for each customer and each store computes the average daily and weekly duration of the visit, and stores them in the DBMS.
+Every week the StatisticsManager retrieves a list of the reservations of the past week, and for each customer and each store computes the average daily and weekly duration of the visit, and stores them in the database.
 \subsubsection{Customer enters store}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.45]{Images/RuntimeViewStoreEntry.png}}
 \end{figure}
-The customer provides the QR reader with a QR code (be it on the screen of his/her smartphone or printed on paper). That code is then forwarded by the redirector to the QRManager that decodes it and calls the QueueManager to check that the QR code belongs to a customer that is now authorized to enter the store. If this is the case, the turnstiles unlock. Whenever the customer enters or exits a store, QueueManager saves the time of arrival/departure in the reservation, and then saves them in the DBMS.
+The customer provides the QR reader with a QR code (be it on the screen of his/her smartphone or printed on paper). That code is then forwarded by the redirector to the QRManager that decodes it and calls the QueueManager to check that the QR code belongs to a customer that is now authorized to enter the store. If this is the case, the turnstiles unlock. Whenever the customer enters or exits a store, QueueManager saves the time of arrival/departure in the reservation, and then saves them in the database.
 \subsubsection{Store owner registers store via web app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.35]{Images/RuntimeViewStoreReg.png}}
 \end{figure}
-The store owner opens the app and look at all his/her stores; he/she decides to add a new store, so he/she insert all required data, that are sent, through the redirector, to the StoreManager. This component validates the data and, if everything is correct, asks the DBMS to save the data of the new store.\\
+The store owner opens the app and look at all his/her stores; he/she decides to add a new store, so he/she insert all required data, that are sent, through the redirector, to the StoreManager. This component validates the data and, if everything is correct, asks the DBMSServices to save the data of the new store.\\
 Of course, in this process, only the store has been added, so the store owner will then also need to register the TicketPrinter, the QRReader and the StoreMonitor to the system.
 \subsubsection{Customer is notified by smartphone app}
 \begin{figure}[H]
@@ -222,7 +222,7 @@ Then the phone app will use the MapAPI to get an estimation of the time necessar
 \end{figure}
 In this diagram we represented the interfaces of the system components with their methods, and such interfaces interact with each other.\\
 For ease of representation we split WebApp and SmartApp component functionalities into three interfaces: CustomerService, StoreOwnerService and NotificationService. The WebApp component, that allows customers and store owners to interact with the system with a computer, implements the CustomerService and the StoreOwnerService interfaces. The SmartApp component, that allows customers and store owners to interact with the system with a smartphone, implements the CustomerService, StoreOwnerService and NotificationService interfaces.\\\\
-All communication from the outside world (except DBMS) to the ApplicationServer is mediated by the Redirector, while the ApplicationServer sends messages directly to the interested components: NotificationService communicates directly with the NotificationService, and MonitorManager communicates directly with the StoreMonitor component.\\
+All communication from the outside world (except DBMSServices) to the ApplicationServer is mediated by the Redirector, while the ApplicationServer sends messages directly to the interested components: NotificationService communicates directly with the NotificationService, and MonitorManager communicates directly with the StoreMonitor component.\\
 Methods written here provide a logical representation of what component interfaces have to offer. They will be a soft guideline for the developers, that will be able to adapt them to create working components, facing the various problems that emerge during the implementation.\\
 At time of creation a user is assigned a string called id that uniquely represents that user. At time of creation a reservation is assigned a string called resId that uniquely represents it.\\
 \subsection{Selected Architectural Style and Patterns}
@@ -244,9 +244,9 @@ The other constraint of the REST style, i.e. the layered system with client-serv
 In order to separate the internal representation of the information from how it is presented to the user, we decide to apply the well-known Model View Controller pattern.\\
 This style is based on the division of the whole sysetm in three parts:
 \begin{itemize}
-	\item the model: the component responsible for managing the data of the application and for receiving user input from the controller; in our architecture it is represented by the DBMS, which manages all the data of the system.
+	\item the model: the component responsible for managing the data of the application and for receiving user input from the controller; in our architecture it is represented by the database, which manages all the data of the system.
 	\item the view: the component responsible for the presentation of the information to the users and their interaction with the system; in the proposed architecture it is represented by the components of the presentation layer, namely the SmartApp, the WebApp, the StoreMonitor, the TicketPrinter and the QRReader.
-	\item the controller: the component responsible for receiving input from the user and, based on them, performs interactions with the model. In our system the controller is represented by the various components of the application server, which manage the input and perform changes to the DBMS.
+	\item the controller: the component responsible for receiving input from the user and, based on them, performs interactions with the model. In our system the controller is represented by the various components of the application server, which manage the input and perform changes to the database.
 \end{itemize}
 This pattern has been chosen to guarantee the maintainability and the reusability of the code, as well as to promote a parallel development.
 \subsubsection{Facade pattern}

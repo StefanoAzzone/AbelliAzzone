@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.15)  4 JAN 2021 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.12.15)  4 JAN 2021 18:05
 entering extended mode
 **./main.tex
 (main.tex
@@ -971,7 +971,7 @@ LaTeX Info: Redefining \nameref on input line 6.
 \openout5 = `main.out'.
 
 \c@lstlisting=\count325
-<Images/PolimiLogo.png, id=273, 405.515pt x 125.46875pt>
+<Images/PolimiLogo.png, id=285, 405.515pt x 125.46875pt>
 File: Images/PolimiLogo.png Graphic file (type png)
 <use Images/PolimiLogo.png>
 Package pdftex.def Info: Images/PolimiLogo.png  used on input line 16.
@@ -1013,7 +1013,7 @@ This may cause the page layout to be inconsistent, however.
 
 ] [6]) [7]
 (Files/architecture.tex
-<Images/Archimate.png, id=378, 1045.9075pt x 694.595pt>
+<Images/Archimate.png, id=393, 1045.9075pt x 694.595pt>
 File: Images/Archimate.png Graphic file (type png)
 <use Images/Archimate.png>
 Package pdftex.def Info: Images/Archimate.png  used on input line 13.
@@ -1031,7 +1031,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--16
 [8
 
  <./Images/Archimate.png>]
-<Images/System Architecture.png, id=385, 919.435pt x 613.29124pt>
+<Images/System Architecture.png, id=400, 919.435pt x 613.29124pt>
 File: Images/System Architecture.png Graphic file (type png)
 <use Images/System Architecture.png>
 Package pdftex.def Info: Images/System Architecture.png  used on input line 18.
@@ -1053,17 +1053,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--24
  []
 
 [9 <./Images/System Architecture.png>]
-<Images/LoadBalancer.png, id=391, 300.12125pt x 282.05376pt>
+<Images/LoadBalancer.png, id=406, 300.12125pt x 282.05376pt>
 File: Images/LoadBalancer.png Graphic file (type png)
 <use Images/LoadBalancer.png>
 Package pdftex.def Info: Images/LoadBalancer.png  used on input line 28.
 (pdftex.def)             Requested size: 150.06026pt x 141.02652pt.
  [10 <./Images/LoadBalancer.png>]
-<Images/Component.png, id=398, 1506.62875pt x 1109.14375pt>
+<Images/Component.png, id=413, 1084.7727pt x 798.5835pt>
 File: Images/Component.png Graphic file (type png)
 <use Images/Component.png>
 Package pdftex.def Info: Images/Component.png  used on input line 37.
-(pdftex.def)             Requested size: 527.32797pt x 388.20613pt.
+(pdftex.def)             Requested size: 379.67613pt x 279.5084pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--38
 
@@ -1075,7 +1075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--38
  []
 
 [11 <./Images/Component.png>] [12] [13]
-<Images/RedirectorExpanded.png, id=421, 457.71pt x 583.17876pt>
+<Images/RedirectorExpanded.png, id=436, 457.71pt x 583.17876pt>
 File: Images/RedirectorExpanded.png Graphic file (type png)
 <use Images/RedirectorExpanded.png>
 Package pdftex.def Info: Images/RedirectorExpanded.png  used on input line 105.
@@ -1087,15 +1087,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--106
  []
 
 
-Underfull \vbox (badness 2027) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-<Images/MobileAppRouting.png, id=426, 731.73375pt x 482.80376pt>
+<Images/MobileAppRouting.png, id=441, 731.73375pt x 482.80376pt>
 File: Images/MobileAppRouting.png Graphic file (type png)
 <use Images/MobileAppRouting.png>
 Package pdftex.def Info: Images/MobileAppRouting.png  used on input line 112.
 (pdftex.def)             Requested size: 256.11064pt x 168.98384pt.
-<Images/WebAppRouting.png, id=427, 726.715pt x 482.80376pt>
+<Images/WebAppRouting.png, id=442, 726.715pt x 482.80376pt>
 File: Images/WebAppRouting.png Graphic file (type png)
 <use Images/WebAppRouting.png>
 Package pdftex.def Info: Images/WebAppRouting.png  used on input line 112.
@@ -1105,18 +1105,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--113
 
  []
 
-<Images/QRReaderRouting.png, id=428, 731.73375pt x 482.80376pt>
+<Images/QRReaderRouting.png, id=443, 731.73375pt x 482.80376pt>
 File: Images/QRReaderRouting.png Graphic file (type png)
 <use Images/QRReaderRouting.png>
 Package pdftex.def Info: Images/QRReaderRouting.png  used on input line 118.
 (pdftex.def)             Requested size: 256.11064pt x 168.98384pt.
-<Images/TicketPrinterRouting.png, id=429, 736.7525pt x 482.80376pt>
+<Images/TicketPrinterRouting.png, id=444, 736.7525pt x 482.80376pt>
 File: Images/TicketPrinterRouting.png Graphic file (type png)
 <use Images/TicketPrinterRouting.png>
 Package pdftex.def Info: Images/TicketPrinterRouting.png  used on input line 11
 8.
 (pdftex.def)             Requested size: 257.86723pt x 168.98384pt.
-<Images/MonitorRouting.png, id=430, 736.7525pt x 482.80376pt>
+<Images/MonitorRouting.png, id=445, 736.7525pt x 482.80376pt>
 File: Images/MonitorRouting.png Graphic file (type png)
 <use Images/MonitorRouting.png>
 Package pdftex.def Info: Images/MonitorRouting.png  used on input line 123.
@@ -1124,7 +1124,7 @@ Package pdftex.def Info: Images/MonitorRouting.png  used on input line 123.
 [15 <./Images/RedirectorExpanded.png> <./Images/MobileAppRouting.png> <./Images
 /WebAppRouting.png> <./Images/QRReaderRouting.png> <./Images/TicketPrinterRouti
 ng.png>] [16 <./Images/MonitorRouting.png>]
-<Images/Deployment.png, id=449, 1093.08376pt x 587.19376pt>
+<Images/Deployment.png, id=464, 1093.08376pt x 587.19376pt>
 File: Images/Deployment.png Graphic file (type png)
 <use Images/Deployment.png>
 Package pdftex.def Info: Images/Deployment.png  used on input line 129.
@@ -1135,68 +1135,71 @@ Overfull \hbox (36.63904pt too wide) in paragraph at lines 129--130
  []
 
 [17 <./Images/Deployment.png (PNG copy)>] [18]
-<Images/RuntimeViewLogin.png, id=458, 871.255pt x 413.545pt>
+<Images/RuntimeViewLogin.png, id=473, 627.3036pt x 297.0297pt>
 File: Images/RuntimeViewLogin.png Graphic file (type png)
 <use Images/RuntimeViewLogin.png>
 Package pdftex.def Info: Images/RuntimeViewLogin.png  used on input line 157.
-(pdftex.def)             Requested size: 435.62643pt x 206.77199pt.
+(pdftex.def)             Requested size: 313.65103pt x 148.51448pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-<Images/RuntimeViewImmRes.png, id=459, 1449.415pt x 1426.32875pt>
+<Images/RuntimeViewImmRes.png, id=474, 1042.1334pt x 1026.9567pt>
 File: Images/RuntimeViewImmRes.png Graphic file (type png)
 <use Images/RuntimeViewImmRes.png>
 Package pdftex.def Info: Images/RuntimeViewImmRes.png  used on input line 165.
-(pdftex.def)             Requested size: 507.30286pt x 499.22255pt.
+(pdftex.def)             Requested size: 364.75217pt x 359.44023pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19 <./Images/RuntimeViewLogin.png>]
-<Images/RuntimeViewFutRes.png, id=467, 1959.32pt x 1728.4575pt>
+<Images/RuntimeViewFutRes.png, id=482, 1410.7104pt x 1244.4894pt>
 File: Images/RuntimeViewFutRes.png Graphic file (type png)
 <use Images/RuntimeViewFutRes.png>
 Package pdftex.def Info: Images/RuntimeViewFutRes.png  used on input line 172.
-(pdftex.def)             Requested size: 587.80055pt x 518.54126pt.
+(pdftex.def)             Requested size: 423.21638pt x 373.3497pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20 <./Images/RuntimeViewImmRes.png>] [21 <./Images/RuntimeViewFutRes.png>]
-<Images/RuntimeViewPreRes.png, id=480, 1477.52pt x 1426.32875pt>
+ [20 <./Images/RuntimeViewImmRes.png>]
+<Images/RuntimeViewPreRes.png, id=489, 1063.8144pt x 1026.9567pt>
 File: Images/RuntimeViewPreRes.png Graphic file (type png)
 <use Images/RuntimeViewPreRes.png>
 Package pdftex.def Info: Images/RuntimeViewPreRes.png  used on input line 181.
-(pdftex.def)             Requested size: 517.13976pt x 499.22255pt.
- [22 <./Images/RuntimeViewPreRes.png>]
-<Images/RuntimeViewStatistics.png, id=487, 362.35374pt x 382.42876pt>
+(pdftex.def)             Requested size: 372.34062pt x 359.44023pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./Images/RuntimeViewFutRes.png>]
+<Images/RuntimeViewStatistics.png, id=496, 260.8947pt x 275.3487pt>
 File: Images/RuntimeViewStatistics.png Graphic file (type png)
 <use Images/RuntimeViewStatistics.png>
 Package pdftex.def Info: Images/RuntimeViewStatistics.png  used on input line 1
 88.
-(pdftex.def)             Requested size: 181.17642pt x 191.2139pt.
-<Images/RuntimeViewStoreEntry.png, id=488, 886.31125pt x 482.80376pt>
+(pdftex.def)             Requested size: 130.44702pt x 137.674pt.
+ [22 <./Images/RuntimeViewPreRes.png> <./Images/RuntimeViewStatistics.png>]
+<Images/RuntimeViewStoreEntry.png, id=505, 886.31125pt x 482.80376pt>
 File: Images/RuntimeViewStoreEntry.png Graphic file (type png)
 <use Images/RuntimeViewStoreEntry.png>
 Package pdftex.def Info: Images/RuntimeViewStoreEntry.png  used on input line 1
 95.
 (pdftex.def)             Requested size: 398.83638pt x 217.25967pt.
-<Images/RuntimeViewStoreReg.png, id=489, 1095.09125pt x 792.9625pt>
+<Images/RuntimeViewStoreReg.png, id=506, 788.4657pt x 571.6557pt>
 File: Images/RuntimeViewStoreReg.png Graphic file (type png)
 <use Images/RuntimeViewStoreReg.png>
 Package pdftex.def Info: Images/RuntimeViewStoreReg.png  used on input line 202
 .
-(pdftex.def)             Requested size: 383.28767pt x 277.54103pt.
- [23 <./Images/RuntimeViewStatistics.png> <./Images/RuntimeViewStoreEntry.png>]
-<Images/RuntimeViewNotification.png, id=498, 1075.01625pt x 532.99126pt>
+(pdftex.def)             Requested size: 275.96712pt x 200.08249pt.
+ [23 <./Images/RuntimeViewStoreEntry.png> <./Images/RuntimeViewStoreReg.png>]
+<Images/RuntimeViewNotification.png, id=515, 1075.01625pt x 532.99126pt>
 File: Images/RuntimeViewNotification.png Graphic file (type png)
 <use Images/RuntimeViewNotification.png>
 Package pdftex.def Info: Images/RuntimeViewNotification.png  used on input line
  210.
 (pdftex.def)             Requested size: 376.26132pt x 186.54973pt.
- [24 <./Images/RuntimeViewStoreReg.png> <./Images/RuntimeViewNotification.png>]
- [25]
-<Images/ComponentInterfaces.png, id=512, 1207.6317pt x 766.062pt>
+ [24 <./Images/RuntimeViewNotification.png>]
+<Images/ComponentInterfaces.png, id=522, 1207.6317pt x 766.062pt>
 File: Images/ComponentInterfaces.png Graphic file (type png)
 <use Images/ComponentInterfaces.png>
 Package pdftex.def Info: Images/ComponentInterfaces.png  used on input line 220
@@ -1225,7 +1228,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
 Underfull \vbox (badness 1466) has occurred while \output is active []
 
- [26 <./Images/ComponentInterfaces.png>]
+ [25 <./Images/ComponentInterfaces.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 233--237
 
  []
@@ -1235,12 +1238,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--237
 
  []
 
-[27]) [28] [29] (Files/interface.tex) [30
+[26]) [27] [28] (Files/interface.tex) [29
 
-] (Files/requirements.tex) [31
+] (Files/requirements.tex
 
-]
-(Files/iitp.tex) [32
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1.
+
+
+Overfull \hbox (2.6473pt too wide) in paragraph at lines 38--40
+[]\T1/ptm/m/n/10.95 Non reg-is-tered cus-tomers with an iden-ti-fy-ing doc-u-me
+nt can re-quest reser-va-tions through the printer. 
+ []
+
+[30
+
+]) [31] (Files/iitp.tex) [32
 
 ] (Files/effort.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
@@ -1256,28 +1269,33 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 ) [34
 
 ] (main.aux)
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 977F392FF49788DD46ED3C980CAFAE8C;4848.
 
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 501750C75F01E9A7D0301AEA7B429B8A;5062
+(rerunfilecheck)             After:  CAD65E5709A0993900984A55CC929241;5063.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 23287 strings out of 479799
- 436015 string characters out of 2869247
- 714488 words of memory out of 3000000
- 39635 multiletter control sequences out of 15000+200000
+ 23311 strings out of 479799
+ 436256 string characters out of 2869247
+ 714490 words of memory out of 3000000
+ 39639 multiletter control sequences out of 15000+200000
  562737 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,15n,100p,1190b,527s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 93i,15n,100p,1190b,560s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C
 :/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><
 C:/Users/Simone/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
 
-Output written on main.pdf (34 pages, 1401658 bytes).
+Output written on main.pdf (34 pages, 3802054 bytes).
 PDF statistics:
- 590 PDF objects out of 1000 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
- 654 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
+ 678 words of extra memory for PDF output out of 10000 (max. 10000000)
 

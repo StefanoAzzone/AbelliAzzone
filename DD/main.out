@@ -1,0 +1,76 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Purpose}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Scope}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Definitions, Acronyms, Abbreviations}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Definitions}{subsection.1.3}% 5
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Acronyms}{subsection.1.3}% 6
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Abbreviations}{subsection.1.3}% 7
+\BOOKMARK [2][-]{subsection.1.4}{Revision history}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.5}{Reference Documents}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.6}{Document Structure}{section.1}% 10
+\BOOKMARK [1][-]{section.2}{Architectural Design}{}% 11
+\BOOKMARK [2][-]{subsection.2.1}{Overview}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.2}{Component View}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.1}{WebApp}{subsection.2.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.2.2}{WebServer}{subsection.2.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.2.3}{SmartApp}{subsection.2.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.2.4}{QRReader}{subsection.2.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.2.5}{TicketPrinter}{subsection.2.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.6}{StoreMonitor}{subsection.2.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.2.7}{Redirector}{subsection.2.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.2.8}{AccessManager}{subsection.2.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.2.9}{UserManager}{subsection.2.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.2.10}{ReservationManager}{subsection.2.2}% 23
+\BOOKMARK [3][-]{subsubsection.2.2.11}{StoreManager}{subsection.2.2}% 24
+\BOOKMARK [3][-]{subsubsection.2.2.12}{QueueManager}{subsection.2.2}% 25
+\BOOKMARK [3][-]{subsubsection.2.2.13}{QRManager}{subsection.2.2}% 26
+\BOOKMARK [3][-]{subsubsection.2.2.14}{StatisticsManager}{subsection.2.2}% 27
+\BOOKMARK [3][-]{subsubsection.2.2.15}{PrinterManager}{subsection.2.2}% 28
+\BOOKMARK [3][-]{subsubsection.2.2.16}{MonitorManager}{subsection.2.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.2.17}{NotificationManager}{subsection.2.2}% 30
+\BOOKMARK [3][-]{subsubsection.2.2.18}{MapsAPI}{subsection.2.2}% 31
+\BOOKMARK [3][-]{subsubsection.2.2.19}{DBMSServices}{subsection.2.2}% 32
+\BOOKMARK [3][-]{subsubsection.2.2.20}{Additional specification}{subsection.2.2}% 33
+\BOOKMARK [2][-]{subsection.2.3}{Deployment View}{section.2}% 34
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Smartphone}{subsection.2.3}% 35
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Computer}{subsection.2.3}% 36
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Firewall}{subsection.2.3}% 37
+\BOOKMARK [3][-]{subsubsection.2.3.4}{LoadBalancer}{subsection.2.3}% 38
+\BOOKMARK [3][-]{subsubsection.2.3.5}{ApplicationServerDevice}{subsection.2.3}% 39
+\BOOKMARK [3][-]{subsubsection.2.3.6}{WebServerDevice}{subsection.2.3}% 40
+\BOOKMARK [3][-]{subsubsection.2.3.7}{DatabaseDevice}{subsection.2.3}% 41
+\BOOKMARK [2][-]{subsection.2.4}{Runtime View}{section.2}% 42
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Login via smartphone app}{subsection.2.4}% 43
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Immediate reservation via smartphone app}{subsection.2.4}% 44
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Future reservation via web app}{subsection.2.4}% 45
+\BOOKMARK [3][-]{subsubsection.2.4.4}{On premise reservation}{subsection.2.4}% 46
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Statistics generation}{subsection.2.4}% 47
+\BOOKMARK [3][-]{subsubsection.2.4.6}{Customer enters store}{subsection.2.4}% 48
+\BOOKMARK [3][-]{subsubsection.2.4.7}{Store owner registers store via web app}{subsection.2.4}% 49
+\BOOKMARK [3][-]{subsubsection.2.4.8}{Customer is notified by smartphone app}{subsection.2.4}% 50
+\BOOKMARK [2][-]{subsection.2.5}{Component Interfaces}{section.2}% 51
+\BOOKMARK [2][-]{subsection.2.6}{Selected Architectural Style and Patterns}{section.2}% 52
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Three layer Client-Server}{subsection.2.6}% 53
+\BOOKMARK [3][-]{subsubsection.2.6.2}{RESTful architecture}{subsection.2.6}% 54
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Model View Controller \(MVC\)}{subsection.2.6}% 55
+\BOOKMARK [3][-]{subsubsection.2.6.4}{Facade pattern}{subsection.2.6}% 56
+\BOOKMARK [3][-]{subsubsection.2.6.5}{Observer pattern}{subsection.2.6}% 57
+\BOOKMARK [2][-]{subsection.2.7}{Other Design Decisions}{section.2}% 58
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Thick/thin client}{subsection.2.7}% 59
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Realational DataBase}{subsection.2.7}% 60
+\BOOKMARK [1][-]{section.3}{User Interface Design}{}% 61
+\BOOKMARK [1][-]{section.4}{Requirements Traceability}{}% 62
+\BOOKMARK [2][-]{subsubsection.4.0.1}{Requirements Traceability}{section.4}% 63
+\BOOKMARK [1][-]{section.5}{Implementation, Integration and Test Plan}{}% 64
+\BOOKMARK [2][-]{subsection.5.1}{Overview}{section.5}% 65
+\BOOKMARK [2][-]{subsection.5.2}{Implementation Plan}{section.5}% 66
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Integration Strategy}{subsection.5.2}% 67
+\BOOKMARK [2][-]{subsection.5.3}{System Testing}{section.5}% 68
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Performance testing}{subsection.5.3}% 69
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Load testing}{subsection.5.3}% 70
+\BOOKMARK [3][-]{subsubsection.5.3.3}{Stress testing}{subsection.5.3}% 71
+\BOOKMARK [2][-]{subsection.5.4}{Additional testing specifications}{section.5}% 72
+\BOOKMARK [1][-]{section.6}{Effort Spent}{}% 73
+\BOOKMARK [2][-]{subsection.6.1}{Simone Abelli}{section.6}% 74
+\BOOKMARK [2][-]{subsection.6.2}{Stefano Azzone}{section.6}% 75
+\BOOKMARK [1][-]{subsection.6.2}{References}{}% 76

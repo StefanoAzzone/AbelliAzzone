@@ -10,34 +10,44 @@ Every logic layer can be mapped in an hardware layer.\\
 The presentation layer is composed by the smartphone or the computer of the user, the ticket printer outside the stores, the QR reader and the turnstiles.\\
 The application layer is composed by the application server.
 The data layer is composed by the database server.\\\\\\
-\includegraphics[scale=0.4]{Images/Archimate.png}\\
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{ 
+		\includegraphics[scale=0.45]{Images/Archimate.png}}
+	\caption{High level system architecture} 
+\end{figure}
 This image shows the high level representation of the three-layer architecture, where we have all the devices used to interact with the user and their respective software, that have to connect to the application server, which is able to communicate with the database server.\\
 Although very simple, this high level view shows how a three tier architecture can provide more flexibility to the system, splitting the server side in two logical layers. It is also very useful from a security viewpoint: in fact the data are kept separated from the user by the application layer, so that all sensitive information are protected from undesired access.
 \newpage
 Let us now have a more in-depth look at the system architecture.\\\\
-\includegraphics[scale=0.5]{Images/System Architecture.png}\\\\
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{ 
+		\includegraphics[scale=0.5]{Images/System Architecture.png}}
+	\caption{System Architecture} 
+\end{figure}
 Here we can better see how each tier of the previously defined architecture is mapped in the system. The customer is capable to interact with the system in several ways: through the phone app on his smartphone, by the web app on his computer, using the printer outside the store (in order to create an on premise reservation) or via QR scanner, which unlocks the turnstiles and validate enter and exit from the store. In order to provide an estimation of the travel time from the location of the customer to the store, the system uses the GPS technology through the Google Maps API.\\
 The store owner, from his/her side, can only access the system from the web app or the phone application; this is because in the role of owner he/she does not need to access the market, and use the system only to control occupation and statistics of the stores.\\
 The web app does not communicate directly with the application server, but must traverse the web server, which provide the web pages to the browser.\\
 The application and web servers ere protected from the outside by a first firewall, which creates a demilitarized zone for them. Then, the application server communicates with the database server, which contains the database management system, through a second and more restrictive firewall, that isolate the database from possible attacks. This double firewall ensures the security properties for the system.\\
 In order to create reservations, the clients must communicate synchronously with the server, as they have no information on the queue. The application server, then communicates synchronously with the database server to retrieve information or asynchronously to store information when needed.\\
-In the image above the server element must not be considered as a single machine: if so the architecture would be poorly scalable, and heavy traffic would make the system crash. To guarantee scalability we use a node replication approach, which involves the use of a node balancer which redirect the traffic between multiple servers.\newpage
-\begin{figure}[h]
+In the image above the server element must not be considered as a single machine: if so the architecture would be poorly scalable, and heavy traffic would make the system crash. To guarantee scalability we use a node replication approach, which involves the use of a node balancer which redirect the traffic between multiple servers.\newline
+\begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.5]{Images/LoadBalancer.png}}
+	\caption{Load Balancer} 
 \end{figure}
-This image show an example of how this method works for the application tier: in this case the load balancer splits the work between three application servers, but of course there might be more. Moreover this approach is used also for the web server and the database server, according to the needs of the system.\\
+This image shows an example of how this method works for the application tier: in this case the load balancer splits the work between three application servers, but of course there might be more. Moreover this approach is used also for the web server and the database server, according to the needs of the system.\\
 Until now we have used an informal view of the architecture; in the next sections we will keep deepening the architecture and its characteristics.\newpage
 \subsection{Component View}
 Here we display the main component architecture of our S2B. Since the ApplicationServer contains all the business logic, we will describe in detail the structure of its subcomponents.\\\\
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.35]{Images/Component.png}}
+	\includegraphics[scale=0.45]{Images/Component.png}}
+	\caption{Component view} 
 \end{figure}
-
-
 \subsubsection{WebApp}
 This component allows customer and store owners to access their respective services on a computer. It requires a WebServer.
 \subsubsection{WebServer}
@@ -80,7 +90,7 @@ Finally it is accessed by NotificationManager in order to get the list of the cu
 It needs access to DBMSServices to update the status of each reservation and entry and exit times. It checks periodically the number of customers currently present and the maximum occupation for every store and computes an estimated time that customers have to wait before gaining authorization to enter a specific store if such store has already reached maximum occupation.\\
 This component accesses StatisticsManager to improve the computation of the time a customer needs to wait before being authorized to enter the store.
 \subsubsection{QRManager}
-This component accesses QueueManager whenever a customer needs to view a QR for a reservation: if a QR has already been generated for that reservation it is returned to QRManager, otherwise it is generated by QRManager and sent to QueueManager. When QRReader reads a QR code from a customer it calls QRManager, that accesses QueueManager to check that the reservation is existing and authorized, and if so it send the entry/exit time to the QueueManager and returns the QRReader the permission to unlock turnstile.
+This component accesses QueueManager whenever a customer needs to view a QR for a reservation: if a QR has already been generated for that reservation it is returned to QRManager, otherwise it is generated by QRManager and sent to QueueManager.\\ When QRReader reads a QR code from a customer it calls QRManager, that accesses QueueManager to check that the reservation is existing and authorized, and if so it send the entry/exit time to the QueueManager and returns the QRReader the permission to unlock turnstile.
 \subsubsection{StatisticsManager}
 This component is accessed by QueueManager to improve the estimate of the time that a customer needs to wait before being authorized to enter a specific store. This component is accessed by a store owner through WebApp or SmartApp to visualize statistics. This component accesses the DBMSServices periodically to obtain the data with which to generate the statistics, and to save such statistics.
 \subsubsection{PrinterManager}
@@ -103,6 +113,7 @@ To optimize the routing process we can divide the redirector in several subcompo
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.40]{Images/RedirectorExpanded.png}}
+	\caption{Redirector} 
 \end{figure}
 This image shows how each interface connects with the redirector's subcomponents. Of course, each of them will provide a different routing on the possible interfaces of the system, as shown in the following diagrams.\\
 \begin{figure}[H]
@@ -121,13 +132,17 @@ This image shows how each interface connects with the redirector's subcomponents
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.35]{Images/MonitorRouting.png}}
+	\caption{Routing} 
 \end{figure}
 \newpage
 \subsection{Deployment View}
 The following image shows the deployment diagram of the system by presenting the distribution (deployment) of software artifacts to the nodes, i.e. the deployment targets.
-\begin{flushleft}
-	\includegraphics[scale=0.45]{Images/Deployment.png}
-\end{flushleft}
+\begin{figure}[H]
+	\noindent
+	\makebox[\textwidth]{
+	\includegraphics[scale=0.45]{Images/Deployment.png}}
+	\caption{Deployment view} 
+\end{figure}
 Here we describe the components of the deployment view:
 \subsubsection{Smartphone}
 The customers and the store owners can access the functionalities of the system through a smartphone, that communicates through a firewall and a load balancer with the ApplicationServerDevice.\\
@@ -149,27 +164,28 @@ The web server TomEE will server the browser the artifact it needs to show to th
 This device allows the ApplicationServerDevice to create, read, update, delete information that supports the system operation.\\
 The DataBase is managed by the Oracle DBMSServices which in turn is supported by Oracle Solaris.\newpage
 \subsection{Runtime View}
-%TODO : something here
 \subsubsection{Login via smartphone app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.5]{Images/RuntimeViewLogin.png}}
+	\includegraphics[scale=0.8]{Images/RuntimeViewLogin.png}}
+	\caption{Login} 
 \end{figure}
-%TODO : dashed arrows on responses
 By opening the application, user calls the SmartApp component. SmartApp calls Redirector, that calls LoginManager, that retrieves from the DBMSServices the password hash of the specified user (if he/she exists), and compares it with the provided password. The result of this operation is then sent back to the user.\\
 \subsubsection{Immediate reservation via smartphone app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.35]{Images/RuntimeViewImmRes.png}}
+	\includegraphics[scale=0.45]{Images/RuntimeViewImmRes.png}}
+	\caption{Immediate reservation} 
 \end{figure}
 The customer selects the option to create an immediate reservation. The SmartApp requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer. The customer then selects a store form the list provided and a means of transport. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the selected store is open at the time, loading it from the DBMSServices, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the database. It is rejected otherwise.
 \subsubsection{Future reservation via web app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-		\includegraphics[scale=0.3]{Images/RuntimeViewFutRes.png}}
+	\includegraphics[scale=0.4]{Images/RuntimeViewFutRes.png}}
+	\caption{Future reservation} 
 \end{figure}
 When the customer selects the option to book a visit, the WebApp, through the WebServer, requests a list of stores from the ApplicationServer and this request is then forwarded by the Redirector to the ReservationManager that retrieves the list of stores form the DMBS and sends it back to the customer.\\
 The customer can then select a store form the list provided, the date he would like to book and, optionally, a list of departments he is interested in and how long he thinks the visit will be. This information is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that the resrvation is valid (the selected store is open at the time, the maximum number of reservations has not yet been reached), and if it is, the reservation can be generated: first, if the expected duration has not been specified, it is inferred by the StatisticsManager, based on the past reservations created by the customer, and returned to the ReservationManager; then it ask the queue manager to create the reservation and insert it into the queue in an appropriate time slot, considering the other reservations already present. The reservation is then saved into the database.\\
@@ -178,28 +194,32 @@ If the reservation was not valid, then it is rejected.
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-		\includegraphics[scale=0.35]{Images/RuntimeViewPreRes.png}}
+	\includegraphics[scale=0.45]{Images/RuntimeViewPreRes.png}}
+	\caption{On premise reservation}
 \end{figure}
 The customer selects the option to create an on premise reservation, and provides the TicketPrinter with an identification document. This request is then forwarded by the Redirector to the PrinterManager that checks that the document is valid. If it is, an on premise reservation request is then sent to the ApplicationServer where the Redirector routes it to the ReservationManager that checks that that the reservation is valid for the selected store at the time of creation (e.g. the store is open), loading the store info from the DBMSServices, and if it is, the reservation is confirmed, added to the queue of that store by calling QueueManager, and saved in the database. It is rejected otherwise.
 \subsubsection{Statistics generation}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.5]{Images/RuntimeViewStatistics.png}}
+	\includegraphics[scale=0.8]{Images/RuntimeViewStatistics.png}}
+	\caption{Statistics}
 \end{figure}
 Every week the StatisticsManager retrieves a list of the reservations of the past week, and for each customer and each store computes the average daily and weekly duration of the visit, and stores them in the database.
 \subsubsection{Customer enters store}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.45]{Images/RuntimeViewStoreEntry.png}}
+	\includegraphics[scale=0.75]{Images/RuntimeViewStoreEntry.png}}
+	\caption{Store entry}
 \end{figure}
 The customer provides the QR reader with a QR code (be it on the screen of his/her smartphone or printed on paper). That code is then forwarded by the redirector to the QRManager that decodes it and calls the QueueManager to check that the QR code belongs to a customer that is now authorized to enter the store. If this is the case, the turnstiles unlock. Whenever the customer enters or exits a store, QueueManager saves the time of arrival/departure in the reservation, and then saves them in the database.
 \subsubsection{Store owner registers store via web app}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.35]{Images/RuntimeViewStoreReg.png}}
+	\includegraphics[scale=0.5]{Images/RuntimeViewStoreReg.png}}
+	\caption{Store registration}
 \end{figure}
 The store owner opens the app and look at all his/her stores; he/she decides to add a new store, so he/she insert all required data, that are sent, through the redirector, to the StoreManager. This component validates the data and, if everything is correct, asks the DBMSServices to save the data of the new store.\\
 Of course, in this process, only the store has been added, so the store owner will then also need to register the TicketPrinter, the QRReader and the StoreMonitor to the system.
@@ -207,18 +227,19 @@ Of course, in this process, only the store has been added, so the store owner wi
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
-	\includegraphics[scale=0.35]{Images/RuntimeViewNotification.png}}
+	\includegraphics[scale=0.65]{Images/RuntimeViewNotification.png}}
+	\caption{Notification}
 \end{figure}
 Periodically the system must check if it is time to notify the customer about his/her reservations.\\
 Once every minute, the NotificationManager will ask the QueueManager to send, for each of the relatively closest reservations(those that hava as target time less than an hour with respact to the current time) the time remaining before they become authorized. Each of this times is then sent to its respective customer, if the reservation has been generated by a phone app.\\
-Then the phone app will use the MapAPI to get an estimation of the time necessary to reach the store from the location of the device, by the means of transport specified at the creation of the reservation. Now, by comparing this two numbers, it can decide whether notify the customer or not. Of course there can actually be an additional value n such that the customer is notified if time to wait <= time to reach + n. In this way the customer has a little notice before departing.
+Then the phone app will use the MapAPI to get an estimation of the time necessary to reach the store from the location of the device, by the means of transport specified at the creation of the reservation. Now, by comparing this two numbers, it can decide whether notify the customer or not. Of course there can actually be an additional value n such that the customer is notified if the time to wait is less or equal to the time to reach plus n. In this way the customer has a little notice before departing.
 \newpage
 \subsection{Component Interfaces}
 \begin{figure}[H]
 	\noindent
 	\makebox[\textwidth]{
 	\includegraphics[scale=0.45]{Images/ComponentInterfaces.png}}
-	\caption{Component Interfaces} %TODO: decide wether to keep captions
+	\caption{Component Interfaces}
 \end{figure}
 In this diagram we represented the interfaces of the system components with their methods, and such interfaces interact with each other.\\
 For ease of representation we split WebApp and SmartApp component functionalities into three interfaces: CustomerService, StoreOwnerService and NotificationService. The WebApp component, that allows customers and store owners to interact with the system with a computer, implements the CustomerService and the StoreOwnerService interfaces. The SmartApp component, that allows customers and store owners to interact with the system with a smartphone, implements the CustomerService, StoreOwnerService and NotificationService interfaces.\\\\
@@ -244,13 +265,13 @@ The other constraint of the REST style, i.e. the layered system with client-serv
 In order to separate the internal representation of the information from how it is presented to the user, we decide to apply the well-known Model View Controller pattern.\\
 This style is based on the division of the whole sysetm in three parts:
 \begin{itemize}
-	\item the model: the component responsible for managing the data of the application and for receiving user input from the controller; in our architecture it is represented by the database, which manages all the data of the system.
+	\item the model: the component responsible for managing the data of the application and for receiving user input from the controller; in our architecture it is represented by the database, and the DBMSServices which manages all the data of the system.
 	\item the view: the component responsible for the presentation of the information to the users and their interaction with the system; in the proposed architecture it is represented by the components of the presentation layer, namely the SmartApp, the WebApp, the StoreMonitor, the TicketPrinter and the QRReader.
 	\item the controller: the component responsible for receiving input from the user and, based on them, performs interactions with the model. In our system the controller is represented by the various components of the application server, which manage the input and perform changes to the database.
 \end{itemize}
 This pattern has been chosen to guarantee the maintainability and the reusability of the code, as well as to promote a parallel development.
 \subsubsection{Facade pattern}
-In the system architecture we can notice that the client accesses the application server through the redirector component; this element constitutes the main part of the facade pattern. The redirector is a "facade", an exterior face of the application server, that hides the internal complexity of the system, providing a simple and unique interface that the client can access to use the various other components of the system.\\
+In the system architecture we can notice that the client accesses the application server through the redirector component; this element constitutes the main part of the facade pattern.\\ The redirector is a "facade", an exterior face of the application server, that hides the internal complexity of the system, providing a simple and unique interface that the client can access to use the various other components of the system.\\
 Using this pattern the client does not need to know which component of the architecture he need to contact in order to request a service, because all the routing is internal to the redirector.\\
 Another major benefit of this pattern is that any change in the server-side of the architecture will stay undetectable from the client side, provided that the facade stays the same.
 \subsubsection{Observer pattern}

@@ -1,9 +1,10 @@
 \subsection{Overview}
-In this last section we provide all the necessary specifications about the plan for the implementation and the testing of the system. This phase is, of course, critical for the development of a reliable software system. It is important to observe that, while testing can show the presence of bugs in the code, passing the tests does not imply the absence of errors in the final application. Still, with our tests, we will try to find the majority of the bugs before the product hits the market (and also after, maintenance is important).
+In this last section we provide all the necessary specifications about the plan for the implementation and the testing of the system.\\ This phase is, of course, critical for the development of a reliable software system. It is important to observe that, while testing can show the presence of bugs in the code, passing the tests does not imply the absence of errors in the final application. Still, with our tests, we will try to find the majority of the bugs before the product hits the market (and also after, maintenance is important).
 
 \subsection{Implementation Plan}
-For all the implementation processes we have chosen a \textbf{bottom-up} approach; %TODO
-\\
+For all the implementation processes we have chosen a \textbf{bottom-up} approach, which consists in implementing first the base components, and then, in a iterative way, those that require them. We topologically sort the dependencies between the components such that every time we implement one of them we have already realized all the others on which it depends.\\
+The unit testing will be carried out in parallel with the implementation. Using the bottom-up approach we will use several drivers, during all testing process, which will mimic the behavior of the elements that will use the component under test. On the other hand, the selected approach will never require the creation of stubs, elements that simulate the behavior of not yet implemented modules, required by the component under test.\\
+With this incremental approach we have in each moment fully functional components, being sure that the work already done is complete and functional. Moreover, beginning from the bottom, the core components will be the first to be implemented, and so the ones that will be more tested, improving the robustness of the overall system.\\\\\\
 The first element that we will implement is the \textbf{DBMSServices} component, which manages the model, i.e. the data, of our application, and so it is required by most of the components of the system.\\
 After the data layer has been implemented we can proceed to the components that utilize it. The main logic of the application is implemented by the QueueManager component, so we would to implent it as soon as possible. In order to do this, we need to first realize the compoents on which the QueueManager depends. For this reason we will start by implementing \textbf{StatisticsManager}, and, in parallel, the \textbf{StoreMonitor}, then the \textbf{MonitorManager}.\\\\
 At this point we have all the components needed for \textbf{QueueManager} to operate, so we implement it. Since almost all other components of the ApplicationServer rely on QueueManager and/or on DBMSServices to operate, we can now split our team to work in parallel on the following components: 
@@ -25,7 +26,7 @@ For the implementation and testing plan we decided to use the \textbf{bottom-up}
 	\noindent
 	\makebox[\textwidth]{ 
 		\includegraphics[scale=0.45]{Images/Test1.png}}
-	\caption{Integration 1} %TODO: decide wether to keep captions
+	\caption{Integration 1} 
 \end{figure}
 The first element implemented and unit tested is the DBMSServices, followed by the components that will be necessary for the QueueManager, the core of the application. Of course the DBMSServices is the first to be implemented and tested because all other components rely on it in one way or another.
 \begin{figure}[H]
@@ -65,7 +66,7 @@ At this step we implement and unit test in parallel the components that operate 
 Finally the last step is to develop the components that will enable the notification functionality for the customers. The NotificationService makes use of MapsAPI, which connects it with the external mapping service.\\\\
 Now that every component of the system has been implemented and integrated we can proceed to the system testing phase.
 \subsection{System Testing}
-Onece the whole system has been developed we have to check that all functional and non functional requirements have been met. This is the purpose of the system testing. Note that testing environment should be as close as possible to deployment environment so as to give credibility to the results obtained. These tests will be carried out by an independent team with no knowledge of the internals of the system (black box testing).
+Onece the whole system has been developed we have to check that all functional and non functional requirements have been met. This is the purpose of the system testing. Note that testing environment should be as close as possible to deployment environment so as to give credibility to the results obtained. These tests will be carried out by an independent team with no knowledge of the internals of the system (black box testing).\\
 System testing focuses not only on guaranteeing that all functionalities work as expected, but also on demonstrating the qualities of the application, through performance testing, stress testing and load testing.
 \subsubsection{Performance testing}
 Here we verify that the system matches expected performance requirements. This test will allow us to identify inefficient algorithms, bottlenecks, possibilities for query optimization as well as to produce a benchmark as a measure of the performance of the product, and to compare subsequent versions of the software.
@@ -74,3 +75,9 @@ This phase aims to identify system behavior under heavy load conditions. Here we
 \subsubsection{Stress testing}
 In this phase we overload the system and observe how the system recovers from failure. We would like that the application could come back on line gracefully.
 \subsection{Additional testing specifications}
+In addition to unit, integration and system testing, the development team will need to carry out static analysis activities to verify the correctness of the artifacts produced.\\ There are two kinds of static analysis procedures: the walkthroughs and the inspections.
+They are both an in-depth examination of some work product from a team of reviewers with a limited time duration (no more than two hours). The focus of static analysis activities is to find errors and bugs, not to correct them (task assigned to the developers).\\
+Walkthroughs are informal meetings held between peers (sw developers) aimed to verify product correctness in the scope of the developer team. The discussion is lead by the producer of the artifact.\\
+Inspections are instead formal meetings, held by professional and qualified inspectors, which are the reviewers, aimed to check product correctness by examining a checklist of items. The discussion is lead by the official moderator of the reviewers team.\\\\
+All developers are strongly advised to thoroughly comment the code they produce, in order to improve readability, to ease the review process and facilitate the process of updating the system. For instance every major method, class and attribute could be documented with Javadoc or Doxygen.\\\\
+The developers working on the application logic must also provide, along with the code, enough test cases to cover at least 90\% of it.
